@@ -51,10 +51,9 @@ Temporary Items
 # =========================
 
 .idea/
-.idea/*
 
 # =========================
-# Test files
+# Alpha version
 # =========================
-test/
-test/*
+
+alpha/
