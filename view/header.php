@@ -1,7 +1,7 @@
 <header>
     <div>
         <a href="http://les-ziags.dev/test/">
-            <img src="img/logos/leaf32.png" alt="Les Ziags logo" />
+            <img src="content/img/logos/leaf32.png" alt="Les Ziags logo" />
             <h3>Hôtel</h3>
             <h2 id="logo_title_rotate">Les</h2>
             <h1>Ziags</h1>
