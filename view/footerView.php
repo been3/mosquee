@@ -12,7 +12,7 @@
             <li><a href="#">Contacts</a></li>
         </ul>
     </nav>
-    <div id="credits_copyright">
+    <div id="site-info__credits">
         <p>
             Copyright &copy; 2016 Alex Benoit &amp; Evan Suau<br />
             All rights reserved.

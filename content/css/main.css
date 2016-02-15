@@ -285,13 +285,13 @@ footer nav ul li a:hover {
     color: #fb9e08;
 }
 
-footer #credits_copyright {
+footer #site-info__credits {
     position: relative;
     float: right;
     margin: 0 5% 0 0;
 }
 
-footer #credits_copyright p {
+footer #site-info__credits p {
     text-align: center;
     font-size: 14px;
     color: white;
