@@ -20,16 +20,16 @@
                 </ul>
             </li>
             <li><a href="#">Réservations</a></li>
-            <li>
-                <a href="#">Qui sommes nous ?</a>
-                <ul>
-                    <li><a href="#" class="nav-primary__link-who__sub-menu">Le mot du directeur</a></li>
-                    <li><a href="#" class="nav-primary__link-who__sub-menu">L'équipe</a></li>
-                </ul>
-            </li>
+                <li>
+                    <a href="#">À propos de nous</a>
+                    <ul>
+                        <li><a href="#" class="nav-primary__link-who__sub-menu">Le mot du directeur</a></li>
+                        <li><a href="#" class="nav-primary__link-who__sub-menu">L'équipe</a></li>
+                    </ul>
+                </li>
             </li>
             <li><a href="#">Contact</a></li>
-            <li><a href="#" id="nav-primary__login"></a></li>
+            <li><a href="login.php" id="nav-primary__login"></a></li>
         </ul>
     </nav>
 </header>
