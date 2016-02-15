@@ -1,5 +1,5 @@
 (function($) {
-    var nav = $("#main_menu");
+    var nav = $("#nav-primary");
     nav.find("li").each(function() {
         if ($(this).find("ul").length > 0) {
             $(this).mouseenter(function() {
