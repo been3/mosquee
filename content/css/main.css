@@ -128,7 +128,7 @@ header nav ul li a {
     transition: content 0.3s ease-in;
 }
 
-header nav ul li #nav-primary__login:hover:before {
+#nav-primary__login:hover:before {
     content: url(../img/icons/avatar83_32px_white.png);
 }
 
@@ -173,11 +173,11 @@ header nav ul li ul li a {
     border: none;
 }
 
-header nav ul li ul li .nav-primary__link-our-rooms__sub-menu {
+.nav-primary__link-our-rooms__sub-menu {
     width: 208px;
 }
 
-header nav ul li ul li .nav-primary__link-who__sub-menu {
+.nav-primary__link-who__sub-menu {
     width: 246px;
 }
 
@@ -197,46 +197,46 @@ footer {
     margin: 0;
 }
 
-footer #social_icons {
+#site-info__social-icons {
     position: relative;
     top: 15px;
     left: 50px;
     float: left;
 }
 
-footer #social_icons a {
+#site-info__social-icons a {
     margin: 0 5px 0 5px;
 }
 
-footer div #social_icons__twitter:before {
+#site-info__social-icons__twitter:before {
     content: url(../img/icons/twitter_32px_white.png);
 }
 
-footer div #social_icons__facebook:before {
+#site-info__social-icons__facebook:before {
     content: url(../img/icons/facebook2_32px_white.png);
 }
 
-footer div #social_icons__instagram:before {
+#site-info__social-icons__instagram:before {
     content: url(../img/icons/instagram19_32px_white.png);
 }
 
-footer div #social_icons__gplus:before {
+#site-info__social-icons__gplus:before {
     content: url(../img/icons/google-plus_32px_white.png);
 }
 
-footer div #social_icons__twitter:hover:before {
+#site-info__social-icons__twitter:hover:before {
     content: url(../img/icons/twitter_32px_fb9e08.png);
 }
 
-footer div #social_icons__facebook:hover:before {
+#site-info__social-icons__facebook:hover:before {
     content: url(../img/icons/facebook2_32px_fb9e08.png);
 }
 
-footer div #social_icons__instagram:hover:before {
+#site-info__social-icons__instagram:hover:before {
     content: url(../img/icons/instagram19_32px_fb9e08.png);
 }
 
-footer div #social_icons__gplus:hover:before {
+#site-info__social-icons__gplus:hover:before {
     content: url(../img/icons/google-plus_32px_fb9e08.png);
 }
 

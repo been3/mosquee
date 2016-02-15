@@ -37,11 +37,11 @@
         <![endif]-->
 
         <script type="text/javascript" src="content/js/jquery.js"></script>
-        <script type="text/javascript" src="conten/js/modernizr.js"></script>
+        <script type="text/javascript" src="content/js/modernizr.js"></script>
     </head>
     <body>
         <?php include 'view/headerView.php'; ?>
         <?php include 'view/footerView.php'; ?>
-        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="content/js/script.js"></script>
     </body>
 </html>
