@@ -14,17 +14,17 @@
             <li>
                 <a href="#">Nos chambres</a>
                 <ul>
-                    <li><a href="#" class="main_menu__ourrooms__link">Chambre simple</a></li>
-                    <li><a href="#" class="main_menu__ourrooms__link">Chambre double</a></li>
-                    <li><a href="#" class="main_menu__ourrooms__link">Suite familiale</a></li>
+                    <li><a href="#" class="nav-primary__link-our-rooms__sub-menu">Chambre simple</a></li>
+                    <li><a href="#" class="nav-primary__link-our-rooms__sub-menu">Chambre double</a></li>
+                    <li><a href="#" class="nav-primary__link-our-rooms__sub-menu">Suite familiale</a></li>
                 </ul>
             </li>
             <li><a href="#">Réservations</a></li>
             <li>
                 <a href="#">Qui sommes nous ?</a>
                 <ul>
-                    <li><a href="#" class="main_menu__who__link">Le mot du directeur</a></li>
-                    <li><a href="#" class="main_menu__who__link">L'équipe</a></li>
+                    <li><a href="#" class="nav-primary__link-who__sub-menu">Le mot du directeur</a></li>
+                    <li><a href="#" class="nav-primary__link-who__sub-menu">L'équipe</a></li>
                 </ul>
             </li>
             </li>

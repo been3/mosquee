@@ -40,8 +40,8 @@
         <script type="text/javascript" src="conten/js/modernizr.js"></script>
     </head>
     <body>
-        <?php include 'view/header.php'; ?>
-        <?php include 'view/footer.php'; ?>
+        <?php include 'view/headerView.php'; ?>
+        <?php include 'view/footerView.php'; ?>
         <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>
