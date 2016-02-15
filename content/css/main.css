@@ -171,11 +171,11 @@ header nav ul li ul li a {
     border: none;
 }
 
-header nav ul li ul li .main_menu__ourrooms__link {
+header nav ul li ul li .nav-primary__link-our-rooms__sub-menu {
     width: 208px;
 }
 
-header nav ul li ul li .main_menu__who__link {
+header nav ul li ul li .nav-primary__link-who__sub-menu {
     width: 246px;
 }
 
