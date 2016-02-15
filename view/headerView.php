@@ -8,7 +8,7 @@
             <div></div>
         </a>
     </div>
-    <nav id="main_menu">
+    <nav id="nav-primary">
         <ul>
             <li><a href="#">L'Hôtel</a></li>
             <li>
