@@ -31,6 +31,7 @@
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         <link href="content/css/main.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="content/css/home.css" rel="stylesheet" type="text/css" media="screen" />
         <link rel="shortcut icon" href="favicon.ico" />
         <!--[if IE]>
             <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
