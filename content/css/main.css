@@ -23,29 +23,30 @@
 */
 
 body {
-    background: url(../img/airbnb-office-1.jpg) fixed no-repeat center;
-    background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     margin: 0;
 }
 
+/* HEADER */
+/* branding */
+
 header div a {
-    position: absolute;
+    background: #fb9e08;
+    border-radius: 0 0 5px 5px;
     color: #485160;
-    background-color: #fb9e08;
     height: 155px;
-    width: 200px;
     left: 34px;
     padding: 15px 5px 5px 5px;
-    border-radius: 0 0 5px 5px;
+    position: absolute;
     text-align: center;
-    text-transform: uppercase;
     text-decoration: none;
+    text-transform: uppercase;
     -webkit-transition: height 0.2s ease-in;
     -moz-transition: height 0.2s ease-in;
     -o-transition: height 0.2s ease-in;
     transition: height 0.2s ease-in;
+    width: 200px;
 }
 
 header div a:hover {
@@ -57,68 +58,72 @@ header div a h1, h3 {
 }
 
 header div a h1 {
-    text-align: right;
     font-size: 54px;
     margin: 2px 4px 0 0;
+    text-align: right;
 }
 
-header div a #logo_title_rotate {
-    position: absolute;
+#branding-title--rotate {
     display: table;
-    margin: 0;
-    top: 125px;
     left: 15px;
+    margin: 0;
+    position: absolute;
     text-indent: 1em;
-    white-space: nowrap;
+    top: 125px;
     transform: rotate(-90deg) translate(-50%, 0);
     transform-origin: 0.35em center;
+    white-space: nowrap;
 }
+
+/* nav primary */
 
 header nav {
     background: white;
-    width: 100%;
     height: 100px;
+    width: 100%;
 }
 
 header nav ul {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    text-transform: uppercase;
-    float: right;
-    border: none;
     background: white;
+    border: none;
+    float: right;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
 }
 
 header nav ul:before {
     content: '';
-    width: auto;
     position: absolute;
+    width: auto;
 }
 
 header nav ul li {
-    list-style: none;
     float: left;
-    padding: 0;
+    list-style: none;
     margin: 0;
+    padding: 0;
     position: relative;
 }
 
 header nav ul li a {
-    float: left;
-    padding: 30px 39px 30px 39px;
-    margin: 0;
-    height: 40px;
-    line-height: 40px;
     background: white;
     color: #485160;
+    float: left;
     font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    padding: 30px 39px 30px 39px;
     text-decoration: none;
     -webkit-transition: background 0.3s ease-in;
     -moz-transition: background 0.3s ease-in;
     -o-transition: background 0.3s ease-in;
     transition: background 0.3s ease-in;
 }
+
+/* header nav login links */
 
 #nav-primary__login:before {
     content: url(../img/icons/avatar83_32px_grey.png);
@@ -139,6 +144,8 @@ header nav ul li ul li a:focus {
     color: white;
 }
 
+/* Adding arrays for sub menus */
+
 li > a:after {
     content: "   \25be";
 }
@@ -147,17 +154,19 @@ li > a:only-child:after {
     content: '';
 }
 
+/* Sub menus style */
+
 header nav ul li ul {
+    background: white;
+    border: none;
+    font-size: 14px;
+    height: auto;
+    left: 0;
+    margin: 0;
+    padding: 0;
     position: absolute;
     top: 100px;
-    left: 0;
-    border: none;
-    background: white;
-    height: auto;
     width: 100%;
-    padding: 0;
-    margin: 0;
-    font-size: 14px;
 }
 
 header nav ul li ul:before {
@@ -165,43 +174,47 @@ header nav ul li ul:before {
 }
 
 header nav ul li ul li a {
+    border: none;
     color: #586375;
-    padding: 5px 0 5px 20px;
-    margin: 0;
     height: auto;
     line-height: 30px;
-    border: none;
+    margin: 0;
+    padding: 5px 0 5px 20px;
 }
 
-.nav-primary__link-our-rooms__sub-menu {
+header nav ul li ul li .nav-primary__link-our-rooms__sub-menu {
     width: 208px;
 }
 
-.nav-primary__link-who__sub-menu {
-    width: 246px;
+header nav ul li ul li .nav-primary__link-who__sub-menu {
+    width: 239px;
 }
 
 header nav ul ul {
     display: none;
-    width: 100%;
-    position: absolute;
     left: 0;
+    position: absolute;
+    width: 100%;
 }
+
+/* FOOTER */
 
 footer {
-    position: absolute;
     background: #485160;
     bottom: 0;
-    width: 100%;
     height: 61px;
     margin: 0;
+    position: absolute;
+    width: 100%;
 }
 
+/* Social network icons */
+
 #site-info__social-icons {
+    float: left;
+    left: 50px;
     position: relative;
     top: 15px;
-    left: 50px;
-    float: left;
 }
 
 #site-info__social-icons a {
@@ -240,41 +253,42 @@ footer {
     content: url(../img/icons/google-plus_32px_fb9e08.png);
 }
 
+/* Footer menu */
+
 footer nav ul {
-    padding: 0;
-    margin: 0;
-    text-transform: uppercase;
-    border: none;
     background: #485160;
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
 }
 
 footer nav ul:before {
     content: '';
-    width: auto;
     position: absolute;
+    width: auto;
 }
 
 footer nav ul li {
-    top: 14px;
-    left: 25%;
-    list-style: none;
     float: left;
-    padding: 0;
+    left: 20%;
+    list-style: none;
     margin: 0;
+    padding: 0;
     position: relative;
+    top: 14px;
 }
 
 footer nav ul li a {
-    float: left;
-    padding: 5px 8px 5px 8px;
-    margin: 1px 1px 1px 1px;
-    height: auto;
-    line-height: auto;
     background: #485160;
-    color: white;
     border-right: 1px solid white;
-    text-decoration: none;
+    color: white;
+    float: left;
     font-size: 14px;
+    height: auto;
+    margin: 1px 1px 1px 1px;
+    padding: 5px 8px 5px 8px;
+    text-decoration: none;
 }
 
 footer nav ul li:last-child a {
@@ -285,14 +299,16 @@ footer nav ul li a:hover {
     color: #fb9e08;
 }
 
-footer #site-info__credits {
-    position: relative;
+/* Site credits */
+
+#site-info__credits {
     float: right;
     margin: 0 5% 0 0;
+    position: relative;
 }
 
-footer #site-info__credits p {
-    text-align: center;
-    font-size: 14px;
+#site-info__credits p {
     color: white;
+    font-size: 14px;
+    text-align: center;
 }
