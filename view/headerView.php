@@ -21,7 +21,7 @@
             </li>
             <li><a href="#">Réservations</a></li>
             <li>
-                <a href="#">Qui sommes nous ?</a>
+                <a href="#">&Agrave; propos de nous</a>
                 <ul>
                     <li><a href="#" class="nav-primary__link-who__sub-menu">Le mot du directeur</a></li>
                     <li><a href="#" class="nav-primary__link-who__sub-menu">L'équipe</a></li>
