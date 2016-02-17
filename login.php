@@ -41,8 +41,8 @@
         <script type="text/javascript" src="js/modernizr.js"></script>
     </head>
     <body>
-        <?php include 'headerView.php'; ?>
-        <?php include 'footerView.php'; ?>
+        <?php include 'view/headerView.php'; ?>
+        <?php include 'view/footerView.php'; ?>
 
         <section>
             <div class="form-container" id="form-signin">
