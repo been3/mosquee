@@ -29,7 +29,7 @@
             </li>
             </li>
             <li><a href="#">Contact</a></li>
-            <li><a href="#" id="nav-primary__login"></a></li>
+            <li><a href="../login.php" id="nav-primary__login"></a></li>
         </ul>
     </nav>
 </header>
