@@ -30,8 +30,8 @@
         <!--[if lt IE 9]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        <link href="css/main.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="css/login.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="content/css/main.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="content/css/login.css" rel="stylesheet" type="text/css" media="screen" />
         <link rel="shortcut icon" href="favicon.ico" />
         <!--[if IE]>
             <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
@@ -48,8 +48,8 @@
             <div class="form-container" id="form-signin">
                 <form action="/authorize" method="post">
                     <h5>Se connecter</h5>
-                    <div><span><img src="img/icons/mail-envelope_32px_485160.png" alt="username" /></span><input type="text" placeholder="Email" name="username" /></div>
-                    <div><span><img src="img/icons/closed-padlock_16px_485160.png" alt="password" /></span><input type="password" placeholder="Mot de passe" name="password" /></div>
+                    <div><span><img src="content/img/icons/mail-envelope_32px_485160.png" alt="username" /></span><input type="text" placeholder="Email" name="username" /></div>
+                    <div><span><img src="content/img/icons/closed-padlock_16px_485160.png" alt="password" /></span><input type="password" placeholder="Mot de passe" name="password" /></div>
                     <div><a href="forgot-password">Mot de passe oublié ?</a></div>
                     <div><button>Se connecter</button></div>
                 </form>
