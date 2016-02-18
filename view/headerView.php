@@ -12,7 +12,7 @@
         <ul>
             <li><a href="#">L'Hôtel</a></li>
             <li>
-                <a href="#">Nos chambres</a>
+                <a href="/our-rooms.php">Nos chambres</a>
                 <ul>
                     <li><a href="#" class="nav-primary__link-our-rooms__sub-menu">Chambre simple</a></li>
                     <li><a href="#" class="nav-primary__link-our-rooms__sub-menu">Chambre double</a></li>
