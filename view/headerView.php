@@ -21,7 +21,7 @@
             </li>
             <li><a href="/reservations.php" class="nav-primary__link">Réservations</a></li>
             <li>
-                <a href="" class="nav-primary__link">&Agrave; propos de nous</a>
+                <a href="/about.php" class="nav-primary__link">&Agrave; propos de nous</a>
                 <ul>
                     <li><a href="/directors-message.php" class="nav-primary__link-who__sub-menu">Le mot du directeur</a></li>
                     <li><a href="/team.php" class="nav-primary__link-who__sub-menu">L'équipe</a></li>
