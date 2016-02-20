@@ -12,11 +12,7 @@
         <ul>
             <li><a href="/hotel.php" class="nav-primary__link">L'Hôtel</a></li>
             <li>
-<<<<<<< HEAD
-                <a href="/our-rooms.php">Nos chambres</a>
-=======
                 <a href="/our-rooms.php" class="nav-primary__link">Nos chambres</a>
->>>>>>> refs/remotes/origin/master
                 <ul>
                     <li><a href="/simple-room.php" class="nav-primary__link-our-rooms__sub-menu">Chambre simple</a></li>
                     <li><a href="/double-room.php" class="nav-primary__link-our-rooms__sub-menu">Chambre double</a></li>
