@@ -1,0 +1,74 @@
+.content {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+#our-rooms {
+    background: url(/content/img/backgrounds/Milan20120.jpg) fixed no-repeat center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    -webkit-transition: opacity 1s ease-in;
+    -moz-transition: opacity 1s ease-in;
+    -o-transition: opacity 1s ease-in;
+    -ms-transition: opacity 1s ease-in;
+    transition: opacity 1s ease-in;
+    width: 100%;
+}
+
+.container div.load {
+    opacity: 1;
+}
+
+.our-rooms-content-card {
+    background: white;
+    color: #393b45;
+    font-size: 20px;
+    opacity: 0.8;
+    padding: 10px 10px 10px 10px;
+    position: absolute;
+    text-align: left;
+    top: 250px;
+    width: 300px;
+}
+
+.our-rooms-content-card img {
+    margin-right: 5px;
+}
+
+.our-rooms-content-card h3 {
+    display: inline-block;
+}
+
+#card-one {
+    left: 10%;
+}
+
+#card-two {
+    left: 40%;
+}
+
+#card-three {
+    left: 70%;
+}
+
+.our-rooms-content-card a:hover {
+    cursor: pointer;
+}
+
+.our-rooms-content-card button {
+    appearance: none;
+    border: 1px solid white;
+    background: green;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
