@@ -24,4 +24,3 @@ function highlightCurrentLink(){
 }
 
 $(".container").addClass("load");
-$(".our-rooms-content-card").addClass("load");
