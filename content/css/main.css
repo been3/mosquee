@@ -210,7 +210,7 @@ footer {
     bottom: 0;
     height: 61px;
     margin: 0;
-    position: absolute;
+    position: fixed;
     width: 100%;
 }
 
