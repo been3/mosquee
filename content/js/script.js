@@ -1,14 +1,3 @@
-window.onload = highlightCurrentLink;
-
-function highlightCurrentLink(){
-    var a = document.getElementsByClassName("nav-primary__link");
-    for (var i = 0; i < a.length; i++) {
-        if (a[i].href.split("#")[0] == window.location.href.split("#")[0]) {
-            a[i].classList.add("current");
-        }
-    }
-}
-
 (function($) {
     var nav = $("#nav-primary");
     nav.find("li").each(function() {
@@ -22,3 +11,16 @@ function highlightCurrentLink(){
         }
     });
 })(jQuery);
+
+window.onload = highlightCurrentLink;
+
+function highlightCurrentLink(){
+    var a = document.getElementsByClassName("nav-primary__link");
+    for (var i = 0; i < a.length; i++) {
+        if (a[i].href.split("#")[0] == window.location.href.split("#")[0]) {
+            a[i].classList.add("current");
+        }
+    }
+}
+
+$("#our-rooms .container").addClass("load");
