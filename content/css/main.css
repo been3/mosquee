@@ -123,6 +123,12 @@ header nav ul li a {
     transition: background 0.3s ease-in;
 }
 
+header nav ul li a.current {
+    background: #f46330;
+    color: white;
+    transition: none;
+}
+
 /* header nav login links */
 
 #nav-primary__login:before {
@@ -204,7 +210,7 @@ footer {
     bottom: 0;
     height: 61px;
     margin: 0;
-    position: absolute;
+    position: fixed;
     width: 100%;
 }
 
