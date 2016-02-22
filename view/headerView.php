@@ -28,7 +28,7 @@
                 </ul>
             </li>
             <li><a href="/contacts" class="nav-primary__link">Contact</a></li>
-            <li><a href="" id="nav-primary__login"></a></li>
+            <li><a href="/login.php" id="nav-primary__login"></a></li>
         </ul>
     </nav>
 </header>
