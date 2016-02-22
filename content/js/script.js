@@ -23,4 +23,4 @@ function highlightCurrentLink(){
     }
 }
 
-$("#our-rooms .container").addClass("load");
+$(".container").addClass("load");

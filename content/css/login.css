@@ -1,25 +1,37 @@
 body {
-    background: url(../img/backgrounds/just-fab-san-francisco-headquarters-3.jpg) fixed no-repeat center;
+    background: url(/content/img/backgrounds/just-fab-san-francisco-headquarters-3.jpg) fixed no-repeat center;
     background-size: cover;
 }
 
 #nav-primary__login:before {
-    content: url(../img/icons/avatar83_32px_white.png);
+    content: url(/content/img/icons/avatar83_32px_white.png);
 }
 
 section {
     position: absolute;
-    right: 200px;
+    right: 150px;
     top: 100px;
-    width: 300px;
+    width: 350px;
 }
 
 .container {
+    position: relative;
+    left: 50px;
     background: #f5f5f5;
     padding: 1px 20px 20px 20px;
     color: #393b45;
     margin: 10px;
-    width: 100%;
+    opacity: 0;
+    -webkit-transition: left 1s ease-out, opacity 1s ease 0.3s;
+    -moz-transition: left 1s ease-out, opacity 1s ease 0.3s;
+    -o-transition: left 1s ease-out, opacity 1s ease 0.3s;
+    transition: left 1s ease-out, opacity 1s ease 0.3s;
+    width: 300px;
+}
+
+.container.load {
+    opacity: 1;
+    left: 0;
 }
 
 .container form {
@@ -59,9 +71,6 @@ section {
     opacity: 1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #999999;
-}
-:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
     color: #999999;
 }
 
