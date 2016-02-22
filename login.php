@@ -68,6 +68,6 @@
         </section>
 
         <?php include 'view/footerView.php'; ?>
-        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="/content/js/script.js"></script>
     </body>
 </html>
