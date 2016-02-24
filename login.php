@@ -47,17 +47,13 @@
         <!-- Login with... social buttons -->
         <section class="login__social-buttons">
             <div class="container">
-                <a href="/" title="Se connecter avec Facebook">
-                    <div class="login__social-button" id="login__social-button__facebook">
-                        <img src="/content/img/icons/facebook-letter-logo_24px_white.png" alt="login-with-facebook" />
-                        <p>Se connecter avec Facebook</p>
-                    </div>
+                <a href="/" title="Se connecter avec Facebook" class="login__social-button" id="login__social-button__facebook">
+                    <img src="/content/img/icons/facebook-letter-logo_24px_white.png" alt="login-with-facebook" />
+                    <p>Se connecter avec Facebook</p>
                 </a>
-                <a href="/" title="Se connecter avec Google Plus">
-                    <div class="login__social-button" id="login__social-button__google">
-                        <img src="/content/img/icons/google-plus_24px_white.png" alt="login-with-google+" />
-                        <p>Se connecter avec Google+</p>
-                    </div>
+                <a href="/" title="Se connecter avec Google Plus" class="login__social-button" id="login__social-button__google">
+                    <img src="/content/img/icons/google-plus_24px_white.png" alt="login-with-google+" />
+                    <p>Se connecter avec Google+</p>
                 </a>
             </div>
         </section>
