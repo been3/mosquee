@@ -40,28 +40,48 @@
         <script type="text/javascript" src="/content/js/jquery.js"></script>
         <script type="text/javascript" src="/content/js/modernizr.js"></script>
     </head>
+
     <body>
         <?php include 'view/headerView.php'; ?>
 
-        <section>
+        <!-- Login with... social buttons -->
+        <section class="login__social-buttons">
             <div class="container">
-                <form action="/authorize" method="post" id="form-signin">
+                <a href="/" title="Se connecter avec Facebook">
+                    <div class="login__social-button" id="login__social-button__facebook">
+                        <img src="/content/img/icons/facebook-letter-logo_24px_white.png" alt="login-with-facebook" />
+                        <p>Se connecter avec Facebook</p>
+                    </div>
+                </a>
+                <a href="/" title="Se connecter avec Google Plus">
+                    <div class="login__social-button" id="login__social-button__google">
+                        <img src="/content/img/icons/google-plus_24px_white.png" alt="login-with-google+" />
+                        <p>Se connecter avec Google+</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Sign in and sign up forms -->
+        <section class="login__forms">
+            <div class="container">
+                <form action="" method="post" id="login__form-signin">
                     <h5>Se connecter</h5>
-                    <span><img src="content/img/icons/mail-envelope_32px_485160.png" alt="username" /></span>
-                    <input type="text" placeholder="Email" name="username" />
+                    <span><img src="/content/img/icons/mail-envelope_32px_485160.png" alt="username" /></span>
+                    <input type="text" placeholder="Email / Nom d'utilisateur" name="username" /><br />
                     <span><img src="content/img/icons/closed-padlock_16px_485160.png" alt="password" /></span>
-                    <input type="password" placeholder="Mot de passe" name="password" />
-                    <a href="forgot-password">Mot de passe oublié ?</a>
+                    <input type="password" placeholder="Mot de passe" name="password" /><br />
+                    <a href="/">Mot de passe oublié ?</a>
                     <button>Se connecter</button>
                 </form>
             </div>
             <div class="container">
-                <form action="signup-reques" method="post" id="form-signup">
+                <form action="" method="post" id="login__form-signup">
                     <h5>Pas encore inscrit ?</h5>
                     <h3>Créer un compte</h3>
                     <input type="text" placeholder="Nom" name="firstname" />
                     <input type="text" placeholder="Prénom" name="lastname" />
-                    <input type="text" pattern="[a-zA-Z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?" placeholder="Email" name="email" oninput="try {if ($(this).val().match(new RegExp(this.getAttribute('pattern')))) { this.setCustomValidity(''); } else { this.setCustomValidity('Veuillez entrer une adresse valide'); }} catch(e) {}"/><br />
+                    <input type="text" placeholder="Email" name="email" pattern="[a-zA-Z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?" oninput="try {if ($(this).val().match(new RegExp(this.getAttribute('pattern')))) { this.setCustomValidity(''); } else { this.setCustomValidity('Veuillez entrer une adresse valide'); }} catch(e) {}" /><br />
                     <button>S'inscrire</button>
                 </form>
             </div>
