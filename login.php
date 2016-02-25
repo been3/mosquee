@@ -41,7 +41,7 @@
         <![endif]-->
 
         <script type="text/javascript" src="/content/js/jquery-1.12.1.min.js"></script>
-        <script type="text/javascript" src="/content/js/modernizr.js"></script>
+        <script type="text/javascript" src="/content/js/modernizr-3.3.1.min.js"></script>
         <!-- Facebook Login script -->
         <script type="text/javascript" src="/content/js/fbLogin.js"></script>
 
