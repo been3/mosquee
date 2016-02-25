@@ -22,7 +22,7 @@ body {
 .login__social-buttons .container {
     position: absolute;
     opacity: 0;
-    top: 75px;
+    top: 100px;
     -webkit-transition: top 1s ease-out, opacity 1s ease 0.3s;
     -moz-transition: top 1s ease-out, opacity 1s ease 0.3s;
     -o-transition: top 1s ease-out, opacity 1s ease 0.3s;
