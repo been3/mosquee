@@ -319,3 +319,33 @@ footer nav ul li a:hover {
     font-size: 14px;
     text-align: center;
 }
+
+
+/* ERROR 404 PAGE */
+
+.content.not-found {
+    background: #f46330;
+    color: white;
+    font-size: 60px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.not-found section {
+    top: 210px;
+    margin: auto;
+    position: relative;
+    width: 1000px;
+}
+
+.not-found section img {
+    float: left;
+    margin-right: 50px;
+}
+
+.not-found h1, p {
+    display: inline;
+}
