@@ -37,7 +37,7 @@
             <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
         <![endif]-->
 
-        <script type="text/javascript" src="content/js/jquery.js"></script>
+        <script type="text/javascript" src="content/js/jquery-1.12.1.min.js"></script>
         <script type="text/javascript" src="content/js/modernizr.js"></script>
     </head>
     <body>
