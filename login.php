@@ -42,35 +42,12 @@
 
         <script type="text/javascript" src="/content/js/jquery.js"></script>
         <script type="text/javascript" src="/content/js/modernizr.js"></script>
-        <!-- Facebook Login integration -->
+        <!-- Facebook Login script -->
         <script type="text/javascript" src="/content/js/fbLogin.js"></script>
-        <script src="https://apis.google.com/js/api:client.js"></script>
-        <script>
-            var googleUser = {};
-            var startApp = function() {
-                gapi.load('auth2', function(){
-                    // Retrieve the singleton for the GoogleAuth library and set up the client.
-                    auth2 = gapi.auth2.init({
-                        client_id: '189757043401-bl1ecnjjqu824qt4n4u7pobn431nks3g.apps.googleusercontent.com',
-                        cookiepolicy: 'single_host_origin',
-                        // Request scopes in addition to 'profile' and 'email'
-                        //scope: 'additional_scope'
-                    });
-                    attachSignin(document.getElementById('login__social-button__google'));
-                });
-            };
 
-            function attachSignin(element) {
-                console.log(element.id);
-                auth2.attachClickHandler(element, {},
-                    function(googleUser) {
-                        document.getElementById('name').innerText = "Signed in: " +
-                            googleUser.getBasicProfile().getName();
-                    }, function(error) {
-                        alert(JSON.stringify(error, undefined, 2));
-                    });
-            }
-        </script>
+        <!-- Google API & script -->
+        <script type="text/javascript" src="https://apis.google.com/js/api:client.js"></script>
+        <script type="text/javascript" src="/content/js/gplusLogin.js"></script>
 
     </head>
 
@@ -127,6 +104,7 @@
         <?php include 'view/footerView.php'; ?>
         <script type="text/javascript" src="/content/js/script.js"></script>
 
-        <script>startApp();</script>
+        <!-- Google Login -->
+        <script type="text/javascript">startApp();</script>
     </body>
 </html>
