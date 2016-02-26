@@ -26,7 +26,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
-        <title>Hôtel Les Ziags | Accueil</title>
+        <title>Erreur 404</title>
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
