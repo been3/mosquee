@@ -1,1 +1,3 @@
+# Redirige toutes les erreurs
+ErrorDocument 403 /403.php
 ErrorDocument 404 /404.php
