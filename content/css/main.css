@@ -319,3 +319,40 @@ footer nav ul li a:hover {
     font-size: 14px;
     text-align: center;
 }
+
+
+/* ERROR 403 & 404 PAGE */
+
+.content.error {
+    background: #f46330;
+    color: white;
+    font-size: 60px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.content.error section {
+    top: 210px;
+    margin: auto;
+    position: relative;
+}
+
+.error-404 {
+    width: 970px;
+}
+
+.error-403 {
+    width: 700px;
+}
+
+.content.error section img {
+    float: left;
+    margin-right: 50px;
+}
+
+.content.error h1, p {
+    display: inline;
+}
