@@ -10,25 +10,25 @@
     </div>
     <nav id="nav-primary">
         <ul>
-            <li><a href="/hotel.php" class="nav-primary__link">L'Hôtel</a></li>
+            <li><a href="/hotel" class="nav-primary__link">L'Hôtel</a></li>
             <li>
-                <a href="/our-rooms.php" class="nav-primary__link">Nos chambres</a>
+                <a href="/our-rooms" class="nav-primary__link">Nos chambres</a>
                 <ul>
-                    <li><a href="/simple-room.php" class="nav-primary__link-our-rooms__sub-menu">Chambre simple</a></li>
-                    <li><a href="/double-room.php" class="nav-primary__link-our-rooms__sub-menu">Chambre double</a></li>
-                    <li><a href="/familiy-suite.php" class="nav-primary__link-our-rooms__sub-menu">Suite familiale</a></li>
+                    <li><a href="/simple-room" class="nav-primary__link-our-rooms__sub-menu">Chambre simple</a></li>
+                    <li><a href="/double-room" class="nav-primary__link-our-rooms__sub-menu">Chambre double</a></li>
+                    <li><a href="/familiy-suite" class="nav-primary__link-our-rooms__sub-menu">Suite familiale</a></li>
                 </ul>
             </li>
-            <li><a href="/reservations.php" class="nav-primary__link">Réservations</a></li>
+            <li><a href="/reservations" class="nav-primary__link">Réservations</a></li>
             <li>
-                <a href="/about.php" class="nav-primary__link">&Agrave; propos de nous</a>
+                <a href="/about" class="nav-primary__link">&Agrave; propos de nous</a>
                 <ul>
-                    <li><a href="/directors-message.php" class="nav-primary__link-who__sub-menu">Le mot du directeur</a></li>
-                    <li><a href="/team.php" class="nav-primary__link-who__sub-menu">L'équipe</a></li>
+                    <li><a href="/directors-message" class="nav-primary__link-who__sub-menu">Le mot du directeur</a></li>
+                    <li><a href="/team" class="nav-primary__link-who__sub-menu">L'équipe</a></li>
                 </ul>
             </li>
             <li><a href="/contacts" class="nav-primary__link">Contact</a></li>
-            <li><a href="/login.php" class="nav-primary__link" id="nav-primary__login"></a></li>
+            <li><a href="/login" class="nav-primary__link" id="nav-primary__login"></a></li>
         </ul>
     </nav>
 </header>
