@@ -17,7 +17,7 @@
     │                                          │
     │ ALEX BENOIT                              │
     ├──────────┬───────────────────────────────┤
-    │ Email    │ ben75.alex@gmail.com          │
+    │ Email    │ benalex75@gmail.com           │
     ├──────────┼───────────────────────────────┤
     │ Location │ Paris, FR                     │
     ╰──────────┴───────────────────────────────╯
@@ -28,25 +28,26 @@
 
         <!-- META -->
         <meta charset="utf-8" />
-        <title>Hôtel Les Ziags | Accueil</title>
+
+        <title>Erreur 404</title>
+
         <!--[if lt IE 9]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
 
         <!-- STYLES -->
         <!-- CSS -->
         <link href="content/css/main.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="content/css/home.css" rel="stylesheet" type="text/css" media="screen" />
         <!-- Favicon -->
         <link rel="shortcut icon" href="favicon.ico" />
         <!--[if IE]>
-            <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
         <![endif]-->
 
+        <!-- SCRIPTS -->
         <script type="text/javascript" src="content/js/jquery-1.12.1.min.js"></script>
         <script type="text/javascript" src="content/js/modernizr-3.3.1.min.js"></script>
     </head>
-
     <body>
 
         <!-- Wrapper -->
@@ -56,13 +57,18 @@
             <?php include 'view/headerView.php'; ?>
 
             <!-- Content -->
-            <div class="content">
-
+            <div class="content error">
+                <section class="error-404">
+                    <img src="/content/img/icons/sad-emoticon-square-face_256px_white.png" alt="not found">
+                    <h1>404</h1><br />
+                    <p>La page que vous recherchez n'existe pas.</p>
+                </section>
             </div>
 
             <!-- Footer -->
             <?php include 'view/footerView.php'; ?>
         </div>
+
         <script type="text/javascript" src="content/js/script.js"></script>
     </body>
 </html>

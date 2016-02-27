@@ -1,3 +1,4 @@
+// Primary nav animations
 (function($) {
     var nav = $("#nav-primary");
     nav.find("li").each(function() {
@@ -12,6 +13,7 @@
     });
 })(jQuery);
 
+// Current link highlighting
 window.onload = highlightCurrentLink;
 
 function highlightCurrentLink(){
@@ -23,4 +25,5 @@ function highlightCurrentLink(){
     }
 }
 
-$("#our-rooms .container").addClass("load");
+// Animations on loading
+$(".container").addClass("load");
