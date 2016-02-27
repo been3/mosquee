@@ -1,9 +1,9 @@
-/* Background image */
-body {
+.content {
     background: url(/content/img/backgrounds/just-fab-san-francisco-headquarters-3.jpg) fixed no-repeat center;
     background-size: cover;
+    position: relative;
+    height: 500px;
 }
-
 
 /* Changing login link image in primary nav (highlight) */
 #nav-primary__login:before {
@@ -15,7 +15,7 @@ body {
 
 .login__social-buttons {
     left: 400px;
-    position: absolute;
+    position: relative;
     width: 290px;
 }
 
@@ -83,7 +83,6 @@ body {
 .login__forms {
     position: absolute;
     right: 150px;
-    top: 100px;
     width: 350px;
 }
 

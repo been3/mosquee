@@ -28,8 +28,20 @@ body {
     margin: 0;
 }
 
-/* HEADER */
-/* branding */
+.wrapper {
+    float: none;
+    overflow:visible;
+    position: absolute;
+    height: 80%;
+    width: 100%;
+}
+
+/*----------
+    HEADER
+----------*/
+
+
+/* BRANDING */
 
 header div a {
     background: #fb9e08;
@@ -47,12 +59,14 @@ header div a {
     -o-transition: height 0.2s ease-in;
     transition: height 0.2s ease-in;
     width: 200px;
+    z-index: 1;
 }
 
 header div a:hover {
     height: 165px;
 }
 
+/* Title style */
 header div a h1, h3 {
     margin: 0;
 }
@@ -63,6 +77,7 @@ header div a h1 {
     text-align: right;
 }
 
+/* Rotate 'LES' */
 #branding-title--rotate {
     display: table;
     left: 15px;
@@ -75,12 +90,14 @@ header div a h1 {
     white-space: nowrap;
 }
 
-/* nav primary */
+
+/* HEADER MENU STYLE */
 
 header nav {
     background: white;
     height: 100px;
     width: 100%;
+    z-index: 1;
 }
 
 header nav ul {
@@ -123,13 +140,14 @@ header nav ul li a {
     transition: background 0.3s ease-in;
 }
 
+/* Highlights current link in primary nav */
 header nav ul li a.current {
     background: #f46330;
     color: white;
     transition: none;
 }
 
-/* header nav login links */
+/* HEADER MENU LINKS STYLE */
 
 #nav-primary__login:before {
     content: url(../img/icons/avatar83_32px_grey.png);
@@ -150,17 +168,17 @@ header nav ul li ul li a:focus {
     color: white;
 }
 
-/* Adding arrays for sub menus */
+/* Adds arrays for sub menus */
 
-li > a:after {
+.nav-primary__link:after {
     content: "   \25be";
 }
 
-li > a:only-child:after {
+.nav-primary__link:only-child:after {
     content: '';
 }
 
-/* Sub menus style */
+/* HEADER SUB MENU STYLE */
 
 header nav ul li ul {
     background: white;
@@ -189,11 +207,13 @@ header nav ul li ul li a {
     padding: 5px 0 5px 20px;
 }
 
-header nav ul li ul li .nav-primary__link-our-rooms__sub-menu {
+
+/* Specific width for sub menu links */
+.nav-primary__link-our-rooms__sub-menu {
     width: 208px;
 }
 
-header nav ul li ul li .nav-primary__link-who__sub-menu {
+.nav-primary__link-who__sub-menu {
     width: 239px;
 }
 
@@ -210,8 +230,7 @@ footer {
     background: #485160;
     bottom: 0;
     height: 61px;
-    margin: 0;
-    position: fixed;
+    position: relative;
     width: 100%;
 }
 
@@ -225,8 +244,10 @@ footer {
 }
 
 #site-info__social-icons a {
-    margin: 0 5px 0 5px;
+    margin: 0 5px;
 }
+
+/* Social icons' content */
 
 #site-info__social-icons__twitter:before {
     content: url(../img/icons/twitter_32px_white.png);
@@ -261,6 +282,12 @@ footer {
 }
 
 /* Footer menu */
+
+footer nav {
+    position: relative;
+    width: 650px;
+    margin: auto;
+}
 
 footer nav ul {
     background: #485160;
@@ -310,14 +337,28 @@ footer nav ul li a:hover {
 
 #site-info__credits {
     float: right;
-    margin: 0 5% 0 0;
     position: relative;
+    right: 50px;
+    text-align: center;
+    top: 10px;
+    margin: auto;
 }
 
 #site-info__credits p {
     color: white;
     font-size: 14px;
-    text-align: center;
+}
+
+
+/*--------------------
+    CONTENT STYLE
+--------------------*/
+
+.content {
+    height: 100%;
+    position: relative;
+    top: 0;
+    width: 100%;
 }
 
 
@@ -327,15 +368,16 @@ footer nav ul li a:hover {
     background: #f46330;
     color: white;
     font-size: 60px;
-    height: 100%;
-    position: absolute;
     top: 0;
     width: 100%;
-    z-index: -1;
+}
+
+.content.error:after {
+    height: 100%;
 }
 
 .content.error section {
-    top: 210px;
+    top: 100px;
     margin: auto;
     position: relative;
 }
