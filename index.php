@@ -56,7 +56,7 @@
             <?php include 'view/headerView.php'; ?>
 
             <!-- Content -->
-            <div class="content">
+            <div class="content home">
 
             </div>
 

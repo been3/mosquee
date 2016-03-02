@@ -1,5 +1,9 @@
-.content {
+/*///////////////
+    HOME PAGE
+///////////////*/
+
+.home.content {
     background: url(/content/img/backgrounds/airbnb-office-1.jpg) fixed no-repeat center;
     background-size: cover;
-    width: 100%;
+    height: 100%;
 }

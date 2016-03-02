@@ -1,14 +1,18 @@
-.content {
+/*/////////////////
+    LOGIN PAGE
+/////////////////*/
+
+.content.login {
     background: url(/content/img/backgrounds/just-fab-san-francisco-headquarters-3.jpg) fixed no-repeat center;
     background-size: cover;
-    position: relative;
-    height: 500px;
+    margin: -10px 0;
 }
 
 /* Changing login link image in primary nav (highlight) */
 #nav-primary__login:before {
     content: url(/content/img/icons/avatar83_32px_white.png);
 }
+
 
 
 /* LOGIN WITH ... SOCIAL BUTTONS */
@@ -20,7 +24,7 @@
 }
 
 .login__social-buttons .container {
-    position: absolute;
+    position: relative;
     opacity: 0;
     top: 100px;
     -webkit-transition: top 1s ease-out, opacity 1s ease 0.3s;
@@ -81,8 +85,10 @@
 /* SIGN IN AND SIGN UP FORMS */
 
 .login__forms {
-    position: absolute;
-    right: 150px;
+    left: 350px;
+    margin: auto;
+    position: relative;
+    top: -30px;
     width: 350px;
 }
 
@@ -107,32 +113,32 @@
     opacity: 1;
 }
 
-.container form {
+.login .container form {
     width: 100%;
 }
 
-.container span {
+.login .container span {
     float: left;
     margin: 0;
     position: relative;
     top: 5px;
 }
 
-.container form span img {
+.login .container form span img {
     background: #f0f0f0;
     border: 1px solid #d9d9d9;
     border-right: none;
     padding: 4px;
 }
 
-.container form input {
+.login .container form input {
     border: 1px solid #d9d9d9;
     font-size: medium;
     margin: 5px 0 8px 0;
     padding: 3px;
 }
 
-.container form input:focus {
+.login .container form input:focus {
     border: 1px solid #00a6fd;
 }
 
@@ -160,25 +166,26 @@
     width: 290px;
 }
 
-.container form a {
+.login .container form a {
     font-size: 12px;
     width: 100%;
 }
 
-.container form div input:focus {
-
-}
-
-.container form button {
-    position: relative;
+.login .container form button {
     background: #f46330;
-    border: none;
+    border: 1px solid #f46330;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
     color: white;
     font-size: 14px;
-    padding: 10px 15px 10px 15px;
+    padding: 10px 15px;
+}
+
+.login .container form button:hover {
+    background: none;
+    color: #f46330;
+    cursor: pointer;
 }
 
 #login__form-signin button {
@@ -189,9 +196,4 @@
 #login__form-signup button {
     position: relative;
     left: 210px;
-}
-
-.container form button:hover {
-    background: #fb9e08;
-    cursor: pointer;
 }

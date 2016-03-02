@@ -69,7 +69,7 @@
             <?php include 'view/headerView.php'; ?>
 
             <!-- Content -->
-            <div class="content">
+            <div class="content login">
                 <!-- Login with... social buttons -->
                 <section class="login__social-buttons">
                     <div class="container">

@@ -38,7 +38,7 @@
         <!-- STYLES -->
         <!-- CSS -->
         <link href="content/css/main.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="content/css/our-rooms.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="content/css/bedrooms.css" rel="stylesheet" type="text/css" media="screen" />
         <!-- Favicon -->
         <link rel="shortcut icon" href="favicon.ico" />
         <!--[if IE]>
@@ -57,42 +57,42 @@
             <?php include 'view/headerView.php'; ?>
 
             <!-- Content -->
-            <div class="content">
+            <div class="content bedrooms">
 
                 <!-- Section 'Introduction' -->
-                <div id="our-rooms">
+                <div id="bedrooms">
                     <div class="container">
-                        <div class="our-rooms-content-card">
+                        <div class="bedrooms-content-card">
                             <img src="/content/img/icons/list_24px_fb9e08.png" alt="list" />
                             <h3>Un choix élargi</h3>
                             <p>
                                 L'hôtel Les Ziags offre toute une gamme de chambres décorées, simples, doubles, twin, avec ou sans salle de bains.
                             </p>
-                            <a href="/our-rooms#our-rooms-presentation"><button>Voir les chambres</button></a>
+                            <a href="/bedrooms#gallery"><button>Voir les chambres</button></a>
                         </div>
-                        <div class="our-rooms-content-card">
+                        <div class="bedrooms-content-card">
                             <img src="/content/img/icons/label_24px_green.png" alt="label" />
                             <h3>Des tarifs abordables</h3>
                             <p>
                                 Abordables, nos tarifs commencent à 20€ la nuit, à deux pas de la capitale... Vérifiez bien nos offres spéciales!
                             </p>
-                            <a href="/pricing.php"><button>Consulter nos tarifs</button></a>
+                            <a href="/bedrooms#pricing"><button>Consulter nos tarifs</button></a>
                         </div>
-                        <div class="our-rooms-content-card">
+                        <div class="bedrooms-content-card">
                             <img src="/content/img/icons/circle-with-check-symbol_24px_blue.png" alt="check" />
                             <h3>Confort et sécurité</h3>
                             <p>
                                 Toutes les chambres de l’hôtel sont nettoyées quotidiennement et toutes possèdent un accès sécurisé avec une carte.
                             </p>
-                            <a href="/our-rooms.php"><button>En savoir plus</button></a>
+                            <a href="/bedrooms.php"><button>En savoir plus</button></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Section 'Overview/Gallery' -->
-                <div id="our-rooms-presentation">
+                <div id="gallery">
                     <div class="container">
-                        <div class="our-rooms-content-gallery" id="our-rooms-content-gallery__one">
+                        <div class="bedrooms-content-gallery left">
                             <div class="hover-effect">
                                 <img class="img-responsive" src="/content/img/illustrations/single-room.png" alt="" />
                                 <div class="overlay">
@@ -101,7 +101,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="our-rooms-content-gallery" id="our-rooms-content-gallery__two">
+                        <div class="bedrooms-content-gallery middle">
                             <div class="hover-effect">
                                 <img class="img-responsive" src="/content/img/illustrations/double-room.png" alt="" />
                                 <div class="overlay">
@@ -110,7 +110,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="our-rooms-content-gallery" id="our-rooms-content-gallery__three">
+                        <div class="bedrooms-content-gallery right">
                             <div class="hover-effect">
                                 <img class="img-responsive" src="/content/img/illustrations/twin-room.jpg" alt="" />
                                 <div class="overlay">
