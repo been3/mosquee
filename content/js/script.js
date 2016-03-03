@@ -27,3 +27,4 @@ function highlightCurrentLink(){
 
 // Animations on loading
 $(".container").addClass("load");
+$(".booking .overlay").addClass("load");

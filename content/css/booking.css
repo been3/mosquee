@@ -1,0 +1,64 @@
+/*//////////////////////
+    BOOKING PAGE
+//////////////////////*/
+
+.booking.content {
+    background: url("/content/img/backgrounds/Airbnb-Portland-Office-Yellowtrace-19.jpg") no-repeat center;
+    background-size: cover;
+    height: 100%;
+}
+
+/* Overlay animation */
+.booking .overlay {
+    height: 0;
+    background-color: rgba(48, 152, 157, 0.8);
+    -webkit-transition: height 1s ease 0.3s;
+    -moz-transition: height 1s ease 0.3s;
+    -o-transition: height 1s ease 0.3s;
+    transition: height 1s ease 0.3s;
+}
+
+.booking .overlay.load {
+    height: 100%;
+}
+
+/**/
+.booking .container.progression {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    position: relative;
+    top: 100px;
+}
+
+/* Center the steps bar */
+.booking .steps {
+    position: relative;
+    margin: auto;
+    width: 1174px;
+}
+
+.booking .step {
+    display: inline-block;
+    position: relative;
+}
+
+/* Displays array between each step */
+.booking .step:after {
+    content: url("/content/img/icons/arrow-point-to-right_32px_white.png");
+    position: relative;
+    margin: 0 30px;
+}
+
+/* No array for last step */
+.booking .step:last-child:after {
+    content: '';
+    margin: 0;
+}
+
+.booking .step h2 {
+    bottom: 7px;
+    color: white;
+    display: inline-block;
+    margin: 0 0 0 8px;
+    position: relative;
+}
