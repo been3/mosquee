@@ -28,7 +28,7 @@
 
         <!-- META -->
         <meta charset="utf-8" />
-        <title>Hôtel Les Ziags | Réservation</title>
+        <title>Hôtel Les Ziags | Réservation | Choix du séjour</title>
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -62,30 +62,11 @@
                 <div class="overlay">
 
                     <!-- Steps progression -->
-                    <div class="container booking-progress">
-                        <div class="steps">
-                            <div class="step" id="booking-step-one">
-                                <img src="/content/img/icons/number-one-in-a-circle_32px_white.png" alt="">
-                                <h2>Choix des chambres</h2>
-                            </div>
-                            <div class="step" id="booking-step-two">
-                                <img src="/content/img/icons/number-two-in-a-circle_32px_white.png" alt="">
-                                <h2>Vos coordonnées</h2>
-                            </div>
-                            <div class="step" id="booking-step-three">
-                                <img src="/content/img/icons/number-three-in-a-circle32px_white.png" alt="">
-                                <h2>Paiement</h2>
-                            </div>
-                            <div class="step" id="booking-step-four">
-                                <img src="/content/img/icons/number-four-in-a-circle_32px_white.png" alt="">
-                                <h2>Confirmation</h2>
-                            </div>
-                        </div>
-                    </div>
+                    <?php include '../view/bookingProgressionView.php' ?>
 
                     <!-- Form -->
-                    <div class="container booking-choose-form">
-                        <form action="../login.php" method="post">
+                    <div class="container booking-container-main">
+                        <form action="connect.php" method="post">
                             <table>
                                 <tr>
                                     <td>
@@ -122,7 +103,7 @@
                                             Motif<br />
                                             <input type="radio" name="booking-choose-purpose" value="business" id="booking-choose-purpose-business" /><label for="booking-choose-purpose-business">  Voyage d'affaire</label><br />
                                             <input type="radio" name="booking-choose-purpose" value="tourism" id="booking-choose-purpose-tourism" /><label for="booking-choose-purpose-tourism">  Tourisme</label><br />
-                                            <input type="radio" name="booking-choose-purpose" value="none" id="booking-choose-purpose-none" /><label for="booking-choose-purpose-none">  Ne se prononce pas</label>
+                                            <input type="radio" name="booking-choose-purpose" value="none" id="booking-choose-purpose-none" /><label for="booking-choose-purpose-none">  Autre</label>
                                         </p>
                                     </td>
                                 </tr>
