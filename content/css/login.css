@@ -117,19 +117,7 @@
     width: 100%;
 }
 
-.login .container span {
-    float: left;
-    margin: 0;
-    position: relative;
-    top: 5px;
-}
-
-.login .container form span img {
-    background: #f0f0f0;
-    border: 1px solid #d9d9d9;
-    border-right: none;
-    padding: 4px;
-}
+#signin-input-login:before
 
 #login__form-signin input {
     width: 265px;

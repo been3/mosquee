@@ -404,13 +404,26 @@ form input:focus, select:focus {
     color: #999999;
 }
 
-.input-date-container:before {
+.input-container:before {
     background: #f0f0f0;
-    content: url("/content/img/icons/calendar_16px_485160.png");
-    padding: 3px;
     border: 1px solid #d9d9d9;
     border-right: none;
+    padding: 3px;
 }
+
+.input-container-date:before {
+    content: url("/content/img/icons/calendar_16px_485160.png");
+}
+
+.input-container-username:before {
+    content: url("/content/img/icons/mail-envelope_32px_485160.png");
+}
+
+.input-container-password:before {
+    content: url("/content/img/icons/closed-padlock_16px_485160.png");
+}
+
+
 
 /* Buttons in forms */
 .container form button {

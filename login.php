@@ -96,10 +96,8 @@
                     <div class="container">
                         <form action="" method="post" id="login__form-signin">
                             <h5>Se connecter</h5>
-                            <span><img src="/content/img/icons/mail-envelope_32px_485160.png" alt="username" /></span>
-                            <input type="text" placeholder="Email / Nom d'utilisateur" name="username" /><br />
-                            <span><img src="content/img/icons/closed-padlock_16px_485160.png" alt="password" /></span>
-                            <input type="password" placeholder="Mot de passe" name="password" /><br />
+                            <div class="input-container input-container-username"><input type="text" placeholder="Email / Nom d'utilisateur" name="username" /></div>
+                            <div class="input-container input-container-password" id="signin-input-password"><input type="password" placeholder="Mot de passe" name="password" /></div>
                             <a href="/">Mot de passe oublié ?</a>
                             <button>Se connecter</button>
                         </form>

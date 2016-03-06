@@ -64,7 +64,7 @@
                     <!-- Steps progression -->
                     <?php include '../view/bookingProgressionView.php' ?>
 
-                    <!-- Form -->
+                    <!-- Container -->
                     <div class="container booking-container-main">
                         <h1>Vous n'êtes pas connecté.</h1>
                         <h2 class="countdown"></h2>
@@ -85,7 +85,7 @@
                 $("h2.countdown").html("Redirection vers la page de connection dans " + count + ".");
                 if (count == 0) {
                     clearInterval(countdown);
-                    window.open( "/login.php", "_self" );
+                    window.open( "/login", "_self" );
                 }
                 count--;
             }, 1000);

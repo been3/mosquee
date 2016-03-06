@@ -66,18 +66,18 @@
 
                     <!-- Form -->
                     <div class="container booking-container-main">
-                        <form action="connect.php" method="post">
+                        <form action="/booking/connect" method="post">
                             <table>
                                 <tr>
                                     <td>
                                         <label for="arrival-datepicker">Date d'arrivée</label>
-                                        <div class="input-date-container"><input type="text" name="arrivalDate" placeholder="dd/mm/aaaa" id="arrival-datepicker" class="input-date-arrival"><br /></div>
+                                        <div class="input-container input-container-date"><input type="text" name="arrivalDate" placeholder="dd/mm/aaaa" id="arrival-datepicker" class="input-date-arrival" required></div>
                                         <label for="departure-datepicker">Date de départ</label>
-                                        <div class="input-date-container"><input type="text" name="departureDate" placeholder="dd/mm/aaaa" id="departure-datepicker" class="input-date-departure"></div>
+                                        <div class="input-container input-container-date"><input type="text" name="departureDate" placeholder="dd/mm/aaaa" id="departure-datepicker" class="input-date-departure" required></div>
 
                                         <label for="booking-choose-bedroom-number">Nombre de chambres</label><br />
-                                        <input type="number" step="1" value="1" min="1" max="12" id="booking-choose-bedroom-number"><a href="#" id="booking-choose-bedroom-number-confirm" onclick="addFields()">Confirmer</a>
-                                        <div id="booking-choose-bedroom-type-container" style="position: relative;"></div>
+                                        <input type="number" step="1" value="1" min="1" max="12" id="booking-choose-bedroom-number"><a href="#" id="booking-choose-bedroom-number-confirm" onclick="addFields()" required>Confirmer</a>
+                                        <div id="booking-choose-bedroom-type-container"></div>
                                     </td>
                                     <td>
                                         Formule
@@ -101,7 +101,7 @@
                                     <td>
                                         <p>
                                             Motif<br />
-                                            <input type="radio" name="booking-choose-purpose" value="business" id="booking-choose-purpose-business" /><label for="booking-choose-purpose-business">  Voyage d'affaire</label><br />
+                                            <input type="radio" name="booking-choose-purpose" value="business" id="booking-choose-purpose-business" required /><label for="booking-choose-purpose-business">  Voyage d'affaire</label><br />
                                             <input type="radio" name="booking-choose-purpose" value="tourism" id="booking-choose-purpose-tourism" /><label for="booking-choose-purpose-tourism">  Tourisme</label><br />
                                             <input type="radio" name="booking-choose-purpose" value="none" id="booking-choose-purpose-none" /><label for="booking-choose-purpose-none">  Autre</label>
                                         </p>
@@ -140,6 +140,7 @@
                     container.appendChild(document.createElement("br"));
                     var select = document.createElement("select");
                     select.setAttribute("name", "booking-choose-bedroom-type");
+                    select.required = true;
                     container.appendChild(select);
                     for (var k = 0; k < array.length; k++) {
                         var option = document.createElement("option");
