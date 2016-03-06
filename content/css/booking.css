@@ -72,6 +72,10 @@ footer {
     color: #f46330;
 }
 
+.booking-connect #booking-step-two {
+    color: #f46330;
+}
+
 .booking .container.booking-container-main {
     height: auto;
     width: 1000px;
