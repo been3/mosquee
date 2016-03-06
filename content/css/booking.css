@@ -2,6 +2,10 @@
     BOOKING PAGE
 //////////////////////*/
 
+footer {
+    clear: both;
+}
+
 .booking.content {
     background: url("/content/img/backgrounds/Airbnb-Portland-Office-Yellowtrace-19.jpg") no-repeat center;
     background-size: cover;
@@ -22,9 +26,10 @@
     height: 100%;
 }
 
-/**/
-.booking .container.progression {
+/* */
+.booking .container {
     background-color: rgba(0, 0, 0, 0.5);
+    color: white;
     padding: 10px;
     position: relative;
     top: 100px;
@@ -51,14 +56,153 @@
 
 /* No array for last step */
 .booking .step:last-child:after {
-    content: '';
+    content: "";
     margin: 0;
 }
 
 .booking .step h2 {
     bottom: 7px;
-    color: white;
     display: inline-block;
     margin: 0 0 0 8px;
     position: relative;
+}
+
+
+.booking-choose #booking-step-one {
+    color: #f46330;
+}
+
+.booking-choose .container.booking-choose-form {
+    height: auto;
+    width: 1000px;
+    margin: 50px auto 0 auto;
+    padding: 40px;
+    position: relative;
+}
+
+.booking-choose table {
+    margin: auto;
+}
+
+.booking-choose table td {
+    padding: 10px 50px;
+    vertical-align: top;
+}
+
+.input-date-arrival,
+.input-date-departure {
+    width: 245px;
+}
+
+.booking-choose form button {
+    float: right;
+    font-size: 18px;
+    position: relative;
+    width: 190px;
+}
+
+/*--------------
+    SWTICHES
+--------------*/
+
+.input-switch {
+    position: relative;
+    width: 175px;
+}
+
+.input-switch-checkbox {
+    display: none;
+}
+
+.input-switch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #999999;
+    border-radius: 20px;
+}
+
+.input-switch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.input-switch-inner:before,
+.input-switch-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.input-switch-inner:before {
+    padding-left: 10px;
+    background-color: #f46330;
+    color: white;
+}
+
+.input-switch-inner:after {
+    padding-right: 10px;
+    background-color: #f0f0f0;
+    color: #999999;
+    text-align: right;
+}
+
+#board-switch-label .input-switch-inner:before {
+    content: "Pension complète";
+}
+
+#board-switch-label .input-switch-inner:after {
+    content: "Demi-pension";
+}
+
+#bathroom-switch-label .input-switch-inner:before {
+    content: "Individuelle";
+}
+
+#bathroom-switch-label .input-switch-inner:after {
+    content: "Collective";
+}
+
+.input-switch-switch {
+    display: block;
+    width: 30px;
+    margin: 0;
+    background: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 140px;
+    border: 2px solid #999999;
+    border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+}
+
+.input-switch-checkbox:checked + .input-switch-label .input-switch-inner {
+    margin-left: 0;
+}
+
+.input-switch-checkbox:checked + .input-switch-label .input-switch-switch {
+    right: 0;
+}
+
+/*-------------------
+    CONFIRM BUTTON
+-------------------*/
+
+#booking-choose-bedroom-number-confirm {
+    background: #f46330;
+    border-radius: 6px;
+    color: white;
+    margin-left: 15px;
+    padding: 5px;
+    text-decoration: none;
 }
