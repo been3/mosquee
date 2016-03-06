@@ -14,17 +14,17 @@
 })(jQuery);
 
 // Current link highlighting
-window.onload = highlightCurrentLink;
-
-function highlightCurrentLink(){
-    var a = document.getElementsByClassName("nav-primary__link");
-    for (var i = 0; i < a.length; i++) {
-        if (a[i].href.split("#")[0] == window.location.href.split("#")[0]) {
-            a[i].classList.add("current");
+$(function() {
+    var pathname = window.location.pathname;
+    $(".nav-primary__link").each(function() {
+        if ($(this).attr("href") == pathname) {
+            $(this).addClass("current");
         }
-    }
-}
+    });
+});
 
 // Animations on loading
-$(".container").addClass("load");
-$(".booking .overlay").addClass("load");
+$(function() {
+    $(".container").addClass("load");
+    $(".booking .overlay").addClass("load");
+});
