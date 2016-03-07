@@ -10,7 +10,7 @@
             <li><a href="/index">Accueil</a></li>
             <li><a href="/about">&Agrave; propos de nous</a></li>
             <li><a href="/sitemap">Plan du site</a></li>
-            <li><a href="/contact">Contacts</a></li>
+            <li><a href="/contact">Contact</a></li>
         </ul>
     </nav>
     <div id="site-info__credits">

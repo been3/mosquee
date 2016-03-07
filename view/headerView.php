@@ -27,7 +27,7 @@
                     <li><a href="/team" class="nav-primary__link-who__sub-menu">L'équipe</a></li>
                 </ul>
             </li>
-            <li><a href="/contacts" class="nav-primary__link">Contact</a></li>
+            <li><a href="/contact" class="nav-primary__link">Contact</a></li>
             <li><a href="/login" class="nav-primary__link" id="nav-primary__login"></a></li>
         </ul>
     </nav>

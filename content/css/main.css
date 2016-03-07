@@ -451,6 +451,10 @@ form input:focus, select:focus {
     content: url("/content/img/icons/man-user_16px_485160.png");
 }
 
+.input-container-mail-object:before {
+    content: url("/content/img/icons/lamp_16px_485160.png");
+}
+
 
 /* Buttons in forms */
 .button-submit,
