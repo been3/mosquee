@@ -44,6 +44,7 @@ body {
     position: relative;
     height: 100%;
     width: 100%;
+    overflow: auto;
 }
 
 /*-----------
@@ -380,6 +381,7 @@ footer nav ul li a:hover {
 .content form input, select {
     border: 1px solid #d9d9d9;
     font-size: medium;
+    min-height: 100%;
     margin: 5px 0 8px 0;
     padding: 3px;
 }
@@ -423,23 +425,38 @@ form input:focus, select:focus {
     content: url("/content/img/icons/closed-padlock_16px_485160.png");
 }
 
+.input-container-credit-card-number:before {
+    content: url("/content/img/icons/credit-card_16px_485160.png");
+}
+
+.input-container-user:before {
+    content: url("/content/img/icons/man-user_16px_485160.png");
+}
 
 
 /* Buttons in forms */
-.container form button {
+.button-submit,
+.button-return {
     background: #f46330;
     border: 1px solid #f46330;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
     border-radius: 20px;
     color: white;
-    font-size: 14px;
     padding: 10px 15px;
     position: relative;
     text-align: center;
 }
 
-.container form button:hover {
+.button-submit {
+    font-size: 14px;
+}
+
+.button-return {
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.button-submit:hover,
+.button-return:hover {
     background: none;
     color: #f46330;
     cursor: pointer;

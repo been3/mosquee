@@ -99,7 +99,7 @@
                             <div class="input-container input-container-username"><input type="text" placeholder="Email / Nom d'utilisateur" name="username" /></div>
                             <div class="input-container input-container-password" id="signin-input-password"><input type="password" placeholder="Mot de passe" name="password" /></div>
                             <a href="/">Mot de passe oublié ?</a>
-                            <button>Se connecter</button>
+                            <button class="button-submit">Se connecter</button>
                         </form>
                     </div>
 
@@ -111,7 +111,7 @@
                             <input type="text" placeholder="Nom" name="firstname" />
                             <input type="text" placeholder="Prénom" name="lastname" />
                             <input type="text" placeholder="Email" name="email" pattern="[a-zA-Z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?" oninput="try {if ($(this).val().match(new RegExp(this.getAttribute('pattern')))) { this.setCustomValidity(''); } else { this.setCustomValidity('Veuillez entrer une adresse valide'); }} catch(e) {}" /><br />
-                            <button>S'inscrire</button>
+                            <button class="button-submit">S'inscrire</button>
                         </form>
                     </div>
                 </section>
