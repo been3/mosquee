@@ -367,7 +367,6 @@ footer nav ul li a:hover {
 -----------------------------*/
 
 .content {
-    height: auto;
     position: relative;
     top: 0;
     width: 100%;
@@ -531,8 +530,8 @@ form input:focus, select:focus {
     background: #f46330;
     color: white;
     font-size: 60px;
-    height: 90%;
-    width: 100%;
+    min-height: 500px;
+    height: 100%;
 }
 
 .content.error section {

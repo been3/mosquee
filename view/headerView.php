@@ -16,7 +16,7 @@
                 <ul>
                     <li><a href="/bedrooms#simple-room" class="nav-primary__link-our-rooms__sub-menu">Chambre simple</a></li>
                     <li><a href="/bedrooms#double-room" class="nav-primary__link-our-rooms__sub-menu">Chambre double</a></li>
-                    <li><a href="/bedrooms#twin-room" class="nav-primary__link-our-rooms__sub-menu">Suite familiale</a></li>
+                    <li><a href="/bedrooms#twin-room" class="nav-primary__link-our-rooms__sub-menu">Chambre twin</a></li>
                 </ul>
             </li>
             <li><a href="/booking/stay" class="nav-primary__link">Réservations</a></li>

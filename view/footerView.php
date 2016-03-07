@@ -15,7 +15,7 @@
     </nav>
     <div id="site-info__credits">
         <p>
-            Copyright &copy; 2016 Alex Benoit &amp; Evan Suau<br />
+            Copyright &copy; 2016 Les Ziags Hotel<br />
             All rights reserved.
         </p>
     </div>
