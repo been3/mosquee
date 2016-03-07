@@ -37,7 +37,6 @@
         <!-- CSS -->
         <link href="/content/css/main.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="/content/css/booking.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="/content/js/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen" />
         <!-- Favicon -->
         <link rel="shortcut icon" href="favicon.ico" />
         <!--[if IE]>
@@ -45,7 +44,6 @@
         <![endif]-->
 
         <script type="text/javascript" src="/content/js/jquery-1.12.1.min.js"></script>
-        <script type="text/javascript" src="/content/js/jquery-ui-1.11.4/jquery-ui.min.js"></script>
         <script type="text/javascript" src="/content/js/modernizr-3.3.1.min.js"></script>
     </head>
 
@@ -101,7 +99,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="stay" class="button-return">&lt; Retour</a>
+                                        <a href="/booking/stay" class="button-return">&lt; Retour</a>
                                     </td>
                                     <td>
                                         <button class="button-submit">Confirmer</button>
