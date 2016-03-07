@@ -75,9 +75,8 @@
                                         <label for="departure-datepicker">Date de départ</label>
                                         <div class="input-container input-container-date"><input type="text" name="departureDate" placeholder="dd/mm/aaaa" id="departure-datepicker" class="input-date-departure" required></div>
 
-                                        <label for="booking-stay-bedroom-number">Nombre de chambres</label><br />
-                                        <input type="number" step="1" value="1" min="1" max="12" id="booking-stay-bedroom-number"><a href="#" id="booking-stay-bedroom-number-confirm" onclick="addFields()" required>Confirmer</a>
-                                        <div id="booking-stay-bedroom-type-container"></div>
+                                        <label for="booking-stay-bedroom-number">Nombre de personnes</label><br />
+                                        <input type="number" step="1" min="1" max="12" id="booking-stay-bedroom-number" required>
                                     </td>
                                     <td>
                                         Formule
@@ -88,8 +87,9 @@
                                                 <span class="input-switch-switch"></span>
                                             </label>
                                         </div>
-
                                         <br />
+
+                                        Salle de bain
                                         <div class="input-switch">
                                             <input type="checkbox" name="bathroom-switch" class="input-switch-checkbox" id="bathroom-switch" checked>
                                             <label class="input-switch-label" for="bathroom-switch" id="bathroom-switch-label">
@@ -125,7 +125,13 @@
 
         <script type="text/javascript" src="/content/js/script.js"></script>
         <script type="text/javascript" src="/content/js/datePicker.js"></script>
-        <script type="text/javascript" src="/content/js/bookingStayAddFields.js"></script>
+        <script>
+            $("#booking-stay-bedroom-number").spinner({
+                min : 1,
+                max : 12,
+                showOn : 'both'
+            });
+        </script>
 
     </body>
 </html>

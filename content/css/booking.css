@@ -228,19 +228,6 @@ footer {
     right: 0;
 }
 
-/*--------------------------------------
-    CONFIRM BEDROOMS NUMBER BUTTON
---------------------------------------*/
-
-#booking-stay-bedroom-number-confirm {
-    background: #f46330;
-    border-radius: 6px;
-    color: white;
-    margin-left: 15px;
-    padding: 5px;
-    text-decoration: none;
-}
-
 /*------------------
     SUBMIT BUTTON
 ------------------*/
