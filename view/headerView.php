@@ -19,7 +19,7 @@
                     <li><a href="/bedrooms#twin-room" class="nav-primary__link-our-rooms__sub-menu">Suite familiale</a></li>
                 </ul>
             </li>
-            <li><a href="/booking/choose" class="nav-primary__link">Réservations</a></li>
+            <li><a href="/booking/stay" class="nav-primary__link">Réservations</a></li>
             <li>
                 <a href="/about" class="nav-primary__link">&Agrave; propos de nous</a>
                 <ul>

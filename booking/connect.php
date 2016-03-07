@@ -28,7 +28,7 @@
 
         <!-- META -->
         <meta charset="utf-8" />
-        <title>Hôtel Les Ziags | Réservation</title>
+        <title>Hôtel Les Ziags | Réservation | Connectez-vous</title>
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -39,9 +39,9 @@
         <link href="/content/css/booking.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="/content/js/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen" />
         <!-- Favicon -->
-        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <!--[if IE]>
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <![endif]-->
 
         <script type="text/javascript" src="/content/js/jquery-1.12.1.min.js"></script>

@@ -39,9 +39,9 @@
         <link href="/content/css/booking.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="/content/js/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen" />
         <!-- Favicon -->
-        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <!--[if IE]>
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <![endif]-->
 
         <script type="text/javascript" src="/content/js/jquery-1.12.1.min.js"></script>
@@ -58,7 +58,7 @@
             <?php include '../view/headerView.php'; ?>
 
             <!-- Content -->
-            <div class="content booking booking-choose">
+            <div class="content booking booking-stay">
                 <div class="overlay">
 
                     <!-- Steps progression -->
@@ -75,9 +75,9 @@
                                         <label for="departure-datepicker">Date de départ</label>
                                         <div class="input-container input-container-date"><input type="text" name="departureDate" placeholder="dd/mm/aaaa" id="departure-datepicker" class="input-date-departure" required></div>
 
-                                        <label for="booking-choose-bedroom-number">Nombre de chambres</label><br />
-                                        <input type="number" step="1" value="1" min="1" max="12" id="booking-choose-bedroom-number"><a href="#" id="booking-choose-bedroom-number-confirm" onclick="addFields()" required>Confirmer</a>
-                                        <div id="booking-choose-bedroom-type-container"></div>
+                                        <label for="booking-stay-bedroom-number">Nombre de chambres</label><br />
+                                        <input type="number" step="1" value="1" min="1" max="12" id="booking-stay-bedroom-number"><a href="#" id="booking-stay-bedroom-number-confirm" onclick="addFields()" required>Confirmer</a>
+                                        <div id="booking-stay-bedroom-type-container"></div>
                                     </td>
                                     <td>
                                         Formule
@@ -101,9 +101,9 @@
                                     <td>
                                         <p>
                                             Motif<br />
-                                            <input type="radio" name="booking-choose-purpose" value="business" id="booking-choose-purpose-business" required /><label for="booking-choose-purpose-business">  Voyage d'affaire</label><br />
-                                            <input type="radio" name="booking-choose-purpose" value="tourism" id="booking-choose-purpose-tourism" /><label for="booking-choose-purpose-tourism">  Tourisme</label><br />
-                                            <input type="radio" name="booking-choose-purpose" value="none" id="booking-choose-purpose-none" /><label for="booking-choose-purpose-none">  Autre</label>
+                                            <input type="radio" name="booking-stay-purpose" value="business" id="booking-stay-purpose-business" required /><label for="booking-stay-purpose-business">  Voyage d'affaire</label><br />
+                                            <input type="radio" name="booking-stay-purpose" value="tourism" id="booking-stay-purpose-tourism" /><label for="booking-stay-purpose-tourism">  Tourisme</label><br />
+                                            <input type="radio" name="booking-stay-purpose" value="none" id="booking-stay-purpose-none" /><label for="booking-stay-purpose-none">  Autre</label>
                                         </p>
                                     </td>
                                 </tr>
@@ -125,7 +125,7 @@
 
         <script type="text/javascript" src="/content/js/script.js"></script>
         <script type="text/javascript" src="/content/js/datePicker.js"></script>
-        <script type="text/javascript" src="/content/js/bookingChooseAddFields.js"></script>
+        <script type="text/javascript" src="/content/js/bookingStayAddFields.js"></script>
 
     </body>
 </html>

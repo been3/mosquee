@@ -31,10 +31,12 @@ footer {
 .booking .container {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    padding: 10px;
     position: relative;
     top: 100px;
-    z-index: 1;
+    -webkit-transition: height 1s ease 0.3s;
+    -moz-transition: height 1s ease 0.3s;
+    -o-transition: height 1s ease 0.3s;
+    transition: height 1s ease 0.3s;
 }
 
 /* Center the steps bar */
@@ -49,6 +51,16 @@ footer {
     position: relative;
 }
 
+.booking .step img {
+    position: relative;
+    top: 6px;
+}
+
+.booking .step a {
+    text-decoration: none;
+    color: white;
+}
+
 /* Displays array between each step */
 .booking .step:after {
     content: url("/content/img/icons/arrow-point-to-right_32px_white.png");
@@ -58,27 +70,30 @@ footer {
 
 /* No array for last step */
 .booking .step:last-child:after {
-    content: "";
+    content: '';
     margin: 0;
 }
 
-.booking .step h2 {
-    bottom: 7px;
+.booking .step a {
     display: inline-block;
-    margin: 0 0 0 8px;
+    padding: 0 10px 0 10px;
     position: relative;
 }
 
-.booking-choose #booking-step-one {
-    color: #f46330;
+.booking-stay #booking-step-one a {
+    background: rgba(244, 99, 48, 0.6);
 }
 
-.booking-connect #booking-step-two {
-    color: #f46330;
+.booking-connect #booking-step-two a {
+    background: rgba(244, 99, 48, 0.6);
 }
 
-.booking-pay #booking-step-three {
-    color: #f46330;
+.booking-pay #booking-step-three a {
+    background: rgba(244, 99, 48, 0.6);
+}
+
+.booking-confirm #booking-step-four a {
+    background: rgba(244, 99, 48, 0.6);
 }
 
 .booking .booking-container-main {
@@ -207,7 +222,7 @@ footer {
     CONFIRM BEDROOMS NUMBER BUTTON
 --------------------------------------*/
 
-#booking-choose-bedroom-number-confirm {
+#booking-stay-bedroom-number-confirm {
     background: #f46330;
     border-radius: 6px;
     color: white;

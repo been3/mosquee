@@ -28,7 +28,7 @@
 
         <!-- META -->
         <meta charset="utf-8" />
-        <title>Hôtel Les Ziags | Réservation</title>
+        <title>Hôtel Les Ziags | Réservation | Paiement </title>
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -101,7 +101,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a href="choose" class="button-return">&lt; Retour</a>
+                                        <a href="stay" class="button-return">&lt; Retour</a>
                                     </td>
                                     <td>
                                         <button class="button-submit">Confirmer</button>

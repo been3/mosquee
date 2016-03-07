@@ -1,6 +1,6 @@
 function addFields() {
-    var number = document.getElementById("booking-choose-bedroom-number").value;
-    var container = document.getElementById("booking-choose-bedroom-type-container");
+    var number = document.getElementById("booking-stay-bedroom-number").value;
+    var container = document.getElementById("booking-stay-bedroom-type-container");
     while (container.hasChildNodes()) {
         container.removeChild(container.lastChild);
     }
@@ -11,7 +11,7 @@ function addFields() {
         container.appendChild(document.createTextNode("Chambre " + (i+1)));
         container.appendChild(document.createElement("br"));
         var select = document.createElement("select");
-        select.setAttribute("name", "booking-choose-bedroom-type");
+        select.setAttribute("name", "booking-stay-bedroom-type");
         select.required = true;
         container.appendChild(select);
         for (var k = 0; k < array.length; k++) {
