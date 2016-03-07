@@ -57,13 +57,13 @@
 
             <!-- Content -->
             <div class="content booking booking-pay">
-                <div class="overlay">
+                <div class="content-overlay">
 
                     <!-- Steps progression -->
                     <?php include '../view/bookingProgressionView.php' ?>
 
                     <!-- Form -->
-                    <div class="container booking-container-main">
+                    <div class="container container-main">
                         <form action="" method="post">
                             <table>
                                 <tr class="booking-payment-method-container">

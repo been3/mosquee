@@ -57,13 +57,13 @@
 
             <!-- Content -->
             <div class="content booking booking-connect">
-                <div class="overlay">
+                <div class="content-overlay">
 
                     <!-- Steps progression -->
                     <?php include '../view/bookingProgressionView.php' ?>
 
                     <!-- Container -->
-                    <div class="container booking-container-main">
+                    <div class="container container-main">
                         <h1>Vous n'êtes pas connecté.</h1>
                         <h2 class="countdown"></h2>
                     </div>

@@ -26,5 +26,5 @@ $(function() {
 // Animations on loading
 $(function() {
     $(".container").addClass("load");
-    $(".booking .overlay").addClass("load");
+    $(".content-overlay").addClass("load");
 });

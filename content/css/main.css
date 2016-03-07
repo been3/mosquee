@@ -240,6 +240,7 @@ header nav ul ul {
 footer {
     background: #485160;
     bottom: 0;
+    clear: both;
     height: 61px;
     position: relative;
     width: 100%;
@@ -372,6 +373,24 @@ footer nav ul li a:hover {
     width: 100%;
 }
 
+/*
+    OVERLAY ANIMATIONS
+*/
+
+.content-overlay {
+    background-color: rgba(48, 152, 157, 0.8);
+    height: 0;
+    -webkit-transition: height 1s ease 0.3s;
+    -moz-transition: height 1s ease 0.3s;
+    -o-transition: height 1s ease 0.3s;
+    transition: height 1s ease 0.3s;
+    width: 100%;
+}
+
+.content-overlay.load {
+    height: inherit;
+}
+
 
 /*/////////////////
     FORM STYLES
@@ -440,6 +459,7 @@ form input:focus, select:focus {
     border: 1px solid #f46330;
     border-radius: 20px;
     color: white;
+    display: block;
     padding: 10px 15px;
     position: relative;
     text-align: center;

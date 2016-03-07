@@ -59,13 +59,13 @@
 
             <!-- Content -->
             <div class="content booking booking-stay">
-                <div class="overlay">
+                <div class="content-overlay">
 
                     <!-- Steps progression -->
                     <?php include '../view/bookingProgressionView.php' ?>
 
                     <!-- Form -->
-                    <div class="container booking-container-main">
+                    <div class="container container-main">
                         <form action="/booking/connect" method="post">
                             <table>
                                 <tr>

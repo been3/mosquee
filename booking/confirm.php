@@ -58,13 +58,13 @@
 
             <!-- Content -->
             <div class="content booking booking-confirm">
-                <div class="overlay">
+                <div class="content-overlay">
 
                     <!-- Steps progression -->
                     <?php include '../view/bookingProgressionView.php' ?>
 
                     <!-- Container -->
-                    <div class="container booking-container-main">
+                    <div class="container container-main">
                         <h1>Votre réservation a bien été prise en compte.</h1>
                         <h2>Merci pour votre confiance :)</h2>
 
