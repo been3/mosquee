@@ -75,7 +75,7 @@
                                         <p>
                                             L'Hôtel Les Ziags propose 12 chambres à la décoration moderne et aux équipements fonctionnels et de qualité. Elles sont transformables à votre convenance en véritables salles de réunion.
                                         </p>
-                                        <button class="button-submit">Voir nos chambres</button>
+                                        <a href="/bedrooms"><button class="button-submit">Voir nos chambres</button></a>
                                     </div>
                                 </td>
                                 <td>
@@ -84,7 +84,7 @@
                                         <p>
                                             Connexion WiFi gratuite et illimitée depuis votre chambre et tous les espaces communs de l'hôtel, service petit-déjeuner en chambre de 6h30 à 12h... Profitez de services premium durant votre séjour.
                                         </p>
-                                        <button class="button-submit">Voir nos services</button>
+                                        <a><button class="button-submit">Voir nos services</button></a>
                                     </div>
                                 </td>
                                 <td>
@@ -93,7 +93,7 @@
                                         <p>
                                             L'Hôtel Les Ziags propose des tarifs abordables, à partir de 20€ la nuit, à deux pas de la capitale... Inscrivez-vous et profitez de nos offres spéciales !
                                         </p>
-                                        <button class="button-submit">Consulter nos tarifs</button>
+                                        <a href="/booking/stay"><button class="button-submit">Consulter nos tarifs</button></a>
                                     </div>
                                 </td>
                             </tr>
