@@ -17,7 +17,7 @@
 
         <!-- META -->
         <meta charset="utf-8" />
-        <title>Hôtel Les Ziags | Merci de nous contacter</title>
+        <title>Hôtel Les Ziags | L'hôtel</title>
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -25,7 +25,7 @@
         <!-- STYLES -->
         <!-- CSS -->
         <link href="/content/css/main.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="/content/css/contact.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="/content/css/hotel.css" rel="stylesheet" type="text/css" media="screen" />
         <!-- Favicon -->
         <link rel="shortcut icon" href="/favicon.ico" />
         <!--[if IE]>
@@ -45,14 +45,12 @@
             <?php include 'view/headerView.php'; ?>
 
             <!-- Content -->
-            <div class="content contact contact-submitted">
+            <div class="content hotel">
                 <div class="content-overlay">
 
                     <!-- Container -->
                     <div class="container container-main">
-                        <h1>Votre message a bien été envoyé.</h1>
-                        <h2>Nous vous répondrons dans les plus brefs délais :)</h2>
-                        <a href="contact" class="button-return">< Retour</a>
+
                     </div>
 
                 </div>
