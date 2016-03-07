@@ -80,7 +80,7 @@
         <script>
             var count = 5;
             var countdown = setInterval(function(){
-                $("h2.countdown").html("Redirection vers la page de connection dans " + count + ".");
+                $("h2.countdown").html("Redirection vers la page de connexion dans " + count + ".");
                 if (count == 0) {
                     clearInterval(countdown);
                     window.open( "/login", "_self" );
