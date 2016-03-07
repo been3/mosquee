@@ -485,6 +485,42 @@ form input:focus, select:focus {
     cursor: pointer;
 }
 
+/*///////////////////
+    SITEMAP PAGE
+///////////////////*/
+
+.sitemap.content {
+    background: url("/content/img/backgrounds/sitemap-background.jpg") no-repeat fixed;
+    background-size: cover;
+    color: white;
+    font-size: 18px;
+    min-height: 500px;
+    height: 100%;
+}
+
+.sitemap .container-main {
+    margin: auto;
+    position: relative;
+    top: 100px;
+    width: 500px;
+}
+
+.sitemap .container-main h1 {
+    margin: 0;
+}
+
+.sitemap .container-main ul {
+    list-style: none;
+}
+
+.sitemap .container-main li {
+    margin: 5px;
+}
+
+.sitemap .container-main li a {
+    text-decoration: none;
+    color: white;
+}
 
 
 /*/////////////////////
