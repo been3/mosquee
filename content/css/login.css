@@ -5,6 +5,7 @@
 .content.login {
     background: url(/content/img/backgrounds/just-fab-san-francisco-headquarters-3.jpg) fixed no-repeat center;
     background-size: cover;
+    height: 100%;
     margin: -10px 0;
 }
 
@@ -117,10 +118,8 @@
     width: 100%;
 }
 
-#signin-input-login:before
-
-#login__form-signin input {
-    width: 265px;
+#login__form-signin .input-container input {
+    width: 266px;
 }
 
 #login__form-signup input {

@@ -14,7 +14,7 @@
         </div>
         <div class="step" id="booking-step-four">
             <img src="/content/img/icons/number-four-in-a-circle_32px_white.png" alt="">
-            <a><h2>Confirmation</h2></a>
+            <a href="confirm"><h2>Confirmation</h2></a>
         </div>
     </div>
 </div>

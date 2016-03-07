@@ -2,18 +2,18 @@
     BOOKING PAGES
 /////////////////////*/
 
-footer {
-    clear: both;
-}
-
-.booking.content {
+.content {
     background: url("/content/img/backgrounds/Airbnb-Portland-Office-Yellowtrace-19.jpg") no-repeat center;
     background-size: cover;
     height: 100%;
 }
 
 .content.booking-pay {
-    height: 105%;
+    min-height: 800px;
+}
+
+.content.booking-confirm {
+    min-height: 1000px;
 }
 
 /* Overlay animation */
@@ -260,4 +260,29 @@ footer {
 
 .booking-payment-agreement-container a {
     color: #fb9e08;
+}
+
+
+.booking-confirm table {
+    margin-top: 20px;
+}
+
+.booking-confirm ul li img {
+    display: inline-block;
+    height: auto;
+    max-width: 200px;
+}
+
+.booking-confirm-checked:before {
+    content: url("/content/img/icons/checked-symbol_16px_91dc5a.png");
+    margin-right: 6px;
+}
+
+.booking-confirm-unchecked:before {
+    content: url("/content/img/icons/remove-button_16px_d80027.png");
+    margin-right: 6px;
+}
+
+.booking-confirm-price {
+    border-left: 1px solid #999999;
 }
