@@ -9,6 +9,10 @@ footer {
 .booking.content {
     background: url("/content/img/backgrounds/Airbnb-Portland-Office-Yellowtrace-19.jpg") no-repeat center;
     background-size: cover;
+    height: 100%;
+}
+
+.content.booking-pay {
     height: 105%;
 }
 
@@ -32,11 +36,17 @@ footer {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     position: relative;
+    top: 400px;
+    opacity: 0;
+    -webkit-transition: top 1s ease-out, opacity 1s ease 0.3s;
+    -moz-transition: top 1s ease-out, opacity 1s ease 0.3s;
+    -o-transition: top 1s ease-out, opacity 1s ease 0.3s;
+    transition: top 1s ease-out, opacity 1s ease 0.3s;
+}
+
+.booking .container.load {
     top: 100px;
-    -webkit-transition: height 1s ease 0.3s;
-    -moz-transition: height 1s ease 0.3s;
-    -o-transition: height 1s ease 0.3s;
-    transition: height 1s ease 0.3s;
+    opacity: 1;
 }
 
 /* Center the steps bar */
