@@ -1,0 +1,5 @@
+# Protect Admin folder
+AuthName "Page d'administration protégée"
+AuthType Basic
+AuthUserFile C:\wamp\www\les-ziags\admin\.htpasswd
+Require valid-user
