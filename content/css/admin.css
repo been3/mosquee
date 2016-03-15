@@ -1,13 +1,24 @@
+/*////////////////////
+    ADMIN SECTION
+////////////////////*/
+
+
 body {
     background-color: #f1f1f1;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    margin: 0;
     height: 100%;
+    margin: 0;
     width: 100%;
-    overflow: hidden;
 }
 
+.content {
+    left: 170px;
+    padding: 50px 0;
+    position: relative;
+    top: 50px;
+    width: calc(100% - 170px);
+}
 
 header {
     height: 50px;
@@ -15,6 +26,10 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+}
+
+header, aside {
+    z-index: 1;
 }
 
 nav ul {
@@ -51,13 +66,13 @@ header nav ul li a img {
     margin: 0 3px;
 }
 
-.admin .container-main {
+.container-main {
     position: relative;
-    top: 100px;
-    left: 300px;
+    width: 956px;
+    margin: auto;
 }
 
-.admin aside {
+aside {
     background-color: #23282d;
     color: white;
     height: 100%;
@@ -66,18 +81,18 @@ header nav ul li a img {
     width: 170px;
 }
 
-.admin aside nav ul {
+aside nav ul {
     padding: 0;
     position: relative;
     z-index: 1;
 }
 
-.admin aside ul li a {
+aside ul li a {
     float: left;
     padding: 6px 10px;
     width: 150px;
 }
 
-.admin aside ul li ul {
+aside ul li ul {
     display: none;
 }
