@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <!--
     ╭──────────────────────────────────────────╮
     │ ≡ Design & Front-end                     │
@@ -38,9 +39,9 @@
         <link href="/content/css/main.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="/content/css/booking.css" rel="stylesheet" type="text/css" media="screen" />
         <!-- Favicon -->
-        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <!--[if IE]>
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <![endif]-->
 
         <script type="text/javascript" src="/content/js/jquery-1.12.1.min.js"></script>
