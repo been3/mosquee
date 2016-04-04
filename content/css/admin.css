@@ -2,9 +2,9 @@
     ADMIN SECTION
 ////////////////////*/
 
-
 body {
     background-color: #f1f1f1;
+    color: #23282d;;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     height: 100%;
@@ -87,12 +87,48 @@ aside nav ul {
     z-index: 1;
 }
 
-aside ul li a {
+aside nav ul li a {
     float: left;
     padding: 6px 10px;
     width: 150px;
 }
 
-aside ul li ul {
-    display: none;
+aside nav ul li ul li a {
+    position: relative;
+    left: 20px;
+    width: 130px;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+table tr, table td {
+    padding: 10px 30px;
+    text-align: center;
+}
+
+table thead td {
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+
+table tbody tr:hover {
+    background: white;
+}
+
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+.rating > span {
+    display: inline-block;
+    position: relative;
+    width: 1.1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+    content: "\2605";
+    position: absolute;
 }
