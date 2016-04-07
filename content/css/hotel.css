@@ -1,0 +1,6 @@
+.hotel.content {
+    background: url("/content/img/backgrounds/airbnbpdxofficebittermann12-10-2104-4_1200xx7216-4059-0-677.jpg") no-repeat fixed;
+    background-size: cover;
+    min-height: 500px;
+    height: 100%;
+}

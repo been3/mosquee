@@ -1,3 +1,4 @@
+// Primary nav animations
 (function($) {
     var nav = $("#nav-primary");
     nav.find("li").each(function() {
@@ -12,15 +13,18 @@
     });
 })(jQuery);
 
-window.onload = highlightCurrentLink;
-
-function highlightCurrentLink(){
-    var a = document.getElementsByClassName("nav-primary__link");
-    for (var i = 0; i < a.length; i++) {
-        if (a[i].href.split("#")[0] == window.location.href.split("#")[0]) {
-            a[i].classList.add("current");
+// Current link highlighting
+$(function() {
+    var pathname = window.location.pathname;
+    $(".nav-primary__link").each(function() {
+        if ($(this).attr("href") == pathname) {
+            $(this).addClass("current");
         }
-    }
-}
+    });
+});
 
-$(".container").addClass("load");
+// Animations on loading
+$(function() {
+    $(".container").addClass("load");
+    $(".content-overlay").addClass("load");
+});

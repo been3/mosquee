@@ -1,0 +1,66 @@
+/*///////////////////
+    CONTACT PAGE
+///////////////////*/
+
+
+.content {
+    background: url(/content/img/backgrounds/hero_ofc_san-francisco_888-brannan_1500x750_1395083524_1500x750.jpg) fixed no-repeat center;
+    background-size: cover;
+    height: 100%;
+}
+
+.contact.content {
+    min-height: 900px;
+}
+
+.contact-submitted.content {
+    min-height: 500px;
+}
+
+
+.container-main {
+    margin: auto;
+    position: relative;
+    top: 110px;
+}
+
+.contact .container-main {
+    width: 1200px;
+}
+
+.contact-submitted .container-main {
+    color: white;
+    width:  600px;
+}
+
+.contact .container-main table {
+    margin: auto;
+    width: 100%;
+}
+
+.contact .container-main form {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    color: white;
+}
+
+.contact .container-main form input {
+    width: 404px;
+}
+
+.container-main form textarea {
+    border: 1px solid #d9d9d9;
+    height: 200px;
+    width: 430px;
+    margin: 5px 0 10px 0;
+}
+
+#map {
+    display: inline-block;
+    position: relative;
+    left: 50px;
+}
+
+.contact-submitted .button-return {
+    width: 100px;
+}

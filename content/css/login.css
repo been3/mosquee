@@ -1,9 +1,13 @@
-/* Background image */
-body {
+/*/////////////////
+    LOGIN PAGE
+/////////////////*/
+
+.content.login {
     background: url(/content/img/backgrounds/just-fab-san-francisco-headquarters-3.jpg) fixed no-repeat center;
     background-size: cover;
+    height: 100%;
+    margin: -10px 0;
 }
-
 
 /* Changing login link image in primary nav (highlight) */
 #nav-primary__login:before {
@@ -11,16 +15,17 @@ body {
 }
 
 
+
 /* LOGIN WITH ... SOCIAL BUTTONS */
 
 .login__social-buttons {
     left: 400px;
-    position: absolute;
+    position: relative;
     width: 290px;
 }
 
 .login__social-buttons .container {
-    position: absolute;
+    position: relative;
     opacity: 0;
     top: 100px;
     -webkit-transition: top 1s ease-out, opacity 1s ease 0.3s;
@@ -81,9 +86,10 @@ body {
 /* SIGN IN AND SIGN UP FORMS */
 
 .login__forms {
-    position: absolute;
-    right: 150px;
-    top: 100px;
+    left: 350px;
+    margin: auto;
+    position: relative;
+    top: -30px;
     width: 350px;
 }
 
@@ -108,91 +114,27 @@ body {
     opacity: 1;
 }
 
-.container form {
+.login .container form {
     width: 100%;
 }
 
-.container span {
-    float: left;
-    margin: 0;
-    position: relative;
-    top: 5px;
-}
-
-.container form span img {
-    background: #f0f0f0;
-    border: 1px solid #d9d9d9;
-    border-right: none;
-    padding: 4px;
-}
-
-.container form input {
-    border: 1px solid #d9d9d9;
-    font-size: medium;
-    margin: 5px 0 8px 0;
-    padding: 3px;
-}
-
-.container form input:focus {
-    border: 1px solid #00a6fd;
-}
-
-/* Change form placeholder color */
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color: #999999;
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color: #999999;
-    opacity: 1;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color: #999999;
-    opacity: 1;
-}
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #999999;
-}
-
-#login__form-signin input {
-    width: 265px;
+#login__form-signin .input-container input {
+    width: 266px;
 }
 
 #login__form-signup input {
     width: 290px;
 }
 
-.container form a {
+.login .container form a {
     font-size: 12px;
     width: 100%;
 }
 
-.container form div input:focus {
-
-}
-
-.container form button {
-    position: relative;
-    background: #f46330;
-    border: none;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    color: white;
-    font-size: 14px;
-    padding: 10px 15px 10px 15px;
-}
-
 #login__form-signin button {
-    position: relative;
-    left: 62px;
+    left: 182px;
 }
 
 #login__form-signup button {
-    position: relative;
     left: 210px;
-}
-
-.container form button:hover {
-    background: #fb9e08;
-    cursor: pointer;
 }

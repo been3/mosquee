@@ -7,15 +7,15 @@
     </div>
     <nav>
         <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">&Agrave; propos de nous</a></li>
-            <li><a href="#">Plan du site</a></li>
-            <li><a href="#">Contacts</a></li>
+            <li><a href="/index">Accueil</a></li>
+            <li><a href="/about">&Agrave; propos de nous</a></li>
+            <li><a href="/sitemap">Plan du site</a></li>
+            <li><a href="/contact">Contact</a></li>
         </ul>
     </nav>
     <div id="site-info__credits">
         <p>
-            Copyright &copy; 2016 Alex Benoit &amp; Evan Suau<br />
+            Copyright &copy; 2016 Les Ziags Hotel<br />
             All rights reserved.
         </p>
     </div>

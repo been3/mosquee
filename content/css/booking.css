@@ -1,0 +1,273 @@
+/*/////////////////////
+    BOOKING PAGES
+/////////////////////*/
+
+.content {
+    background: url("/content/img/backgrounds/Airbnb-Portland-Office-Yellowtrace-19.jpg") no-repeat center;
+    background-size: cover;
+    height: 100%;
+}
+
+.content.booking-pay {
+    min-height: 800px;
+}
+
+.content.booking-confirm {
+    min-height: 1000px;
+}
+
+/* */
+.booking .container {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: relative;
+    top: 400px;
+    opacity: 0;
+    -webkit-transition: top 1s ease-out, opacity 1s ease 0.3s;
+    -moz-transition: top 1s ease-out, opacity 1s ease 0.3s;
+    -o-transition: top 1s ease-out, opacity 1s ease 0.3s;
+    transition: top 1s ease-out, opacity 1s ease 0.3s;
+}
+
+.booking .container.load {
+    top: 100px;
+    opacity: 1;
+}
+
+/* Center the steps bar */
+.booking .steps {
+    position: relative;
+    margin: auto;
+    width: 1174px;
+}
+
+.booking .step {
+    display: inline-block;
+    position: relative;
+}
+
+.booking .step img {
+    position: relative;
+    top: 6px;
+}
+
+.booking .step a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Displays array between each step */
+.booking .step:after {
+    content: url("/content/img/icons/arrow-point-to-right_32px_white.png");
+    position: relative;
+    margin: 0 30px;
+}
+
+/* No array for last step */
+.booking .step:last-child:after {
+    content: '';
+    margin: 0;
+}
+
+.booking .step a {
+    display: inline-block;
+    padding: 0 10px 0 10px;
+    position: relative;
+}
+
+.booking-stay #booking-step-one a {
+    background: rgba(244, 99, 48, 0.6);
+}
+
+.booking-connect #booking-step-two a {
+    background: rgba(244, 99, 48, 0.6);
+}
+
+.booking-pay #booking-step-three a {
+    background: rgba(244, 99, 48, 0.6);
+}
+
+.booking-confirm #booking-step-four a {
+    background: rgba(244, 99, 48, 0.6);
+}
+
+.booking .container-main {
+    height: auto;
+    width: 1000px;
+    margin: 50px auto 0 auto;
+    padding: 40px;
+    position: relative;
+}
+
+.booking table {
+    position: relative;
+    margin: auto;
+}
+
+.booking table td {
+    padding: 10px 50px;
+    vertical-align: top;
+}
+
+
+
+/*----------------
+    DATE FIELDS
+----------------*/
+
+.input-date-arrival,
+.input-date-departure {
+    width: 245px;
+}
+
+/*--------------
+    SWTICHES
+--------------*/
+
+.input-switch {
+    position: relative;
+    width: 175px;
+}
+
+.input-switch-checkbox {
+    display: none;
+}
+
+.input-switch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #999999;
+    border-radius: 20px;
+}
+
+.input-switch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.input-switch-inner:before,
+.input-switch-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.input-switch-inner:before {
+    padding-left: 10px;
+    background-color: #f46330;
+    color: white;
+}
+
+.input-switch-inner:after {
+    padding-right: 10px;
+    background-color: #f0f0f0;
+    color: #999999;
+    text-align: right;
+}
+
+#board-switch-label .input-switch-inner:before {
+    content: "Pension complète";
+}
+
+#board-switch-label .input-switch-inner:after {
+    content: "Demi-pension";
+}
+
+#bathroom-switch-label .input-switch-inner:before {
+    content: "Individuelle";
+}
+
+#bathroom-switch-label .input-switch-inner:after {
+    content: "Collective";
+}
+
+.input-switch-switch {
+    display: block;
+    width: 30px;
+    margin: 0;
+    background: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 140px;
+    border: 2px solid #999999;
+    border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+}
+
+.input-switch-checkbox:checked + .input-switch-label .input-switch-inner {
+    margin-left: 0;
+}
+
+.input-switch-checkbox:checked + .input-switch-label .input-switch-switch {
+    right: 0;
+}
+
+/*------------------
+    SUBMIT BUTTON
+------------------*/
+
+.booking .button-submit,
+.booking .button-return {
+    float: right;
+    font-size: 16px;
+    width: 190px;
+}
+
+.booking .button-return {
+    width: 130px;
+}
+
+.booking-payment-method input {
+    position: relative;
+    bottom: 26px;
+}
+
+.booking-payment-method label {
+    position: relative;
+    margin-left: 15px;
+}
+
+.booking-payment-credit-card-number,
+.booking-payment-credit-card-owner {
+    width: 492px;
+}
+
+.booking-payment-agreement-container a {
+    color: #fb9e08;
+}
+
+
+.booking-confirm table {
+    margin-top: 20px;
+}
+
+.booking-confirm ul li img {
+    display: inline-block;
+    height: auto;
+    max-width: 200px;
+}
+
+.booking-confirm-checked:before {
+    content: url("/content/img/icons/checked-symbol_16px_91dc5a.png");
+    margin-right: 6px;
+}
+
+.booking-confirm-unchecked:before {
+    content: url("/content/img/icons/remove-button_16px_d80027.png");
+    margin-right: 6px;
+}
+
+.booking-confirm-price {
+    border-left: 1px solid #999999;
+}

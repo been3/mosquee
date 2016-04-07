@@ -11,25 +11,46 @@
     ╰──────────┴───────────────────────────────╯
 
     ╭──────────────────────────────────────────╮
-    │ ≡ Front-end & Back-end                   │
+    │ ≡ Back-end                               │
     ╞══════════════════════════════════════════╡
     │                                          │
     │ ALEX BENOIT                              │
     ├──────────┬───────────────────────────────┤
-    │ Email    │ benalex75@gmail.com           │
+    │ Email    │ ben75.alex@gmail.com          │
     ├──────────┼───────────────────────────────┤
     │ Location │ Paris, FR                     │
     ╰──────────┴───────────────────────────────╯
 */
 
+html {
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+    height: 100%;
     margin: 0;
+    position: relative;
+    width: 100%;
 }
 
-/* HEADER */
-/* branding */
+.wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+/*-----------
+    HEADER
+-----------*/
+
+/* BRANDING */
 
 header div a {
     background: #fb9e08;
@@ -47,12 +68,14 @@ header div a {
     -o-transition: height 0.2s ease-in;
     transition: height 0.2s ease-in;
     width: 200px;
+    z-index: 1;
 }
 
 header div a:hover {
     height: 165px;
 }
 
+/* Title style */
 header div a h1, h3 {
     margin: 0;
 }
@@ -63,6 +86,7 @@ header div a h1 {
     text-align: right;
 }
 
+/* Rotate 'LES' */
 #branding-title--rotate {
     display: table;
     left: 15px;
@@ -75,12 +99,13 @@ header div a h1 {
     white-space: nowrap;
 }
 
-/* nav primary */
+/* HEADER MENU STYLE */
 
 header nav {
     background: white;
     height: 100px;
     width: 100%;
+    z-index: 1;
 }
 
 header nav ul {
@@ -123,13 +148,14 @@ header nav ul li a {
     transition: background 0.3s ease-in;
 }
 
+/* Highlights current link in primary nav */
 header nav ul li a.current {
     background: #f46330;
     color: white;
     transition: none;
 }
 
-/* header nav login links */
+/* HEADER MENU LINKS STYLE */
 
 #nav-primary__login:before {
     content: url(../img/icons/avatar83_32px_grey.png);
@@ -150,17 +176,17 @@ header nav ul li ul li a:focus {
     color: white;
 }
 
-/* Adding arrays for sub menus */
+/* Adds arrays for sub menus */
 
-li > a:after {
+.nav-primary__link:after {
     content: "   \25be";
 }
 
-li > a:only-child:after {
+.nav-primary__link:only-child:after {
     content: '';
 }
 
-/* Sub menus style */
+/* HEADER SUB MENU STYLE */
 
 header nav ul li ul {
     background: white;
@@ -189,11 +215,13 @@ header nav ul li ul li a {
     padding: 5px 0 5px 20px;
 }
 
-header nav ul li ul li .nav-primary__link-our-rooms__sub-menu {
+
+/* Specific width for sub menu links */
+.nav-primary__link-our-rooms__sub-menu {
     width: 208px;
 }
 
-header nav ul li ul li .nav-primary__link-who__sub-menu {
+.nav-primary__link-who__sub-menu {
     width: 239px;
 }
 
@@ -204,14 +232,17 @@ header nav ul ul {
     width: 100%;
 }
 
-/* FOOTER */
+
+/*------------
+    FOOTER
+------------*/
 
 footer {
     background: #485160;
     bottom: 0;
+    clear: both;
     height: 61px;
-    margin: 0;
-    position: fixed;
+    position: relative;
     width: 100%;
 }
 
@@ -225,8 +256,10 @@ footer {
 }
 
 #site-info__social-icons a {
-    margin: 0 5px 0 5px;
+    margin: 0 5px;
 }
+
+/* Social icons' content */
 
 #site-info__social-icons__twitter:before {
     content: url(../img/icons/twitter_32px_white.png);
@@ -262,6 +295,12 @@ footer {
 
 /* Footer menu */
 
+footer nav {
+    position: relative;
+    width: 650px;
+    margin: auto;
+}
+
 footer nav ul {
     background: #485160;
     border: none;
@@ -293,8 +332,8 @@ footer nav ul li a {
     float: left;
     font-size: 14px;
     height: auto;
-    margin: 1px 1px 1px 1px;
-    padding: 5px 8px 5px 8px;
+    margin: 1px;
+    padding: 5px 8px;
     text-decoration: none;
 }
 
@@ -310,42 +349,210 @@ footer nav ul li a:hover {
 
 #site-info__credits {
     float: right;
-    margin: 0 5% 0 0;
     position: relative;
+    right: 50px;
+    text-align: center;
+    top: 10px;
+    margin: auto;
 }
 
 #site-info__credits p {
     color: white;
     font-size: 14px;
+}
+
+
+/*-----------------------------
+    GENERAL CONTENT STYLE
+-----------------------------*/
+
+.content {
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+
+/*
+    OVERLAY ANIMATIONS
+*/
+
+.content-overlay {
+    background-color: rgba(48, 152, 157, 0.8);
+    height: 0;
+    -webkit-transition: height 1s ease 0.3s;
+    -moz-transition: height 1s ease 0.3s;
+    -o-transition: height 1s ease 0.3s;
+    transition: height 1s ease 0.3s;
+    width: 100%;
+}
+
+.content-overlay.load {
+    height: inherit;
+}
+
+
+/*/////////////////
+    FORM STYLES
+/////////////////*/
+
+.content form input, select {
+    border: 1px solid #d9d9d9;
+    font-size: medium;
+    min-height: 100%;
+    margin: 5px 0 8px 0;
+    padding: 3px;
+}
+
+form input:focus, select:focus {
+    border: 1px solid #00a6fd;
+}
+
+/* Change form placeholder color */
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #999999;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #999999;
+    opacity: 1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #999999;
+    opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #999999;
+}
+
+.input-container:before {
+    background: #f0f0f0;
+    border: 1px solid #d9d9d9;
+    border-right: none;
+    padding: 3px;
+}
+
+.input-container-date:before {
+    content: url("/content/img/icons/calendar_16px_485160.png");
+}
+
+.input-container-username:before {
+    content: url("/content/img/icons/mail-envelope_32px_485160.png");
+}
+
+.input-container-password:before {
+    content: url("/content/img/icons/closed-padlock_16px_485160.png");
+}
+
+.input-container-credit-card-number:before {
+    content: url("/content/img/icons/credit-card_16px_485160.png");
+}
+
+.input-container-user:before {
+    content: url("/content/img/icons/man-user_16px_485160.png");
+}
+
+.input-container-mail-object:before {
+    content: url("/content/img/icons/lamp_16px_485160.png");
+}
+
+
+/* Buttons in forms */
+.button-submit,
+.button-return {
+    background: #f46330;
+    border: 1px solid #f46330;
+    border-radius: 20px;
+    color: white;
+    display: block;
+    padding: 10px 15px;
+    position: relative;
     text-align: center;
 }
 
+.button-submit {
+    font-size: 14px;
+}
 
-/* ERROR 404 PAGE */
+.button-return {
+    font-size: 12px;
+    text-decoration: none;
+}
 
-.content.not-found {
+.button-submit:hover,
+.button-return:hover {
+    background: none;
+    color: #f46330;
+    cursor: pointer;
+}
+
+/*///////////////////
+    SITEMAP PAGE
+///////////////////*/
+
+.sitemap.content {
+    background: url("/content/img/backgrounds/sitemap-background.jpg") no-repeat fixed;
+    background-size: cover;
+    color: white;
+    font-size: 18px;
+    min-height: 500px;
+    height: 100%;
+}
+
+.sitemap .container-main {
+    margin: auto;
+    position: relative;
+    top: 100px;
+    width: 500px;
+}
+
+.sitemap .container-main h1 {
+    margin: 0;
+}
+
+.sitemap .container-main ul {
+    list-style: none;
+}
+
+.sitemap .container-main li {
+    margin: 5px;
+}
+
+.sitemap .container-main li a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/*/////////////////////
+    PAGE 403 & 404
+/////////////////////*/
+
+.content.error {
     background: #f46330;
     color: white;
     font-size: 60px;
+    min-height: 500px;
     height: 100%;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1;
 }
 
-.not-found section {
-    top: 210px;
+.content.error section {
     margin: auto;
     position: relative;
-    width: 1000px;
+    top: 150px;
 }
 
-.not-found section img {
+.error-404 {
+    width: 955px;
+}
+
+.error-403 {
+    width: 700px;
+}
+
+.content.error section img {
     float: left;
     margin-right: 50px;
 }
 
-.not-found h1, p {
+.content.error h1, p {
     display: inline;
 }
