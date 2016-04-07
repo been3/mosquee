@@ -38,7 +38,7 @@
 
         <!-- STYLES -->
         <!-- CSS -->
-        <link href="content/css/main.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="/content/css/main.css" rel="stylesheet" type="text/css" media="screen" />
         <!-- Favicon -->
         <link rel="shortcut icon" href="favicon.ico" />
         <!--[if IE]>
@@ -46,8 +46,8 @@
         <![endif]-->
 
         <!-- SCRIPTS -->
-        <script type="text/javascript" src="content/js/jquery-1.12.1.min.js"></script>
-        <script type="text/javascript" src="content/js/modernizr-3.3.1.min.js"></script>
+        <script type="text/javascript" src="/content/js/jquery-1.12.1.min.js"></script>
+        <script type="text/javascript" src="/content/js/modernizr-3.3.1.min.js"></script>
     </head>
     <body>
 

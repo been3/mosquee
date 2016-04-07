@@ -548,6 +548,10 @@ form input:focus, select:focus {
     width: 700px;
 }
 
+.error-401 {
+    width: 840px;
+}
+
 .content.error section img {
     float: left;
     margin-right: 50px;
