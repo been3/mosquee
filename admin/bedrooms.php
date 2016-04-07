@@ -24,6 +24,10 @@
 
         <!-- STYLES -->
         <!-- CSS -->
+        <link href="/content/js/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="/content/js/jquery-ui-1.11.4/jquery-ui.theme.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="/content/js/jquery-ui-1.11.4/jquery-ui.structure.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
         <link href="/content/css/admin.css" rel="stylesheet" type="text/css" media="screen" />
         <!-- Favicon -->
         <link rel="shortcut icon" href="/favicon.ico" />
@@ -33,6 +37,8 @@
 
         <script type="text/javascript" src="/content/js/jquery-1.12.1.min.js"></script>
         <script type="text/javascript" src="/content/js/modernizr-3.3.1.min.js"></script>
+        <script type="text/javascript" src="/content/js/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/content/js/editBedrooms.js"></script>
     </head>
 
     <body>
@@ -51,6 +57,35 @@
 
                 <!-- Container -->
                 <div class="container container-main">
+                    <div id="edit-dialog-form" title="Modifier la chambre" class="ui-dialog">
+                        <p class="validateTips">Tous les champs sont requis.</p>
+
+                        <form>
+                            <fieldset>
+                                <label for="bedroom-type">Type de chambre</label>
+                                <select id="bedroom-type" class="text ui-widget-content ui-corner-all">
+                                    <option value="Simple">Simple</option>
+                                    <option value="Double">Double</option>
+                                    <option value="Twin">Twin</option>
+                                </select>
+                                <label for="bedroom-capacity">Capacité</label>
+                                <input type="number" name="bedroom_capacity" id="bedroom-capacity" value="" step="1" class="text ui-widget-content ui-corner-all" /><br />
+                                <label for="bedroom-status">Statut</label>
+                                <select id="bedroom-status" class="text ui-widget-content ui-corner-all">
+                                    <option value="Libre">Libre</option>
+                                    <option value="Occupée">Occupée</option>
+                                </select>
+                                <br />
+                                <label for="bedroom-rate">Note</label>
+                                <input type="number" name="bedroom_rate" id="bedroom-rate" value="" step="1" class="text ui-widget-content ui-corner-all" /> / 5
+
+                                <!-- Allow form submission with keyboard without duplicating the dialog button -->
+                                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px" />
+                            </fieldset>
+                        </form>
+                    </div>
+
+                    <div>
                     <table>
                         <caption><h1>Liste des chambres</h1></caption>
                         <thead>
@@ -74,9 +109,9 @@
                                         <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                                     </div>
                                 </td>
-                                <td><a href=""><img src="/content/img/icons/editing_24px_191e23.png" /></a></td>
-                                <td><a href=""><img src="/content/img/icons/delete_24px_191e23.png" /></a></td>
-                            </tr>
+                                <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
+                                <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td
+                            </tr
                             <tr>
                                 <td>2</td>
                                 <td>Simple</td>
@@ -87,8 +122,8 @@
                                         <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                                     </div>
                                 </td>
-                                <td><a href=""><img src="/content/img/icons/editing_24px_191e23.png" /></a></td>
-                                <td><a href=""><img src="/content/img/icons/delete_24px_191e23.png" /></a></td>
+                                <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
+                                <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td
                             </tr>
                             <tr>
                                 <td>3</td>
@@ -100,8 +135,8 @@
                                         <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                                     </div>
                                 </td>
-                                <td><a href=""><img src="/content/img/icons/editing_24px_191e23.png" /></a></td>
-                                <td><a href=""><img src="/content/img/icons/delete_24px_191e23.png" /></a></td>
+                                <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
+                                <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td>
                             </tr>
                             <tr>
                                 <td>4</td>
@@ -113,8 +148,8 @@
                                         <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                                     </div>
                                 </td>
-                                <td><a href=""><img src="/content/img/icons/editing_24px_191e23.png" /></a></td>
-                                <td><a href=""><img src="/content/img/icons/delete_24px_191e23.png" /></a></td>
+                                <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
+                                <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td>
                             </tr>
                             <tr>
                                 <td>5</td>
@@ -126,8 +161,8 @@
                                         <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                                     </div>
                                 </td>
-                                <td><a href=""><img src="/content/img/icons/editing_24px_191e23.png" /></a></td>
-                                <td><a href=""><img src="/content/img/icons/delete_24px_191e23.png" /></a></td>
+                                <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
+                                <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td>
                             </tr>
                             <tr>
                                 <td>6</td>
@@ -139,8 +174,8 @@
                                         <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                                     </div>
                                 </td>
-                                <td><a href=""><img src="/content/img/icons/editing_24px_191e23.png" /></a></td>
-                                <td><a href=""><img src="/content/img/icons/delete_24px_191e23.png" /></a></td>
+                                <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
+                                <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td>
                             </tr>
                             <tr>
                                 <td>7</td>
@@ -152,8 +187,8 @@
                                         <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                                     </div>
                                 </td>
-                                <td><a href=""><img src="/content/img/icons/editing_24px_191e23.png" /></a></td>
-                                <td><a href=""><img src="/content/img/icons/delete_24px_191e23.png" /></a></td>
+                                <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
+                                <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td>
                             </tr>
                             <tr>
                                 <td>8</td>
@@ -165,8 +200,8 @@
                                         <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                                     </div>
                                 </td>
-                                <td><a href=""><img src="/content/img/icons/editing_24px_191e23.png" /></a></td>
-                                <td><a href=""><img src="/content/img/icons/delete_24px_191e23.png" /></a></td>
+                                <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
+                                <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td>
                             </tr>
                             <tr>
                                 <td>9</td>
@@ -178,8 +213,8 @@
                                         <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                                     </div>
                                 </td>
-                                <td><a href=""><img src="/content/img/icons/editing_24px_191e23.png" /></a></td>
-                                <td><a href=""><img src="/content/img/icons/delete_24px_191e23.png" /></a></td>
+                                <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
+                                <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td>
                             </tr>
                             <tr>
                                 <td>10</td>
@@ -191,8 +226,8 @@
                                         <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                                     </div>
                                 </td>
-                                <td><a href=""><img src="/content/img/icons/editing_24px_191e23.png" /></a></td>
-                                <td><a href=""><img src="/content/img/icons/delete_24px_191e23.png" /></a></td>
+                                <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
+                                <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td>
                             </tr>
                             <tr>
                                 <td>11</td>
@@ -204,8 +239,8 @@
                                         <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                                     </div>
                                 </td>
-                                <td><a href=""><img src="/content/img/icons/editing_24px_191e23.png" /></a></td>
-                                <td><a href=""><img src="/content/img/icons/delete_24px_191e23.png" /></a></td>
+                                <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
+                                <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td>
                             </tr>
                             <tr>
                                 <td>12</td>
@@ -217,8 +252,8 @@
                                         <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                                     </div>
                                 </td>
-                                <td><a href=""><img src="/content/img/icons/editing_24px_191e23.png" /></a></td>
-                                <td><a href=""><img src="/content/img/icons/delete_24px_191e23.png" /></a></td>
+                                <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
+                                <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td>
                             </tr>
                         </tbody>
                     </table>
@@ -240,6 +275,7 @@
                     }
                 });
             });
+
         </script>
 
     </body>
