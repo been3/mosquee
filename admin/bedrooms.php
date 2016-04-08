@@ -27,7 +27,6 @@
         <link href="/content/js/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="/content/js/jquery-ui-1.11.4/jquery-ui.theme.min.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="/content/js/jquery-ui-1.11.4/jquery-ui.structure.min.css" rel="stylesheet" type="text/css" media="screen" />
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
         <link href="/content/css/admin.css" rel="stylesheet" type="text/css" media="screen" />
         <!-- Favicon -->
         <link rel="shortcut icon" href="/favicon.ico" />
@@ -57,7 +56,7 @@
 
                 <!-- Container -->
                 <div class="container container-main">
-                    <div id="edit-dialog-form" title="Modifier la chambre" class="ui-dialog">
+                    <div id="edit-dialog-form" title="Modifier les informations de la chambre" class="ui-dialog">
                         <p class="validateTips">Tous les champs sont requis.</p>
 
                         <form>
@@ -67,7 +66,7 @@
                                     <option value="Simple">Simple</option>
                                     <option value="Double">Double</option>
                                     <option value="Twin">Twin</option>
-                                </select>
+                                </select><br />
                                 <label for="bedroom-capacity">Capacité</label>
                                 <input type="number" name="bedroom_capacity" id="bedroom-capacity" value="" step="1" class="text ui-widget-content ui-corner-all" /><br />
                                 <label for="bedroom-status">Statut</label>
@@ -104,24 +103,16 @@
                                 <td>Simple</td>
                                 <td>1</td>
                                 <td>Occupée</td>
-                                <td>
-                                    <div class="rating">
-                                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                    </div>
-                                </td>
+                                <td><span class="stars">3.6</span></td>
                                 <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
-                                <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td
+                                <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td>
                             </tr
                             <tr>
                                 <td>2</td>
                                 <td>Simple</td>
                                 <td>1</td>
                                 <td>Occupée</td>
-                                <td>
-                                    <div class="rating">
-                                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                    </div>
-                                </td>
+                                <td><span class="stars">4</span></td>
                                 <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
                                 <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td
                             </tr>
@@ -130,11 +121,7 @@
                                 <td>Simple</td>
                                 <td>1</td>
                                 <td>Occupée</td>
-                                <td>
-                                    <div class="rating">
-                                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                    </div>
-                                </td>
+                                <td><span class="stars">4</span></td>
                                 <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
                                 <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td>
                             </tr>
@@ -143,11 +130,7 @@
                                 <td>Simple</td>
                                 <td>1</td>
                                 <td>Occupée</td>
-                                <td>
-                                    <div class="rating">
-                                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                    </div>
-                                </td>
+                                <td><span class="stars">1.7</span></td>
                                 <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
                                 <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td>
                             </tr>
@@ -156,11 +139,7 @@
                                 <td>Simple</td>
                                 <td>1</td>
                                 <td>Occupée</td>
-                                <td>
-                                    <div class="rating">
-                                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                    </div>
-                                </td>
+                                <td><span class="stars">5</span></td>
                                 <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
                                 <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td>
                             </tr>
@@ -169,11 +148,7 @@
                                 <td>Simple</td>
                                 <td>1</td>
                                 <td>Occupée</td>
-                                <td>
-                                    <div class="rating">
-                                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                    </div>
-                                </td>
+                                <td><span class="stars">4.8618164</span></td>
                                 <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
                                 <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td>
                             </tr>
@@ -182,11 +157,7 @@
                                 <td>Simple</td>
                                 <td>1</td>
                                 <td>Occupée</td>
-                                <td>
-                                    <div class="rating">
-                                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                    </div>
-                                </td>
+                                <td><span class="stars">4.8618164</span></td>
                                 <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
                                 <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td>
                             </tr>
@@ -195,11 +166,7 @@
                                 <td>Simple</td>
                                 <td>1</td>
                                 <td>Occupée</td>
-                                <td>
-                                    <div class="rating">
-                                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                    </div>
-                                </td>
+                                <td><span class="stars">0.5355</span></td>
                                 <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
                                 <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td>
                             </tr>
@@ -208,11 +175,7 @@
                                 <td>Simple</td>
                                 <td>1</td>
                                 <td>Occupée</td>
-                                <td>
-                                    <div class="rating">
-                                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                    </div>
-                                </td>
+                                <td><span class="stars">2.6545344</span></td>
                                 <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
                                 <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td>
                             </tr>
@@ -221,11 +184,7 @@
                                 <td>Simple</td>
                                 <td>1</td>
                                 <td>Occupée</td>
-                                <td>
-                                    <div class="rating">
-                                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                    </div>
-                                </td>
+                                <td><span class="stars">2.6545344</span></td>
                                 <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
                                 <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td>
                             </tr>
@@ -234,11 +193,7 @@
                                 <td>Simple</td>
                                 <td>1</td>
                                 <td>Occupée</td>
-                                <td>
-                                    <div class="rating">
-                                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                    </div>
-                                </td>
+                                <td><span class="stars">2.6545344</span></td>
                                 <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
                                 <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td>
                             </tr>
@@ -247,11 +202,7 @@
                                 <td>Simple</td>
                                 <td>1</td>
                                 <td>Occupée</td>
-                                <td>
-                                    <div class="rating">
-                                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                    </div>
-                                </td>
+                                <td><span class="stars">3.6545344</span></td>
                                 <td><button class="edit-bedrooms"><img src="/content/img/icons/editing_24px_191e23.png" /></button></td>
                                 <td><button class="remove-bedrooms"><img src="/content/img/icons/delete_24px_191e23.png" /></button></td>
                             </tr>
@@ -276,6 +227,9 @@
                 });
             });
 
+            $(function() {
+                $('span.stars').stars();
+            });
         </script>
 
     </body>

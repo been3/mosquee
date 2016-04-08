@@ -118,23 +118,15 @@ table tbody tr:hover {
     background: white;
 }
 
-.rating {
-    unicode-bidi: bidi-override;
-    direction: rtl;
-}
-.rating > span {
-    display: inline-block;
-    position: relative;
-    width: 1.1em;
-}
-.rating > span:hover:before,
-.rating > span:hover ~ span:before {
-    content: "\2605";
-    position: absolute;
+span.stars, span.stars span {
+    display: block;
+    background: url(/content/img/icons/stars.png) 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
 }
 
-form .rating {
-    text-align: left;
+span.stars span {
+    background-position: 0 0;
 }
 
 button {

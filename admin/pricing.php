@@ -24,11 +24,10 @@
 
         <!-- STYLES -->
         <!-- CSS -->
+        <link href="/content/js/jquery-ui-1.11.4/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="/content/js/jquery-ui-1.11.4/jquery-ui.theme.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="/content/js/jquery-ui-1.11.4/jquery-ui.structure.min.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="/content/css/admin.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="/content/js/jquery-ui-1.11.4/jquery-ui.min.css" />
-        <link href="/content/js/jquery-ui-1.11.4/jquery-ui.theme.min.css" />
-        <link href="/content/js/jquery-ui-1.11.4/jquery-ui.structure.min.css" />
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
         <!-- Favicon -->
         <link rel="shortcut icon" href="/favicon.ico" />
