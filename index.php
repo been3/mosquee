@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <!--
     ╭──────────────────────────────────────────╮
     │ ≡ Design & Front-end                     │
@@ -12,7 +13,7 @@
     ╰──────────┴───────────────────────────────╯
 
     ╭──────────────────────────────────────────╮
-    │ ≡ Front-end & Back-end                   │
+    │ ≡ Back-end                               │
     ╞══════════════════════════════════════════╡
     │                                          │
     │ ALEX BENOIT                              │
@@ -56,8 +57,50 @@
             <?php include 'view/headerView.php'; ?>
 
             <!-- Content -->
-            <div class="content">
-
+            <div class="content home">
+                <div class="content-overlay">
+                    <div class="container container-main">
+                        <div class="home-title">
+                            <img src="/content/img/icons/favourite-symbol_64px_white.png" />
+                            <img src="/content/img/icons/favourite-symbol_64px_white.png" />
+                            <img src="/content/img/icons/favourite-symbol_64px_white.png" />
+                            <h1 id="home-title-welcome">BIENVENUE</h1>
+                            <h1 id="home-title-hotel">À L'HÔTEL</h1>
+                            <h1 id="home-title-les-ziags">LES ZIAGS</h1>
+                        </div>
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="card">
+                                        <h2>Une accueil de qualité</h2>
+                                        <p>
+                                            L'Hôtel Les Ziags propose 12 chambres à la décoration moderne et aux équipements fonctionnels et de qualité. Elles sont transformables à votre convenance en véritables salles de réunion.
+                                        </p>
+                                        <a href="/bedrooms"><button class="button-submit">Voir nos chambres</button></a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="card">
+                                        <h2>Des services premium</h2>
+                                        <p>
+                                            Connexion WiFi gratuite et illimitée depuis votre chambre et tous les espaces communs de l'hôtel, service petit-déjeuner en chambre de 6h30 à 12h... Profitez de services premium durant votre séjour.
+                                        </p>
+                                        <a><button class="button-submit">Voir nos services</button></a>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="card">
+                                        <h2>Des prix abordables</h2>
+                                        <p>
+                                            L'Hôtel Les Ziags propose des tarifs abordables, à partir de 20€ la nuit, à deux pas de la capitale... Inscrivez-vous et profitez de nos offres spéciales !
+                                        </p>
+                                        <a href="/booking/stay"><button class="button-submit">Consulter nos tarifs</button></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
 
             <!-- Footer -->

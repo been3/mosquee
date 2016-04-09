@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <!--
     ╭──────────────────────────────────────────╮
     │ ≡ Design & Front-end                     │
@@ -11,17 +10,6 @@
     ├──────────┼───────────────────────────────┤
     │ Location │ Sucy-en-Brie, FR              │
     ╰──────────┴───────────────────────────────╯
-
-    ╭──────────────────────────────────────────╮
-    │ ≡ Back-end                               │
-    ╞══════════════════════════════════════════╡
-    │                                          │
-    │ ALEX BENOIT                              │
-    ├──────────┬───────────────────────────────┤
-    │ Email    │ ben75.alex@gmail.com          │
-    ├──────────┼───────────────────────────────┤
-    │ Location │ Paris, FR                     │
-    ╰──────────┴───────────────────────────────╯
 -->
 
 <html lang="fr">
@@ -30,7 +18,7 @@
         <!-- META -->
         <meta charset="utf-8" />
 
-        <title>Erreur 403</title>
+        <title>Erreur 401</title>
 
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -60,10 +48,10 @@
 
             <!-- Content -->
             <div class="content error">
-                <section class="error-403">
+                <section class="error-401">
                     <img src="/content/img/icons/hand_256px_white.png" alt="unauthorized">
-                    <h1>403</h1><br />
-                    <p>Accès refusé.</p>
+                    <h1>401</h1><br />
+                    <p>Une authentification est nécessaire.</p>
                 </section>
             </div>
 

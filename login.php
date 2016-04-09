@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <!--
     ╭──────────────────────────────────────────╮
     │ ≡ Design & Front-end                     │
@@ -12,7 +13,7 @@
     ╰──────────┴───────────────────────────────╯
 
     ╭──────────────────────────────────────────╮
-    │ ≡ Front-end & Back-end                   │
+    │ ≡ Back-end                               │
     ╞══════════════════════════════════════════╡
     │                                          │
     │ ALEX BENOIT                              │
@@ -69,7 +70,7 @@
             <?php include 'view/headerView.php'; ?>
 
             <!-- Content -->
-            <div class="content">
+            <div class="content login">
                 <!-- Login with... social buttons -->
                 <section class="login__social-buttons">
                     <div class="container">
@@ -96,12 +97,10 @@
                     <div class="container">
                         <form action="" method="post" id="login__form-signin">
                             <h5>Se connecter</h5>
-                            <span><img src="/content/img/icons/mail-envelope_32px_485160.png" alt="username" /></span>
-                            <input type="text" placeholder="Email / Nom d'utilisateur" name="username" /><br />
-                            <span><img src="content/img/icons/closed-padlock_16px_485160.png" alt="password" /></span>
-                            <input type="password" placeholder="Mot de passe" name="password" /><br />
+                            <div class="input-container input-container-username"><input type="text" placeholder="Email / Nom d'utilisateur" name="username" /></div>
+                            <div class="input-container input-container-password"><input type="password" placeholder="Mot de passe" name="password" /></div>
                             <a href="/">Mot de passe oublié ?</a>
-                            <button>Se connecter</button>
+                            <button class="button-submit">Se connecter</button>
                         </form>
                     </div>
 
@@ -112,8 +111,8 @@
                             <h3>Créer un compte</h3>
                             <input type="text" placeholder="Nom" name="firstname" />
                             <input type="text" placeholder="Prénom" name="lastname" />
-                            <input type="text" placeholder="Email" name="email" pattern="[a-zA-Z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?" oninput="try {if ($(this).val().match(new RegExp(this.getAttribute('pattern')))) { this.setCustomValidity(''); } else { this.setCustomValidity('Veuillez entrer une adresse valide'); }} catch(e) {}" /><br />
-                            <button>S'inscrire</button>
+                            <input type="email" placeholder="Email" name="email" pattern="[a-zA-Z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?" oninput="try {if ($(this).val().match(new RegExp(this.getAttribute('pattern')))) { this.setCustomValidity(''); } else { this.setCustomValidity('Veuillez entrer une adresse valide'); }} catch(e) {}" /><br />
+                            <button class="button-submit">S'inscrire</button>
                         </form>
                     </div>
                 </section>
