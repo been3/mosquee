@@ -39,7 +39,7 @@
     top: 60px;
 }
 
-.login__social-button {
+.social-status {
     display: block;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -50,13 +50,13 @@
     width: 100%;
 }
 
-.login__social-button img {
+.social-status img {
     margin-right: 8px;
     float: left;
     padding: 3px;
 }
 
-.login__social-button p {
+.social-status p {
     display: inline-block;
     margin: 0;
     padding-top: 5px;

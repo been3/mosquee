@@ -1,0 +1,155 @@
+/*////////////////////
+    ACCOUNT PAGES
+////////////////////*/
+
+.content {
+    background: url("/content/img/backgrounds/ABNB0.jpg") no-repeat center;
+    background-size: cover;
+    min-height: 1300px;
+    height: 100%;
+}
+
+.container {
+    color: white;
+    position: relative;
+    top: 200px;
+    opacity: 0;
+    -webkit-transition: top 1s ease-out, opacity 1s ease 0.3s;
+    -moz-transition: top 1s ease-out, opacity 1s ease 0.3s;
+    -o-transition: top 1s ease-out, opacity 1s ease 0.3s;
+    transition: top 1s ease-out, opacity 1s ease 0.3s;
+    width: 1000px;
+    margin: auto;
+}
+
+.container.load {
+    opacity: 1;
+    top: 150px;
+}
+
+.user-avatar {
+    position: relative;
+    margin: auto;
+    top: -50px;
+    width: 150px;
+}
+
+.user-avatar img {
+    border-radius: 8px;
+    height: 150px;
+}
+
+.user-avatar figcaption {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin: 15px 0;
+}
+
+/*----- Tabs -----*/
+.tabs {
+    width: 100%;
+    display: inline-block;
+}
+
+/*----- Tab Links -----*/
+/* Clearfix */
+.tab-links:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.tab-links li {
+    margin: 0 5px;
+    float: left;
+    list-style: none;
+}
+
+.tab-links a {
+    padding: 9px 15px;
+    display: inline-block;
+    border-radius: 3px 3px 0 0;
+    background: #7fb5da;
+    font-size: 16px;
+    color: #4c4c4c;
+    text-decoration: none;
+    transition: all linear 0.15s;
+}
+
+.tab-links a:hover {
+    background: #a7cce5;
+    text-decoration: none;
+}
+
+li.active a, li.active a:hover {
+    background: #fff;
+    color: #4c4c4c;
+}
+
+/*----- Content of Tabs -----*/
+.tab-content {
+    color: #393b45;
+    padding: 15px;
+    box-shadow: -1px 1px 1px rgba(0,0,0,0.15);
+    background: #fff;
+    position: relative;
+    top: -17px;
+}
+
+.tab {
+    display: none;
+}
+
+.tab.active {
+    display: block;
+}
+
+.tab-container {
+    margin: auto;
+    width: 500px;
+}
+
+.tab-container table tr td {
+    padding: 25px;
+}
+
+.tab-container table tr td:first-child {
+    font-weight: bold;
+}
+
+.tab-container table tr td .user-avatar {
+    top: 0;
+    -webkit-transition: opacity 0.5s ease 0.1s;
+    -moz-transition: opacity 0.5s ease 0.1s;
+    -o-transition: opacity 0.5s ease 0.1s;
+    transition: opacity 0.5s ease 0.1s;
+}
+
+.tab-container table tr td .user-avatar:hover {
+    opacity: 0.5;
+}
+
+.social-status {
+    display: block;
+    border-radius: 4px;
+    color: white;
+    height: 30px;
+    margin: 10px;
+    width: 100%;
+    background: #3b5998;
+    border: 1px solid #2f477a;
+}
+
+.social-status img {
+    border-right: 1px solid #2f477a;
+    float: left;
+    margin-right: 8px;
+    padding: 3px;
+}
+
+.social-status p {
+    display: inline-block;
+    margin: 0;
+    padding-top: 5px;
+}
