@@ -30,6 +30,8 @@ SET time_zone = "+00:00";
 -- Procédure P_RESERVATION
 --
 
+DELIMITER $$
+
 CREATE PROCEDURE p_reservation(`chambre` VARCHAR(15), `date` DATE, `duree` INT, client VARCHAR(15), `nb_personnes` INT)
 BEGIN
 	IF duree < 8
