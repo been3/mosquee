@@ -21,3 +21,21 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
+
+--
+-- Suppression de l'ensemble des données
+--
+
+SET FOREIGN_KEY_CHECKS = 0; -- disable a foreign keys check
+SET AUTOCOMMIT = 0; -- disable autocommit
+START TRANSACTION; -- begin transaction
+
+TRUNCATE `address`;
+TRUNCATE `admin`;
+TRUNCATE `booking`;
+TRUNCATE `client`;
+TRUNCATE `contact`;
+TRUNCATE `payment`;
+TRUNCATE `room`;
+
+SET FOREIGN_KEY_CHECKS = 1; -- enable a foreign keys check
