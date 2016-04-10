@@ -11,7 +11,7 @@
     ╰──────────┴───────────────────────────────╯
 
     ╭──────────────────────────────────────────╮
-    │ ≡ Front-end & Back-end                   │
+    │ ≡ Back-end                               │
     ╞══════════════════════════════════════════╡
     │                                          │
     │ ALEX BENOIT                              │
@@ -546,6 +546,10 @@ form input:focus, select:focus {
 
 .error-403 {
     width: 700px;
+}
+
+.error-401 {
+    width: 840px;
 }
 
 .content.error section img {
