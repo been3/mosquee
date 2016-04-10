@@ -21,3 +21,33 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
+
+--
+-- Procédures MySQL
+--
+
+--
+-- Procédure P_RESERVATION
+--
+
+CREATE PROCEDURE p_reservation(`chambre` VARCHAR(15), `date` DATE, `duree` INT, client VARCHAR(15), `nb_personnes` INT)
+BEGIN
+	IF duree < 8
+		AND TIMESTAMPDIFF(MONTH, CURDATE(), date) < 6
+        AND (SELECT COUNT(*) FROM `booking` WHERE `booking_datestart` = `date`) = 0
+        AND (SELECT COUNT(*) FROM `booking` WHERE `booking_idclient` = `client` AND `booking_canceled` = 0) < 2 THEN
+		INSERT INTO `booking` (`booking_idbooking`, `booking_idroom`, `booking_idclient`, `booking_idpayment`, `booking_datestart`, `booking_dateend`, `booking_nbnights`, `booking_price`, `booking_canceled`) VALUES
+		('684100734059023', `chambre`, `client`, CONVERT(FLOOR( 111111111111111 + RAND( ) * 999999999999999 ), CHAR(15)) , `date`, DATE_ADD(`date` , INTERVAL `duree` DAY), TIMESTAMPDIFF(DAY, `date`, DATE_ADD(`date` , INTERVAL `duree` DAY)), 120, 0);
+    END IF;
+END $$
+
+--
+-- Procédure P_ANNULE_RESERVATION
+--
+
+CREATE PROCEDURE p_annule_reservation(`reservation` VARCHAR(15))
+BEGIN
+	UPDATE `booking` SET `booking_canceled`=1 WHERE `booking_idbooking`=`reservation`;
+END $$
+
+DELIMITER ;
