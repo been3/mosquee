@@ -27,13 +27,14 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `address` (
-  `address_idadress` varchar(15) NOT NULL,
+  `address_idaddress` varchar(15) NOT NULL,
   `address_country` varchar(20) NOT NULL,
+  `address_city` varchar(50) NOT NULL,
   `address_zipcode` int(10) NOT NULL,
   `address_street` varchar(50) NOT NULL,
   `address_streetnumber` int(4) NOT NULL,
-  PRIMARY KEY (`address_idadress`),
-  UNIQUE KEY `address_idadress` (`address_idadress`)
+  PRIMARY KEY (`address_idaddress`),
+  UNIQUE KEY `address_idadress` (`address_idaddress`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -44,6 +45,7 @@ CREATE TABLE IF NOT EXISTS `address` (
 
 CREATE TABLE IF NOT EXISTS `admin` (
   `admin_idadmin` varchar(15) NOT NULL,
+  `admin_connectionid` varchar(20) NOT NULL,
   `admin_password` varchar(20) NOT NULL,
   `admin_firstname` varchar(50) NOT NULL,
   `admin_lastname` varchar(20) NOT NULL,
@@ -63,7 +65,9 @@ CREATE TABLE IF NOT EXISTS `booking` (
   `booking_idpayment` varchar(15) NOT NULL,
   `booking_datestart` date NOT NULL,
   `booking_dateend` date NOT NULL,
+  `booking_nbnights` int(3) NOT NULL,
   `booking_price` int(5) NOT NULL,
+  `booking_canceled` tinyint(1) NOT NULL,
   PRIMARY KEY (`booking_idbooking`),
   UNIQUE KEY `booking_idclient` (`booking_idclient`),
   UNIQUE KEY `booking_idpayment` (`booking_idpayment`),
@@ -80,16 +84,16 @@ CREATE TABLE IF NOT EXISTS `client` (
   `client_idclient` varchar(15) NOT NULL,
   `client_firstname` varchar(50) NOT NULL,
   `client_lastname` varchar(50) NOT NULL,
-  `client_idadress` varchar(15) NOT NULL,
-  `client_cellphone` int(10) NOT NULL,
+  `client_idaddress` varchar(15) NOT NULL,
+  `client_cellphone` varchar(10) NOT NULL,
   `client_fbaccount` varchar(50) NOT NULL,
-  `client_gender` varchar(3) NOT NULL,
+  `client_gender` enum('Mr','Mrs') NOT NULL,
   PRIMARY KEY (`client_idclient`),
   UNIQUE KEY `client_idclient` (`client_idclient`),
   UNIQUE KEY `client_cellphone` (`client_cellphone`),
   UNIQUE KEY `client_fbaccount` (`client_fbaccount`),
-  UNIQUE KEY `client_idadress_2` (`client_idadress`),
-  KEY `client_idadress` (`client_idadress`),
+  UNIQUE KEY `client_idadress_2` (`client_idaddress`),
+  KEY `client_idadress` (`client_idaddress`),
   KEY `client_firstname` (`client_firstname`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -120,7 +124,7 @@ CREATE TABLE IF NOT EXISTS `payment` (
   `payment_idclient` varchar(15) NOT NULL,
   `payment_idaddress` varchar(15) NOT NULL,
   `payment_cardtype` varchar(20) NOT NULL,
-  `payment_cardnb` int(16) NOT NULL,
+  `payment_cardnb` bigint(16) NOT NULL,
   `payment_crypto` int(3) NOT NULL,
   `payment_expiration` date NOT NULL,
   PRIMARY KEY (`payment_idpayment`),
@@ -139,15 +143,21 @@ CREATE TABLE IF NOT EXISTS `payment` (
 
 CREATE TABLE IF NOT EXISTS `room` (
   `room_idroom` varchar(15) NOT NULL,
-  `room_type` varchar(5) NOT NULL,
-  `room_vue` varchar(5) NOT NULL,
-  `room_capacity` int(1) NOT NULL,
-  `room_highpricing` int(11) NOT NULL,
+  `room_roomnbr` int(2) NOT NULL,
+  `room_floornbr` enum('1','2') NOT NULL,
+  `room_bathroom` tinyint(1) NOT NULL,
+  `room_type` enum('simple','double','twin') NOT NULL,
+  `room_vue` enum('A86','cour') NOT NULL,
+  `room_capacity` enum('1','2') NOT NULL,
+  `room_superficy` int(3) NOT NULL,
   `room_lowpricing` int(11) NOT NULL,
-  PRIMARY KEY (`room_idroom`)
+  `room_highpricing` int(11) NOT NULL,
+  `room_avaible` tinyint(1) NOT NULL,
+  PRIMARY KEY (`room_idroom`),
+  UNIQUE KEY `room_roomnbr` (`room_roomnbr`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
+-- --------------------------------------------------------
 
 --
 -- Contraintes pour les tables exportées
@@ -157,19 +167,23 @@ CREATE TABLE IF NOT EXISTS `room` (
 -- Contraintes pour la table `booking`
 --
 ALTER TABLE `booking`
-  ADD CONSTRAINT `booking_ibfk_3` FOREIGN KEY (`booking_idpayment`) REFERENCES `payment` (`payment_idpayment`),
-  ADD CONSTRAINT `booking_ibfk_1` FOREIGN KEY (`booking_idroom`) REFERENCES `room` (`room_idroom`),
-  ADD CONSTRAINT `booking_ibfk_2` FOREIGN KEY (`booking_idclient`) REFERENCES `client` (`client_idclient`);
+ADD CONSTRAINT `booking_ibfk_1` FOREIGN KEY (`booking_idroom`) REFERENCES `room` (`room_idroom`),
+ADD CONSTRAINT `booking_ibfk_2` FOREIGN KEY (`booking_idclient`) REFERENCES `client` (`client_idclient`),
+ADD CONSTRAINT `booking_ibfk_3` FOREIGN KEY (`booking_idpayment`) REFERENCES `payment` (`payment_idpayment`);
 
 --
 -- Contraintes pour la table `client`
 --
 ALTER TABLE `client`
-  ADD CONSTRAINT `client_ibfk_1` FOREIGN KEY (`client_idadress`) REFERENCES `address` (`address_idadress`);
+ADD CONSTRAINT `client_ibfk_1` FOREIGN KEY (`client_idaddress`) REFERENCES `address` (`address_idaddress`);
 
 --
 -- Contraintes pour la table `payment`
 --
 ALTER TABLE `payment`
-  ADD CONSTRAINT `payment_ibfk_2` FOREIGN KEY (`payment_idaddress`) REFERENCES `address` (`address_idadress`),
-  ADD CONSTRAINT `payment_ibfk_1` FOREIGN KEY (`payment_idclient`) REFERENCES `client` (`client_idclient`);
+ADD CONSTRAINT `payment_ibfk_1` FOREIGN KEY (`payment_idclient`) REFERENCES `client` (`client_idclient`),
+ADD CONSTRAINT `payment_ibfk_2` FOREIGN KEY (`payment_idaddress`) REFERENCES `address` (`address_idaddress`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
