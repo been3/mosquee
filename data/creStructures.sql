@@ -22,10 +22,6 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
---
--- Structure de la table `address`
---
-
 CREATE TABLE IF NOT EXISTS `address` (
   `address_idaddress` varchar(15) NOT NULL,
   `address_country` varchar(20) NOT NULL,
@@ -45,6 +41,7 @@ CREATE TABLE IF NOT EXISTS `address` (
 
 CREATE TABLE IF NOT EXISTS `admin` (
   `admin_idadmin` varchar(15) NOT NULL,
+  `admin_clearancelevel` enum('operator','admin') NOT NULL,
   `admin_connectionid` varchar(20) NOT NULL,
   `admin_password` varchar(20) NOT NULL,
   `admin_firstname` varchar(50) NOT NULL,
@@ -87,14 +84,20 @@ CREATE TABLE IF NOT EXISTS `client` (
   `client_idaddress` varchar(15) NOT NULL,
   `client_cellphone` varchar(10) NOT NULL,
   `client_fbaccount` varchar(50) NOT NULL,
+  `client_mail` varchar(75) NOT NULL,
   `client_gender` enum('Mr','Mrs') NOT NULL,
+  `client_age` int(3) NOT NULL,
+  `client_clientid` varchar(20) NOT NULL,
+  `client_clientpass` varchar(20) NOT NULL,
   PRIMARY KEY (`client_idclient`),
   UNIQUE KEY `client_idclient` (`client_idclient`),
   UNIQUE KEY `client_cellphone` (`client_cellphone`),
   UNIQUE KEY `client_fbaccount` (`client_fbaccount`),
   UNIQUE KEY `client_idadress_2` (`client_idaddress`),
+  UNIQUE KEY `client_mail_2` (`client_mail`),
   KEY `client_idadress` (`client_idaddress`),
-  KEY `client_firstname` (`client_firstname`)
+  KEY `client_firstname` (`client_firstname`),
+  KEY `client_mail` (`client_mail`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -110,7 +113,9 @@ CREATE TABLE IF NOT EXISTS `contact` (
   `contact_subject` varchar(100) NOT NULL,
   `contact_message` text NOT NULL,
   PRIMARY KEY (`contact_idcontact`),
-  KEY `contact_mail` (`contact_mail`)
+  KEY `contact_mail` (`contact_mail`),
+  KEY `contact_mail_2` (`contact_mail`),
+  KEY `contact_mail_3` (`contact_mail`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -147,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `room` (
   `room_floornbr` enum('1','2') NOT NULL,
   `room_bathroom` tinyint(1) NOT NULL,
   `room_type` enum('simple','double','twin') NOT NULL,
-  `room_vue` enum('A86','cour') NOT NULL,
+  `room_view` enum('A86','courtyard') NOT NULL,
   `room_capacity` enum('1','2') NOT NULL,
   `room_superficy` int(3) NOT NULL,
   `room_lowpricing` int(11) NOT NULL,
@@ -170,6 +175,7 @@ ALTER TABLE `booking`
 ADD CONSTRAINT `booking_ibfk_1` FOREIGN KEY (`booking_idroom`) REFERENCES `room` (`room_idroom`),
 ADD CONSTRAINT `booking_ibfk_2` FOREIGN KEY (`booking_idclient`) REFERENCES `client` (`client_idclient`),
 ADD CONSTRAINT `booking_ibfk_3` FOREIGN KEY (`booking_idpayment`) REFERENCES `payment` (`payment_idpayment`);
+
 
 --
 -- Contraintes pour la table `client`
