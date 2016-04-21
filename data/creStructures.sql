@@ -22,19 +22,6 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
-CREATE TABLE IF NOT EXISTS `address` (
-  `address_idaddress` varchar(15) NOT NULL,
-  `address_country` varchar(20) NOT NULL,
-  `address_city` varchar(50) NOT NULL,
-  `address_zipcode` int(10) NOT NULL,
-  `address_street` varchar(50) NOT NULL,
-  `address_streetnumber` int(4) NOT NULL,
-  PRIMARY KEY (`address_idaddress`),
-  UNIQUE KEY `address_idadress` (`address_idaddress`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
 --
 -- Structure de la table `admin`
 --
@@ -68,6 +55,8 @@ CREATE TABLE IF NOT EXISTS `booking` (
   PRIMARY KEY (`booking_idbooking`),
   UNIQUE KEY `booking_idclient` (`booking_idclient`),
   UNIQUE KEY `booking_idpayment` (`booking_idpayment`),
+  UNIQUE KEY `booking_idclient_2` (`booking_idclient`),
+  UNIQUE KEY `booking_idclient_3` (`booking_idclient`),
   KEY `booking_idroom` (`booking_idroom`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -81,7 +70,6 @@ CREATE TABLE IF NOT EXISTS `client` (
   `client_idclient` varchar(15) NOT NULL,
   `client_firstname` varchar(50) NOT NULL,
   `client_lastname` varchar(50) NOT NULL,
-  `client_idaddress` varchar(15) NOT NULL,
   `client_cellphone` varchar(10) NOT NULL,
   `client_fbaccount` varchar(50) NOT NULL,
   `client_mail` varchar(75) NOT NULL,
@@ -89,13 +77,16 @@ CREATE TABLE IF NOT EXISTS `client` (
   `client_age` int(3) NOT NULL,
   `client_clientid` varchar(20) NOT NULL,
   `client_clientpass` varchar(20) NOT NULL,
+  `client_country` varchar(15) NOT NULL,
+  `client_city` varchar(20) NOT NULL,
+  `client_zipcode` int(10) NOT NULL,
+  `client_street` varchar(50) NOT NULL,
+  `client_streetnumber` varchar(8) NOT NULL,
   PRIMARY KEY (`client_idclient`),
   UNIQUE KEY `client_idclient` (`client_idclient`),
   UNIQUE KEY `client_cellphone` (`client_cellphone`),
   UNIQUE KEY `client_fbaccount` (`client_fbaccount`),
-  UNIQUE KEY `client_idadress_2` (`client_idaddress`),
   UNIQUE KEY `client_mail_2` (`client_mail`),
-  KEY `client_idadress` (`client_idaddress`),
   KEY `client_firstname` (`client_firstname`),
   KEY `client_mail` (`client_mail`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -127,16 +118,13 @@ CREATE TABLE IF NOT EXISTS `contact` (
 CREATE TABLE IF NOT EXISTS `payment` (
   `payment_idpayment` varchar(15) NOT NULL,
   `payment_idclient` varchar(15) NOT NULL,
-  `payment_idaddress` varchar(15) NOT NULL,
   `payment_cardtype` varchar(20) NOT NULL,
   `payment_cardnb` bigint(16) NOT NULL,
   `payment_crypto` int(3) NOT NULL,
   `payment_expiration` date NOT NULL,
   PRIMARY KEY (`payment_idpayment`),
-  UNIQUE KEY `payment_idaddress` (`payment_idaddress`),
   UNIQUE KEY `payment_idclient_2` (`payment_idclient`),
   KEY `payment_idclient` (`payment_idclient`),
-  KEY `payment_idaddress_2` (`payment_idaddress`),
   KEY `payment_cardtype` (`payment_cardtype`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -176,19 +164,17 @@ ADD CONSTRAINT `booking_ibfk_1` FOREIGN KEY (`booking_idroom`) REFERENCES `room`
 ADD CONSTRAINT `booking_ibfk_2` FOREIGN KEY (`booking_idclient`) REFERENCES `client` (`client_idclient`),
 ADD CONSTRAINT `booking_ibfk_3` FOREIGN KEY (`booking_idpayment`) REFERENCES `payment` (`payment_idpayment`);
 
-
 --
--- Contraintes pour la table `client`
+-- Contraintes pour la table `contact`
 --
-ALTER TABLE `client`
-ADD CONSTRAINT `client_ibfk_1` FOREIGN KEY (`client_idaddress`) REFERENCES `address` (`address_idaddress`);
+ALTER TABLE `contact`
+ADD CONSTRAINT `contact_ibfk_1` FOREIGN KEY (`contact_mail`) REFERENCES `client` (`client_mail`);
 
 --
 -- Contraintes pour la table `payment`
 --
 ALTER TABLE `payment`
-ADD CONSTRAINT `payment_ibfk_1` FOREIGN KEY (`payment_idclient`) REFERENCES `client` (`client_idclient`),
-ADD CONSTRAINT `payment_ibfk_2` FOREIGN KEY (`payment_idaddress`) REFERENCES `address` (`address_idaddress`);
+ADD CONSTRAINT `payment_ibfk_1` FOREIGN KEY (`payment_idclient`) REFERENCES `client` (`client_idclient`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
