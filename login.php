@@ -74,7 +74,7 @@
                 <!-- Login with... social buttons -->
                 <section class="login__social-buttons">
                     <div class="container">
-                        <a href="#" title="Se connecter avec Facebook" class="login__social-button" id="login__social-button__facebook" onclick="fb_login();">
+                        <a href="#" title="Se connecter avec Facebook" class="button-social button-social-facebook" onclick="fb_login();">
                             <img src="/content/img/icons/facebook-letter-logo_24px_white.png" alt="login-with-facebook" />
                             <p>Se connecter avec Facebook</p>
                         </a>
@@ -83,7 +83,7 @@
                             Google Plus button following the branding guidelines
                             https://developers.google.com/+/branding-guidelines
                         -->
-                        <a href="#" title="Se connecter avec Google" class="login__social-button" id="login__social-button__google">
+                        <a href="#" title="Se connecter avec Google" class="button-social button-social-gplus">
                             <img src="/content/img/icons/google-plus_24px_white.png" alt="login-with-google" />
                             <p>Se connecter avec Google</p>
                         </a>

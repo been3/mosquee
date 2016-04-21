@@ -97,7 +97,7 @@
                                         <tr>
                                             <td></td>
                                             <td>
-                                                <div class="social-status">
+                                                <div class="button-social button-social-facebook">
                                                     <img src="/content/img/icons/facebook-letter-logo_24px_white.png" alt="login-with-facebook" />
                                                     <p>Connecté avec Facebook</p>
                                                 </div>
@@ -149,7 +149,7 @@
                                             <tr>
                                                 <td></td>
                                                 <td>
-                                                    <div class="social-status">
+                                                    <div class="button-social button-social-facebook">
                                                         <img src="/content/img/icons/facebook-letter-logo_24px_white.png" alt="login-with-facebook" />
                                                         <p>Se déconnecter</p>
                                                     </div>
