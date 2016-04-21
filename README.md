@@ -37,34 +37,30 @@ L’application devra comporter à minima un certain nombre de pages et fonction
 * Création/Modification client. Création d’un nouveau client, modification de certaines de ses caractéristiques.
 * Annulation de réservation. Dans cette page on pourra annuler une réservation donnée sélectionnée et identifiée au préalable graphiquement.
 
-Dans cette première partie il convient de réaliser ces pages et la navigation de
-l’application en html.
-Pour certaines il convient de rajouter « en dur » des données qui seront plus tard
-générées dynamiquement (partie PHP/BD) afin d’observer un résultat exhaustif
-proche du résultat final.
-Il vous est demandé ici d’implémenter des contrôles de validation sur les saisies
-effectuées par les utilisateurs.
-Vous devez fournir un fichier zip `partie1.zip` par email contenant tous les fichiers
-nécessaires à la partie Web statique ainsi que leur arborescence.
+Dans cette première partie il convient de réaliser ces pages et la navigation de l’application en html. Pour certaines il convient de rajouter « en dur » des données qui seront plus tard générées dynamiquement (partie PHP/BD) afin d’observer un résultat exhaustif proche du résultat final. Il vous est demandé ici d’implémenter des contrôles de validation sur les saisies effectuées par les utilisateurs. Vous devez fournir un fichier zip `partie1.zip` par email contenant tous les fichiers nécessaires à la partie Web statique ainsi que leur arborescence.
 
 ## Deuxième partie, partie base de données
 
 1. Modéliser les informations ci-dessus dans un schéma conceptuel ou relationnel.
 
     > Fichier `schema.pdf` à fournir.
+
 2. Fournissez un script de création de l’ensemble des éléments de structures générées par
 cette modélisation. Les éléments de clés primaires, étrangères et autres contraintes sont à
 votre appréciation.
+
     > Fichier `creStructures.sql` à fournir.
+
 3. Fournissez un script de suppression de l’ensemble de ces structures.
+
     > Fichier `supStructures.sql` à fournir.
-4. Alimenter les différentes informations nécessaires dans les tables. Un niveau de jeu de
-données minimum doit être fourni, à partir des éléments du texte et doit permettre par
-exemple de retourner des valeurs à vos requêtes SQL. Des données « pertinentes » sont
-attendues pour une période donnée définie afin de permettre un fonctionnement vraisemblable
-de l’application.
+
+4. Alimenter les différentes informations nécessaires dans les tables. Un niveau de jeu de données minimum doit être fourni, à partir des éléments du texte et doit permettre par exemple de retourner des valeurs à vos requêtes SQL. Des données « pertinentes » sont attendues pour une période donnée définie afin de permettre un fonctionnement vraisemblable de l’application.
+
     > Fichier `alimDonnees.sql` à fournir.
+
 5. Fournissez un script de suppression de l’ensemble des données.
+
     > Fichier `supDonnees.sql` à fournir.
 
 6. Formulez dans le langage SQL les demandes ci-dessous :
@@ -74,9 +70,11 @@ de l’application.
     * Quelle est la capacité totale de l’hôtel à ce jour ?
     * Quel est le chiffre d’affaire réalisé en janvier 2016 ?
     * Quel est le taux d’occupation moyen du mois de janvier 2016 ?
+
     > Fichier `requetes.sql` à fournir.
 
 7. Réalisez les procédures suivantes en langage procédural.
+
     > Fichier `plprojet.sql` à fournir.
 
     `P_RESERVATION (chambre, date, durée, client, nb_personnes)` qui réserve une chambre à
