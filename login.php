@@ -95,7 +95,7 @@
 
                     <!-- Signin form -->
                     <div class="container">
-                        <form action="" method="post" id="login__form-signin">
+                        <form action="/controller/connect.php" method="post" id="login__form-signin">
                             <h5>Se connecter</h5>
                             <div class="input-container input-container-username"><input type="text" placeholder="Email / Nom d'utilisateur" name="username" /></div>
                             <div class="input-container input-container-password"><input type="password" placeholder="Mot de passe" name="password" /></div>
