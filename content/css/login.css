@@ -39,50 +39,6 @@
     top: 60px;
 }
 
-.login__social-button {
-    display: block;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    color: white;
-    height: 30px;
-    margin: 10px;
-    width: 100%;
-}
-
-.login__social-button img {
-    margin-right: 8px;
-    float: left;
-    padding: 3px;
-}
-
-.login__social-button p {
-    display: inline-block;
-    margin: 0;
-    padding-top: 5px;
-}
-
-/* Login with Facebook button */
-#login__social-button__facebook {
-    background: #3b5998;
-    border: 1px solid #2f477a;
-}
-
-#login__social-button__facebook img {
-    border-right: 1px solid #2f477a;
-}
-
-/* Login with Google Plus button */
-#login__social-button__google {
-    background: #dd4B39;
-    border: 1px solid #b13c2e;
-}
-
-#login__social-button__google img {
-    border-right: 1px solid #b13c2e;
-}
-
-
 /* SIGN IN AND SIGN UP FORMS */
 
 .login__forms {

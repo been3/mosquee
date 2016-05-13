@@ -484,6 +484,75 @@ form input:focus, select:focus {
     cursor: pointer;
 }
 
+
+/* Social buttons with image */
+
+.button-social {
+    display: block;
+    border: 1px solid;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: white;
+    height: 30px;
+    margin: 10px;
+    width: 100%;
+    max-width: 290px;
+}
+
+.button-social img {
+    margin-right: 8px;
+    float: left;
+    padding: 3px;
+    border-right: 1px solid;
+}
+
+.button-social p {
+    display: inline-block;
+    margin: 0;
+    padding-top: 5px;
+}
+
+
+/* Facebook button */
+.button-social-facebook,
+.button-social-facebook img {
+    background: #3b5998;
+    border-color: #2f477a;
+}
+
+.button-social-facebook:hover,
+.button-social-facebook:hover img {
+    background: #2d4373;
+    border-color: #24365C;
+}
+
+.button-social-facebook:active,
+.button-social-facebook:active img {
+    background: #23345a;
+    border-color: #19243f;
+}
+
+/* Google Plus button */
+.button-social-gplus,
+.button-social-gplus img {
+    background: #dd4B39;
+    border-color: #b13c2e;
+}
+
+.button-social-gplus:hover,
+.button-social-gplus:hover img {
+    background: #c23321;
+    border-color: #9b291a;
+}
+
+.button-social-gplus:active,
+.button-social-gplus:active img {
+    background: #99281a;
+    border-color: #761f14;
+}
+
+
 /*///////////////////
     SITEMAP PAGE
 ///////////////////*/
