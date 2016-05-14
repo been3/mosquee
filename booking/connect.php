@@ -65,8 +65,23 @@
 
                     <!-- Container -->
                     <div class="container container-main">
-                        <h1>Vous n'êtes pas connecté.</h1>
-                        <h2 class="countdown"></h2>
+                        <table>
+                            <tr>
+                                <td>
+                                    <form action="/controller/bookingConnect.php" method="post">
+                                        <h5>Se connecter</h5>
+                                        <div class="input-container input-container-username"><input type="text" placeholder="Email / Nom d'utilisateur" name="username" /></div>
+                                        <div class="input-container input-container-password"><input type="password" placeholder="Mot de passe" name="password" /></div>
+                                        <a href="/" class="form-link">Mot de passe oublié ?</a><br /><br />
+                                        <button class="button-submit">Se connecter</button>
+                                    </form>
+                                </td>
+                                <td>
+                                    <h5>Pas encore de compte?</h5>
+                                    <a href="/login"><button class="button-submit">Inscrivez-vous</button></a>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
 
                 </div>
@@ -77,18 +92,6 @@
         </div>
 
         <script type="text/javascript" src="/content/js/script.js"></script>
-        <script type="text/javascript" src="/content/js/datePicker.js"></script>
-        <script>
-            var count = 5;
-            var countdown = setInterval(function(){
-                $("h2.countdown").html("Redirection vers la page de connexion dans " + count + ".");
-                if (count == 0) {
-                    clearInterval(countdown);
-                    window.open( "/login", "_self" );
-                }
-                count--;
-            }, 1000);
-        </script>
 
     </body>
 </html>

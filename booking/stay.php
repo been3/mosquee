@@ -67,7 +67,7 @@
 
                     <!-- Form -->
                     <div class="container container-main">
-                        <form action="/booking/connect" method="post">
+                        <form action="/booking/pay" method="post">
                             <table>
                                 <tr>
                                     <td>

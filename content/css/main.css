@@ -484,6 +484,12 @@ form input:focus, select:focus {
     cursor: pointer;
 }
 
+/* Links in forms */
+
+.form-link {
+    color: #fb9e08;
+}
+
 /*///////////////////
     SITEMAP PAGE
 ///////////////////*/

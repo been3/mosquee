@@ -94,8 +94,8 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2" class="booking-payment-agreement-container">
-                                        <input type="checkbox" id="booking-payment-agreement" /><label for="booking-payment-agreement">  J'accepte les <a href="#">Conditions Générales de Vente</a></label>
+                                    <td colspan="2">
+                                        <input type="checkbox" id="booking-payment-agreement" /><label for="booking-payment-agreement">  J'accepte les <a href="#" class="form-link">Conditions Générales de Vente</a></label>
                                     </td>
                                 </tr>
                                 <tr>

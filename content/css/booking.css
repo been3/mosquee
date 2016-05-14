@@ -75,11 +75,11 @@
     position: relative;
 }
 
-.booking-stay #booking-step-one a {
+.booking-connect #booking-step-one a {
     background: rgba(244, 99, 48, 0.6);
 }
 
-.booking-connect #booking-step-two a {
+.booking-stay #booking-step-two a {
     background: rgba(244, 99, 48, 0.6);
 }
 
@@ -242,11 +242,6 @@
 .booking-payment-credit-card-owner {
     width: 492px;
 }
-
-.booking-payment-agreement-container a {
-    color: #fb9e08;
-}
-
 
 .booking-confirm table {
     margin-top: 20px;
