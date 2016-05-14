@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $myusername = mysqli_real_escape_string($db,$_POST['username']);
     $mypassword = mysqli_real_escape_string($db,$_POST['password']);
 
-    $sql = "SELECT `client_idclient` FROM `client` WHERE `client_clientid` = '$myusername' AND `client_clientpass` = '$mypassword'";
+    $sql = "SELECT `client_idclient` FROM `client` WHERE `client_clientlogin` = '$myusername' AND `client_clientpass` = '$mypassword'";
     $result = mysqli_query($db,$sql);
     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
     $active = $row['active'];
