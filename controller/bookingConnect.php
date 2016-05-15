@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if($count == 1) {
         $_SESSION['login_user'] = $myusername;
-        header("location: /account/profile");
+        header("location: /booking/stay");
     } else {
         $error = "Your username or password is invalid";
     }

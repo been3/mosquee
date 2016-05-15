@@ -99,7 +99,7 @@
                             <h5>Se connecter</h5>
                             <div class="input-container input-container-username"><input type="text" placeholder="Email / Nom d'utilisateur" name="username" /></div>
                             <div class="input-container input-container-password"><input type="password" placeholder="Mot de passe" name="password" /></div>
-                            <a href="/">Mot de passe oublié ?</a>
+                            <a href="/" class="form-link">Mot de passe oublié ?</a>
                             <button class="button-submit">Se connecter</button>
                         </form>
                     </div>

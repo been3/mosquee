@@ -64,7 +64,7 @@ INSERT INTO `booking` (`booking_idbooking`, `booking_idroom`, `booking_idclient`
 -- Contenu de la table `client`
 --
 
-INSERT INTO `client` (`client_idclient`, `client_firstname`, `client_lastname`, `client_cellphone`, `client_fbaccount`, `client_mail`, `client_gender`, `client_age`, `client_clientid`, `client_clientpass`, `client_country`, `client_city`, `client_zipcode`, `client_street`, `client_streetnumber`) VALUES
+INSERT INTO `client` (`client_idclient`, `client_firstname`, `client_lastname`, `client_cellphone`, `client_fbaccount`, `client_mail`, `client_gender`, `client_age`, client_clientlogin, `client_clientpass`, `client_country`, `client_city`, `client_zipcode`, `client_street`, `client_streetnumber`) VALUES
   ('002575809122241', 'Bruce', 'Lee', '0681467320', '296588003496600', 'brucelee@gmail.com', 'Mr', 57, 'bruceleeid', 'bruceleepass', 'France', 'Trébeuden', 22560, 'Chemin de Kerglet', '8'),
   ('056675492090332', 'Harvey', 'Keitel', '0658267391', '565296307602995', 'harveykeitel@gmail.com', 'Mr', 46, 'harveykeitelid', 'harveykeitelpass', 'France', 'Montargis', 45200, 'Rue Dorée', '6'),
   ('069959128031004', 'Gary', 'Daniels', '0621803794', '911551207783870', 'Gary.daniels@gmail.com', 'Mr', 52, 'garydanielsid', 'garydanielspass', 'France', 'Paris', 75010, 'Place Franz List', '12'),

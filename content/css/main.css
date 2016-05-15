@@ -454,7 +454,6 @@ form input:focus, select:focus {
     content: url("/content/img/icons/lamp_16px_485160.png");
 }
 
-
 /* Buttons in forms */
 .button-submit,
 .button-return {
@@ -484,7 +483,6 @@ form input:focus, select:focus {
     cursor: pointer;
 }
 
-
 /* Social buttons with image */
 
 .button-social {
@@ -512,7 +510,6 @@ form input:focus, select:focus {
     margin: 0;
     padding-top: 5px;
 }
-
 
 /* Facebook button */
 .button-social-facebook,
@@ -552,6 +549,11 @@ form input:focus, select:focus {
     border-color: #761f14;
 }
 
+/* Links in forms */
+
+.form-link {
+    color: #fb9e08;
+}
 
 /*///////////////////
     SITEMAP PAGE
