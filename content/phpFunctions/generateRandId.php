@@ -1,5 +1,5 @@
 <?php
-function generateRandomString($length = 10) {
+function generateRandId($length = 10) {
 $characters = '0123456789';
 $charactersLength = strlen($characters);
 $randomString = '';
