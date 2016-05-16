@@ -22,9 +22,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $count = mysqli_num_rows($result);
 
     // If result matched $myusername and $mypassword, table row must be 1 row
-
     if($count == 1) {
         $_SESSION['login_user'] = $myusername;
+
+        // Set cookie to last 1 year
+        setcookie('username', $_POST['username'], time()+60*60*24*365);
+        setcookie('password', md5($_POST['password']), time()+60*60*24*365);
+
         header("location: /account/profile");
     } else {
         $error = "Your username or password is invalid";
