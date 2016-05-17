@@ -75,11 +75,11 @@
                                 <div class="tab-container">
                                     <table>
                                         <tr>
-                                            <td>Email</td>
+                                            <td class="user-info-section">Email</td>
                                             <td><?php echo '<a href="mailto:'.$row['client_mail'].'" target="_blank">'.$row['client_mail'].'</a>' ?></td>
                                         </tr>
                                         <tr>
-                                            <td>Adresse</td>
+                                            <td class="user-info-section">Adresse</td>
                                             <td>
                                                 <?php echo $row['client_streetnumber'].", ".htmlspecialchars($row['client_street'], ENT_QUOTES, 'UTF-8', true); ?><br/>
                                                 <?php echo $row['client_zipcode']." ".$row['client_city']; ?><br />
@@ -87,13 +87,13 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Nationalité</td>
+                                            <td class="user-info-section">Nationalité</td>
                                             <td>
                                                 <?php echo $row['client_country']; ?>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>Téléphone</td>
+                                            <td class="user-info-section">Téléphone</td>
                                             <td>
                                                 <?php echo $row['client_cellphone']; ?>
                                             </td>
@@ -101,10 +101,10 @@
                                         <tr>
                                             <td></td>
                                             <td>
-                                                <div class="button-social button-social-facebook">
+                                                <a class="button-social button-social-facebook" href="https://www.facebook.com/" target="_blank">
                                                     <img src="/content/img/icons/facebook-letter-logo_24px_white.png" alt="login-with-facebook" />
                                                     <p>Connecté avec Facebook</p>
-                                                </div>
+                                                </a>
                                             </td>
                                         </tr>
                                     </table>
@@ -116,62 +116,65 @@
                                     <form action="/model/accountModel.php" method="post">
                                         <table>
                                             <tr>
-                                                <td>Avatar</td>
-                                                <td>
+                                                <td class="user-info-section">Avatar</td>
+                                                <td colspan="2">
                                                     <div class="user-avatar-container">
                                                         <?php echo user_avatar($row['client_idclient'], $row['client_gender']) ?>
+                                                        <input type="file" name="nom" />
                                                     </div>
+                                                    <br />
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td></td>
-                                                <td><input type="file" name="nom" /></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Email</td>
-                                                <td>
+                                                <td class="user-info-section">Email</td>
+                                                <td colspan="2">
                                                     <?php echo '<input type="email" id="user-email" name="user_email" value="'.$row['client_mail'].'" placeholder="xyz@example.com" />'; ?>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Adresse</td>
+                                                <td rowspan="3" class="user-info-section">Adresse</td>
                                                 <td>
                                                     <label for="user-street-number">N°</label><br />
                                                     <?php echo '<input type="number" value="'.$row['client_streetnumber'].'" id="user-street-number" name="user_street_number" />'; ?><br />
+                                                </td>
+                                                <td>
                                                     <label for="user-street-name">Voie</label><br />
                                                     <?php echo '<input type="text" value="'.$row['client_street'].'" id="user-street-name" name="user_street_name" />'; ?><br />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
                                                     <label for="user-zip-code">Code Postal</label><br />
                                                     <?php echo '<input type="number" value="'.$row['client_zipcode'].'" id="user-zip-code" name="user_zip_code" />'; ?><br />
+                                                </td>
+                                                <td>
                                                     <label for="user-city">Ville</label><br />
                                                     <?php echo '<input type="text" value="'.$row['client_city'].'" id="user-city" name="user_city" />'; ?><br />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
                                                     <label for="user-country">Pays</label><br />
                                                     <?php echo '<input type="text" value="'.$row['client_country'].'" id="user-country" name="user_country" />' ?><br />
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td><label for="user-nationality">Nationalité</label></td>
-                                                <td>
-                                                    <?php echo '<input type="text" value="'.$row['client_country'].'" id="user-nationality" name="user_nationality" />'; ?>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
+                                                <td class="user-info-section">
                                                     <label for="user-cellphone">Téléphone</label>
-                                                <td>
+                                                <td colspan="2">
                                                     <?php echo '<input type="text" value="'.$row['client_cellphone'].'" id="user-cellphone" name="user_cellphone" />'; ?>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td></td>
-                                                <td>
-                                                    <div class="button-social button-social-facebook">
+                                                <td colspan="3">
+                                                    <div class="button-social button-social-facebook" onclick="fb_logout();">
                                                         <img src="/content/img/icons/facebook-letter-logo_24px_white.png" alt="login-with-facebook" />
                                                         <p>Se déconnecter de Facebook</p>
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td colspan="2"><button class="button-submit" name="edit_user">Mettre à jour</button></td>
+                                                <td colspan="3"><button class="button-submit" name="edit_user">Mettre à jour</button></td>
                                             </tr>
                                         </table>
                                     </form>
@@ -181,7 +184,7 @@
                             <div id="tab3" class="tab">
                                 <div class="tab-container">
                                     <h1>Changer le mot de passe</h1>
-                                    <form>
+                                    <form method="post">
                                         <table>
                                             <tr>
                                                 <td><label for="user-password-old">Ancien mot de passe</label></td>

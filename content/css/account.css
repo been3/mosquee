@@ -120,23 +120,33 @@ li.active a, li.active a:hover {
 }
 
 .tab-container table tr td {
-    padding: 25px;
+    padding: 20px 25px;
 }
 
-.tab-container table tr td:first-child {
+.tab-container .user-info-section {
     font-weight: bold;
 }
 
-.tab-container table tr td .user-avatar-container {
-    top: 0;
+.tab-container .user-info-section:hover {
+    border-right: 2px solid #fb9e08;
+}
+
+
+
+.tab-container .user-avatar-container img {
     -webkit-transition: opacity 0.5s ease 0.1s;
     -moz-transition: opacity 0.5s ease 0.1s;
     -o-transition: opacity 0.5s ease 0.1s;
     transition: opacity 0.5s ease 0.1s;
 }
 
-.tab-container table tr td .user-avatar-container:hover {
+.tab-container .user-avatar-container img:hover {
     opacity: 0.5;
+}
+
+.tab-container table tr td input {
+    width: auto;
+    min-width: 100%;
 }
 
 .social-status {
