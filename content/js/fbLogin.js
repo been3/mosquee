@@ -85,3 +85,13 @@ function fb_login() {
     FB.login( function() {}, { scope: 'email, public_profile' } );
     checkLoginState();
 }
+
+function fb_logout() {
+    FB.logout(function(response) {
+        // user is now logged out
+    });
+}
+
+var status = FB.getLoginStatus();
+
+console.log(status);
