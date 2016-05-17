@@ -82,7 +82,7 @@
                                     <td>
                                         Formule
                                         <div class="input-switch">
-                                            <input type="checkbox" name="board-switch" class="input-switch-checkbox" id="board-switch" checked>
+                                            <input type="checkbox" name="board_switch" class="input-switch-checkbox" id="boards-witch" value = "1" checked>
                                             <label class="input-switch-label" for="board-switch" id="board-switch-label">
                                                 <span class="input-switch-inner"></span>
                                                 <span class="input-switch-switch"></span>
@@ -90,9 +90,8 @@
                                         </div>
                                         <br />
 
-                                        Salle de bain
                                         <div class="input-switch">
-                                            <input type="checkbox" name="bathroom-switch" class="input-switch-checkbox" id="bathroom-switch" checked>
+                                            <input type="checkbox" name="bathroom_switch" class="input-switch-checkbox" id="bathroom-switch" value ="1" checked>
                                             <label class="input-switch-label" for="bathroom-switch" id="bathroom-switch-label">
                                                 <span class="input-switch-inner"></span>
                                                 <span class="input-switch-switch"></span>
@@ -119,15 +118,15 @@
 
                 </div>
             </div>
-            <?php
+<?php
 
-            if ($_POST[bathroom]== "on"){$bathroom = 1;}else{$bathroom=0;}
-            if ($_POST[board]== "on"){$board = 1;}else{$board=0;}
+if ($_POST['bathroom-switch']== "on"){$bathroom = 1;}else{$bathroom=0;}
+if ($_POST['boards-switch']== "on"){$board = 1;}else{$board=0;}
             $idBooking = generateRandId();
-            $idRoom = checkRoomAvailable($bathroom ,$board,$_POST[arrivalDate],$_POST[departureDate]);
+            $idRoom = checkRoomAvailable($bathroom ,$board,$_POST['arrivalDate'],$_POST['departureDate']);
             $idClient = $sql ;
             $idPayment = "SELECT `payment_idpayment` FROM `payment` WHERE `payment_idclient` = '$sql'";
-            $nbNights = calculateNbNights($_POST[arrivalDate],$_POST[departureDate]);
+            $nbNights = calculateNbNights($_POST['arrivalDate'],$_POST['departureDate']);
             $price = calculatePrice($newBooking,$_POST[arrivalDate],$idRoom);
             $canceled = 0;
 
