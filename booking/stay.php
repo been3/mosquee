@@ -124,8 +124,8 @@
             $idRoom = checkRoomAvailable();
             $idClient = $sql ;
             $idpayment = "SELECT `client_idpayment` FROM `client` WHERE `client_idclient` = '$sql'";
-            $nbNights = calculateNbNights();
-            $price = calculateprice();
+            $nbNights = calculateNbNights($_POST[arrivalDate],$_POST[departureDate]);
+            $price = calculatePrice($newBooking,$_POST[arrivalDate],$idRoom);
             $canceled = 0;
 
             $newBooking = "INSERT INTO booking (booking_idbooking, booking_idroom, booking_idclient,booking_idpayment,booking_datestart, booking_dateend, booking_nbnights, booking_price, booking_canceled,booking_nbpersons,booking_purpose)
