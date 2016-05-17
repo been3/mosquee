@@ -1,7 +1,7 @@
 <?php
 function calculatePrice($nbNights, $dateStart, $idRoom, $board)
 {
-    $dateMonth = date("m",$dateStart);
+    $dateMonth = date("m",strtotime($dateStart));
    if ($dateMonth>4 or $dateMonth<11){
        $price = intval("SELECT room_highpricing FROM room where $idRoom ='room_idroom' ");
        if ($board == 1){$price = $price + 15;}
