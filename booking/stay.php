@@ -19,7 +19,6 @@ if (isset($_POST['board'])){
 
 $arrivalDate =(isset($_POST['arrivalDate']) ? $_POST['arrivalDate'] : '');
 
-//$arrivalDate = date_format($arrivalDate,'d-m-Y:i:s');
 
 $departureDate = (isset($_POST['departureDate']) ? $_POST['departureDate'] : '');
 $idBooking = generateRandId();
@@ -32,5 +31,5 @@ $price = calculatePrice($nbNights, $arrivalDate, $idRoom,$board);
 $canceled = 0;
 if (isset($_POST['number'])){$nbPersons = $_POST['number'];}
 $purpose = (isset($_POST['purpose']) ? $_POST['purpose'] : '');
-
+$_SESSION["idBooking"]=$idBooking;
 $newBooking = "INSERT INTO `booking` (`booking_idbooking`, `booking_idroom`, `booking_idclient`, `booking_idpayment`, `booking_datestart`, `booking_dateend`, `booking_nbnights`, `booking_price`, `booking_canceled`, `booking_nbpersons`, `booking_purpose`) VALUES ('$idBooking', '$idRoom', '$idClient', '$idPayment', '$arrivalDate', '$departureDate', '$nbNights', '$price', '$canceled', '$nbPersons', '$purpose'";
