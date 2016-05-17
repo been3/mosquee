@@ -27,23 +27,32 @@
     top: 150px;
 }
 
-.user-avatar {
+.user-avatar-container {
     position: relative;
     margin: auto;
+    text-align: center;
     top: -50px;
-    width: 150px;
+    width: 200px;
 }
 
-.user-avatar img {
-    border-radius: 8px;
-    height: 150px;
-}
-
-.user-avatar figcaption {
+.user-avatar-container figcaption {
     font-size: 25px;
     font-weight: bold;
     text-align: center;
     margin: 15px 0;
+}
+
+.user-avatar {
+    border-radius: 8px;
+}
+
+.user-avatar-default {
+    background: #4c4c4c;
+    padding: 12px;
+}
+
+.user-avatar-custom {
+    max-height: 150px;
 }
 
 /*----- Tabs -----*/
@@ -118,7 +127,7 @@ li.active a, li.active a:hover {
     font-weight: bold;
 }
 
-.tab-container table tr td .user-avatar {
+.tab-container table tr td .user-avatar-container {
     top: 0;
     -webkit-transition: opacity 0.5s ease 0.1s;
     -moz-transition: opacity 0.5s ease 0.1s;
@@ -126,7 +135,7 @@ li.active a, li.active a:hover {
     transition: opacity 0.5s ease 0.1s;
 }
 
-.tab-container table tr td .user-avatar:hover {
+.tab-container table tr td .user-avatar-container:hover {
     opacity: 0.5;
 }
 

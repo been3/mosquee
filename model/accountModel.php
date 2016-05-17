@@ -28,7 +28,6 @@ if (isset($_POST['edit_user']))
         $cellphone = mysqli_real_escape_string($db,$_POST['user_cellphone']);
 
         $sql = "UPDATE `client` SET `client_mail` = '$email', `client_streetnumber` = '$street_number', `client_street` = '$street_name', `client_zipcode` = '$zip_code', `client_city` = '$city', `client_country` = '$country', `client_cellphone` = '$cellphone' WHERE `client_clientlogin` = '$id'";
-        $update = mysqli_query($db,$sql);
 
         if (mysqli_query($db,$sql)) {
             header("location: /account/profile");

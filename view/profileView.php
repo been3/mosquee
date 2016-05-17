@@ -68,8 +68,8 @@
 
                         <div class="tab-content">
                             <div id="tab1" class="tab active">
-                                <figure class="user-avatar">
-                                    <img src="/content/img/illustrations/250731_137645276372310_512347984_n.jpg" alt="" />
+                                <figure class="user-avatar-container">
+                                    <?php echo user_avatar($row['client_idclient'], $row['client_gender']) ?>
                                     <figcaption><?php echo $row['client_firstname']." ".$row['client_lastname']; ?></figcaption>
                                 </figure>
                                 <div class="tab-container">
@@ -117,7 +117,11 @@
                                         <table>
                                             <tr>
                                                 <td>Avatar</td>
-                                                <td><div class="user-avatar"><img src="/content/img/illustrations/250731_137645276372310_512347984_n.jpg" alt="" /></div></td>
+                                                <td>
+                                                    <div class="user-avatar-container">
+                                                        <?php echo user_avatar($row['client_idclient'], $row['client_gender']) ?>
+                                                    </div>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td></td>
@@ -141,7 +145,7 @@
                                                     <label for="user-city">Ville</label><br />
                                                     <?php echo '<input type="text" value="'.$row['client_city'].'" id="user-city" name="user_city" />'; ?><br />
                                                     <label for="user-country">Pays</label><br />
-                                                    <?php echo '<input type="text" value="'.$row['client_country'].'" id="user-country" name="user_coutry" />' ?><br />
+                                                    <?php echo '<input type="text" value="'.$row['client_country'].'" id="user-country" name="user_country" />' ?><br />
                                                 </td>
                                             </tr>
                                             <tr>
@@ -162,7 +166,7 @@
                                                 <td>
                                                     <div class="button-social button-social-facebook">
                                                         <img src="/content/img/icons/facebook-letter-logo_24px_white.png" alt="login-with-facebook" />
-                                                        <p>Se déconnecter</p>
+                                                        <p>Se déconnecter de Facebook</p>
                                                     </div>
                                                 </td>
                                             </tr>
