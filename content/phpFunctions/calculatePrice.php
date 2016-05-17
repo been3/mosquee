@@ -1,15 +1,16 @@
 <?php
-function calculatePrice($nbNights, $dateStart, $idRoom)
+function calculatePrice($nbNights, $dateStart, $idRoom, $board)
 {
-   if (date(m,$dateStart)>4 or date(m, $dateStart)<11){
-       $price = "SELECT room_highpricing FROM room where $idRoom ='room_idroom' ";
-       if ($board = 1){$price = $price+15;}
+    $dateMonth = date("m",$dateStart);
+   if ($dateMonth>4 or $dateMonth<11){
+       $price = intval("SELECT room_highpricing FROM room where $idRoom ='room_idroom' ");
+       if ($board == 1){$price = $price + 15;}
        $price = $price*$nbNights;
        return $price;
 
    }else{
-       $price = "SELECT room_lowpricing FROM room where $idRoom ='room_idroom' ";
-       if ($board = 1){$price = $price+15;}
+       $price = intval("SELECT room_lowpricing FROM room where $idRoom ='room_idroom' ");
+       if ($board == 1){$price = $price + 15;}
        $price = $price*$nbNights;
        return $price;
    }
