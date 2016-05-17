@@ -77,7 +77,7 @@
                                         <div class="input-container input-container-date"><input type="text" name="departureDate" placeholder="dd/mm/aaaa" id="departure-datepicker" class="input-date-departure" required></div>
 
                                         <label for="booking-stay-bedroom-number">Nombre de personnes</label><br />
-                                        <input type="number" step="1" min="1" max="12" id="booking-stay-bedroom-number" required>
+                                        <input type="number" name='number' step="1" min="1" max="12" id="booking-stay-bedroom-number" required>
                                     </td>
                                     <td>
                                         Formule
@@ -102,9 +102,9 @@
                                     <td>
                                         <p>
                                             Motif<br />
-                                            <input type="radio" name="booking-stay-purpose" value="business" id="booking-stay-purpose-business" required /><label for="booking-stay-purpose-business">  Voyage d'affaire</label><br />
-                                            <input type="radio" name="booking-stay-purpose" value="tourism" id="booking-stay-purpose-tourism" /><label for="booking-stay-purpose-tourism">  Tourisme</label><br />
-                                            <input type="radio" name="booking-stay-purpose" value="none" id="booking-stay-purpose-none" /><label for="booking-stay-purpose-none">  Autre</label>
+                                            <input type="radio" name="purpose" value="business" id="booking-stay-purpose-business" required /><label for="booking-stay-purpose-business">  Voyage d'affaire</label><br />
+                                            <input type="radio" name="purpose" value="tourism" id="booking-stay-purpose-tourism" /><label for="booking-stay-purpose-tourism">  Tourisme</label><br />
+                                            <input type="radio" name="purpose" value="none" id="booking-stay-purpose-none" /><label for="booking-stay-purpose-none">  Autre</label>
                                         </p>
                                     </td>
                                 </tr>
@@ -119,10 +119,24 @@
 
                 </div>
             </div>
+            <?php
+            $idBooking = generateRandId();
+            $idRoom = checkRoomAvailable();
+            $idClient = $sql ;
+            $idpayment = "SELECT `client_idpayment` FROM `client` WHERE `client_idclient` = '$sql'";
+            $nbNights = calculateNbNights();
+            $price = calculateprice();
+            $canceled = 0;
+
+            $newBooking = "INSERT INTO booking (booking_idbooking, booking_idroom, booking_idclient,booking_idpayment,booking_datestart, booking_dateend, booking_nbnights, booking_price, booking_canceled,booking_nbpersons,booking_purpose)
+            VALUES ($idBooking, $idRoom,$idClient,$idpayment,$_POST[arrivalDate],$_POST[departureDate],$nbNights,$price,$canceled,$_POST[number],$_POST[purpose])";
+            ?>
+
 
             <!-- Footer -->
             <?php include '../view/footerView.php'; ?>
         </div>
+
 
         <script type="text/javascript" src="/content/js/script.js"></script>
         <script type="text/javascript" src="/content/js/datePicker.js"></script>
@@ -136,3 +150,5 @@
 
     </body>
 </html>
+
+
