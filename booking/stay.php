@@ -91,7 +91,7 @@
                                         <br />
 
                                         <div class="input-switch">
-                                            <input type="checkbox" class="input-switch-checkbox" id="bathroom-switch" nam="bathroom" value ="1" checked>
+                                            <input type="checkbox" class="input-switch-checkbox" id="bathroom-switch" name="bathroom" value ="1" checked>
                                             <label class="input-switch-label" for="bathroom-switch" id="bathroom-switch-label">
                                                 <span class="input-switch-inner"></span>
                                                 <span class="input-switch-switch"></span>
@@ -127,18 +127,17 @@ include '../content/phpFunctions/checkRoomAvailable.php';
 
             if ($_POST[$bathroom]== "on"){$bathroom = 1;}else{$bathroom=0;}
             if ($_POST[$board]== "on"){$board = 1;}else{$board=0;}
+            if(isset($_POST['arrivalDate'])){$arrivalDate = $_POST['arrivalDate'];}
+            if(isset($_POST['departureDate'])){$departureDate = $_POST['$departureDate'];}
             $idBooking = generateRandId();
-            $idRoom = checkRoomAvailable($bathroom ,$_POST['number'],$_POST['arrivalDate'],$_POST['departureDate']);
             $idClient = 0;//"SELECT client_idclient FROM client where client_clientlogin = $_SESSION['login_user']"
             $idPayment = 0;//"SELECT `payment_idpayment` FROM `payment` WHERE `payment_idclient` = $_SESSION['login_user']";
-            $arrivalDate = $_POST['arrivalDate'];
-            $departureDate = $_POST['$departureDate'];
-            $nbNights = calculateNbNights($_POST['arrivalDate'],$_POST['departureDate']);
-            $price = calculatePrice($newBooking,$_POST['arrivalDate'],$idRoom);
+            $nbNights = calculateNbNights($arrivalDate,$arrivalDate);
+            $price = calculatePrice($newBooking,$arrivalDate,$idRoom);
             $canceled = 0;
-            $nbPersons = $_POST['number'];
-            $purpose = $_POST[$purpose];
-
+            if (isset($_POST['number'])){$nbPersons = $_POST['number'];}
+            if (isset($_POST['purpose'])){$purpose = $_POST['purpose'];}
+            $idRoom = checkRoomAvailable($bathroom ,$nbPersons,$arrivalDate,$departureDate);
             $newBooking = "INSERT INTO booking (booking_idbooking, booking_idroom, booking_idclient,booking_idpayment,booking_datestart, booking_dateend, booking_nbnights, booking_price, booking_canceled,booking_nbpersons,booking_purpose)
             VALUES ('$idBooking', $idRoom,$idClient,$idPayment,$arrivalDate,$departureDate,$nbNights,$price,$canceled,$nbPersons,$purpose";
             ?>
