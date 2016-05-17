@@ -82,7 +82,7 @@
                                     <td>
                                         Formule
                                         <div class="input-switch">
-                                            <input type="checkbox" name="board-switch" class="input-switch-checkbox" id="board-switch" checked>
+                                            <input type="checkbox" name="board" class="input-switch-checkbox" id="board" value = "on" checked>
                                             <label class="input-switch-label" for="board-switch" id="board-switch-label">
                                                 <span class="input-switch-inner"></span>
                                                 <span class="input-switch-switch"></span>
@@ -92,7 +92,7 @@
 
                                         Salle de bain
                                         <div class="input-switch">
-                                            <input type="checkbox" name="bathroom-switch" class="input-switch-checkbox" id="bathroom-switch" checked>
+                                            <input type="checkbox" name="bathroom" class="input-switch-checkbox" id="bathroom" value = "on" checked>
                                             <label class="input-switch-label" for="bathroom-switch" id="bathroom-switch-label">
                                                 <span class="input-switch-inner"></span>
                                                 <span class="input-switch-switch"></span>
@@ -120,16 +120,19 @@
                 </div>
             </div>
             <?php
+
+            if ($_POST[bathroom]== "on"){$bathroom = 1;}else{$bathroom=0;}
+            if ($_POST[board]== "on"){$board = 1;}else{$board=0;}
             $idBooking = generateRandId();
-            $idRoom = checkRoomAvailable();
+            $idRoom = checkRoomAvailable($bathroom ,$board,$_POST[arrivalDate],$_POST[departureDate]);
             $idClient = $sql ;
-            $idpayment = "SELECT `client_idpayment` FROM `client` WHERE `client_idclient` = '$sql'";
+            $idPayment = "SELECT `payment_idpayment` FROM `payment` WHERE `payment_idclient` = '$sql'";
             $nbNights = calculateNbNights($_POST[arrivalDate],$_POST[departureDate]);
             $price = calculatePrice($newBooking,$_POST[arrivalDate],$idRoom);
             $canceled = 0;
 
             $newBooking = "INSERT INTO booking (booking_idbooking, booking_idroom, booking_idclient,booking_idpayment,booking_datestart, booking_dateend, booking_nbnights, booking_price, booking_canceled,booking_nbpersons,booking_purpose)
-            VALUES ($idBooking, $idRoom,$idClient,$idpayment,$_POST[arrivalDate],$_POST[departureDate],$nbNights,$price,$canceled,$_POST[number],$_POST[purpose])";
+            VALUES ($idBooking, $idRoom,$idClient,$idPayment,$_POST[arrivalDate],$_POST[departureDate],$nbNights,$price,$canceled,$_POST[number],$_POST[purpose])";
             ?>
 
 
