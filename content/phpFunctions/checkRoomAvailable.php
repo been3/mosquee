@@ -30,19 +30,28 @@ function checkRoomAvailable($bathroom,$numberPersons,$dateStart,$dateEnd){ //ret
          $lastDateEnd = "SELECT b.booking_dateend FROM booking b , room r where b.booking_idroom = r.room_idroom AND r.room_roomnbr = '11' AND b.booking_dateend< $dateEnd ORDER BY b.booking_datestart DESC LIMIT 1";
         if ($lastDateStart <$lastDateEnd && $lastDateEnd < $dateStart){return 11;}else{return 0;}
     }
-    if ($bathroom == 0 && $numberPersons == 2){ //rooms : nbr6 nbr8 nbr10 nbr12
+    if ($bathroom == 0 && $numberPersons == 2) { //rooms : nbr6 nbr8 nbr10 nbr12
         $lastDateStart = "SELECT b.booking_datestart FROM booking b , room r where b.booking_idroom = r.room_idroom AND r.room_roomnbr = '6' AND b.booking_datestart < $dateEnd ORDER BY b.booking_datestart DESC LIMIT 1";
         $lastDateEnd = "SELECT b.booking_dateend FROM booking b , room r where b.booking_idroom = r.room_idroom AND r.room_roomnbr = '6' AND b.booking_dateend< $dateEnd ORDER BY b.booking_datestart DESC LIMIT 1";
-        if ($lastDateStart <$lastDateEnd && $lastDateEnd < $dateStart){return 6;}
+        if ($lastDateStart < $lastDateEnd && $lastDateEnd < $dateStart) {
+            return 6;
+        }
         $lastDateStart = "SELECT b.booking_datestart FROM booking b , room r where b.booking_idroom = r.room_idroom AND r.room_roomnbr = '8' AND b.booking_datestart < $dateEnd ORDER BY b.booking_datestart DESC LIMIT 1";
         $lastDateEnd = "SELECT b.booking_dateend FROM booking b , room r where b.booking_idroom = r.room_idroom AND r.room_roomnbr = '8' AND b.booking_dateend< $dateEnd ORDER BY b.booking_datestart DESC LIMIT 1";
-        if ($lastDateStart <$lastDateEnd && $lastDateEnd < $dateStart){return 8;}
+        if ($lastDateStart < $lastDateEnd && $lastDateEnd < $dateStart) {
+            return 8;
+        }
         $lastDateStart = "SELECT b.booking_datestart FROM booking b , room r where b.booking_idroom = r.room_idroom AND r.room_roomnbr = '10' AND b.booking_datestart < $dateEnd ORDER BY b.booking_datestart DESC LIMIT 1";
         $lastDateEnd = "SELECT b.booking_dateend FROM booking b , room r where b.booking_idroom = r.room_idroom AND r.room_roomnbr = '10' AND b.booking_dateend< $dateEnd ORDER BY b.booking_datestart DESC LIMIT 1";
-        if ($lastDateStart <$lastDateEnd && $lastDateEnd < $dateStart){return 10;}
+        if ($lastDateStart < $lastDateEnd && $lastDateEnd < $dateStart) {
+            return 10;
+        }
         $lastDateStart = "SELECT b.booking_datestart FROM booking b , room r where b.booking_idroom = r.room_idroom AND r.room_roomnbr = '12' AND b.booking_datestart < $dateEnd ORDER BY b.booking_datestart DESC LIMIT 1";
         $lastDateEnd = "SELECT b.booking_dateend FROM booking b , room r where b.booking_idroom = r.room_idroom AND r.room_roomnbr = '12' AND b.booking_dateend< $dateEnd ORDER BY b.booking_datestart DESC LIMIT 1";
-        if ($lastDateStart <$lastDateEnd && $lastDateEnd < $dateStart){return 12;}else{return 0;}
+        if ($lastDateStart < $lastDateEnd && $lastDateEnd < $dateStart) {
+            return 12;
+        } else {
+            return 0;
+        }
     }
-    
 }

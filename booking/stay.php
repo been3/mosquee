@@ -72,7 +72,7 @@
                                 <tr>
                                     <td>
                                         <label for="arrival-datepicker">Date d'arrivée</label>
-                                        <div class="input-container input-container-date"><input type="text" name="arrivalDate" placeholder="dd/mm/aaaa" id="arrival-datepicker" class="input-date-arrival" required></div>
+                                        <div class="input-container input-container-date"><input type="text" placeholder="dd/mm/aaaa" id="arrival-datepicker" class="input-date-arrival" name="arrivalDate"  required></div>
                                         <label for="departure-datepicker">Date de départ</label>
                                         <div class="input-container input-container-date"><input type="text" name="departureDate" placeholder="dd/mm/aaaa" id="departure-datepicker" class="input-date-departure" required></div>
 
@@ -82,7 +82,7 @@
                                     <td>
                                         Formule
                                         <div class="input-switch">
-                                            <input type="checkbox" class="input-switch-checkbox" id="board-switch" value = "1" checked>
+                                            <input type="checkbox" class="input-switch-checkbox" id="board-switch" name="board" value = "1" checked>
                                             <label class="input-switch-label" for="board-switch" id="board-switch-label">
                                                 <span class="input-switch-inner"></span>
                                                 <span class="input-switch-switch"></span>
@@ -91,7 +91,7 @@
                                         <br />
 
                                         <div class="input-switch">
-                                            <input type="checkbox" class="input-switch-checkbox" id="bathroom-switch" value ="1" checked>
+                                            <input type="checkbox" class="input-switch-checkbox" id="bathroom-switch" nam="bathroom" value ="1" checked>
                                             <label class="input-switch-label" for="bathroom-switch" id="bathroom-switch-label">
                                                 <span class="input-switch-inner"></span>
                                                 <span class="input-switch-switch"></span>
@@ -119,19 +119,28 @@
                 </div>
             </div>
 <?php
+include '../content/phpFunctions/generateRandId.php';
+include '../content/phpFunctions/calculatePrice.php';
+include '../content/phpFunctions/calculateNbNights.php';
+include '../content/phpFunctions/checkRoomAvailable.php';
 
-//if (isset($_POST[]== "on"){$bathroom = 1;}else{$bathroom=0;}
-//if ($_POST[boards-switch]== "on"){$board = 1;}else{$board=0;}
+
+            if ($_POST[$bathroom]== "on"){$bathroom = 1;}else{$bathroom=0;}
+            if ($_POST[$board]== "on"){$board = 1;}else{$board=0;}
             $idBooking = generateRandId();
-            $idRoom = checkRoomAvailable($bathroom ,$board,$_POST['arrivalDate'],$_POST['departureDate']);
-            $idClient = $sql ;
-            $idPayment = "SELECT `payment_idpayment` FROM `payment` WHERE `payment_idclient` = '$sql'";
+            $idRoom = checkRoomAvailable($bathroom ,$_POST['number'],$_POST['arrivalDate'],$_POST['departureDate']);
+            $idClient = 0;//"SELECT client_idclient FROM client where client_clientlogin = $_SESSION['login_user']"
+            $idPayment = 0;//"SELECT `payment_idpayment` FROM `payment` WHERE `payment_idclient` = $_SESSION['login_user']";
+            $arrivalDate = $_POST['arrivalDate'];
+            $departureDate = $_POST['$departureDate'];
             $nbNights = calculateNbNights($_POST['arrivalDate'],$_POST['departureDate']);
-            $price = calculatePrice($newBooking,$_POST[arrivalDate],$idRoom);
+            $price = calculatePrice($newBooking,$_POST['arrivalDate'],$idRoom);
             $canceled = 0;
+            $nbPersons = $_POST['number'];
+            $purpose = $_POST[$purpose];
 
             $newBooking = "INSERT INTO booking (booking_idbooking, booking_idroom, booking_idclient,booking_idpayment,booking_datestart, booking_dateend, booking_nbnights, booking_price, booking_canceled,booking_nbpersons,booking_purpose)
-            VALUES ($idBooking, $idRoom,$idClient,$idPayment,$_POST[arrivalDate],$_POST[departureDate],$nbNights,$price,$canceled,$_POST[number],$_POST[purpose])";
+            VALUES ('$idBooking', $idRoom,$idClient,$idPayment,$arrivalDate,$departureDate,$nbNights,$price,$canceled,$nbPersons,$purpose";
             ?>
 
 

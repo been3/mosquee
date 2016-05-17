@@ -1,5 +1,5 @@
 <?php
-function calculatePrice($nbNights, $dateStart, $idRoom, $board)
+function calculatePrice($nbNights, $dateStart, $idRoom)
 {
    if (date(m,$dateStart)>4 or date(m, $dateStart)<11){
        $price = "SELECT room_highpricing FROM room where $idRoom ='room_idroom' ";
