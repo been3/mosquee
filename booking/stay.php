@@ -82,7 +82,7 @@
                                     <td>
                                         Formule
                                         <div class="input-switch">
-                                            <input type="checkbox" name="board" class="input-switch-checkbox" id="board" value = "on" checked>
+                                            <input type="checkbox" name="board-switch" class="input-switch-checkbox" id="board-switch" checked>
                                             <label class="input-switch-label" for="board-switch" id="board-switch-label">
                                                 <span class="input-switch-inner"></span>
                                                 <span class="input-switch-switch"></span>
@@ -92,7 +92,7 @@
 
                                         Salle de bain
                                         <div class="input-switch">
-                                            <input type="checkbox" name="bathroom" class="input-switch-checkbox" id="bathroom" value = "on" checked>
+                                            <input type="checkbox" name="bathroom-switch" class="input-switch-checkbox" id="bathroom-switch" checked>
                                             <label class="input-switch-label" for="bathroom-switch" id="bathroom-switch-label">
                                                 <span class="input-switch-inner"></span>
                                                 <span class="input-switch-switch"></span>
