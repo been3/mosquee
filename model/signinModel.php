@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "SELECT `client_idclient` FROM `client` WHERE `client_clientlogin` = '$myusername' AND `client_clientpass` = '$mypassword'";
     $result = mysqli_query($db,$sql);
     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-    $active = $row['active'];
+    // $active = $row['active'];
 
     $count = mysqli_num_rows($result);
 
@@ -31,6 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         header("location: /account/profile");
     } else {
-        $error = "Your username or password is invalid";
+        header("location: /403");
     }
 }
