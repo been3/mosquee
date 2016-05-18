@@ -32,7 +32,33 @@ if (isset($_POST['edit_user']))
         if (mysqli_query($db,$sql)) {
             header("location: /account/profile");
         } else {
-            echo "Error updating record: ";
+            echo "Error updating record.";
+        }
+    }
+}
+
+if (isset($_POST['change_password'])) {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $old_password = mysqli_real_escape_string($db,$_POST['user_password_old']);
+        $new_password = mysqli_real_escape_string($db,$_POST['user_password_new']);
+        $new_password2 = mysqli_real_escape_string($db,$_POST['user_password_new2']);
+
+        $old_password_test = "SELECT `client_clientlogin` FROM `client` WHERE `client_clientpass` = '$old_password'";
+        $test_result = mysqli_query($db,$old_password_test);
+        $test_result_row = mysqli_fetch_array($test_result,MYSQLI_ASSOC);
+
+        if ($test_result_row['client_clientlogin'] == $id
+            and $new_password == $new_password2) {
+
+            $sql = "UPDATE `client` SET `client_clientpass` = '$new_password' WHERE `client_clientlogin` = '$id'";
+
+            if (mysqli_query($db,$sql)) {
+                header("location: /account/profile");
+            } else {
+                echo "Error updating record.";
+            }
+        } else {
+            header('location: /403');
         }
     }
 }

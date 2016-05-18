@@ -184,7 +184,7 @@
                             <div id="tab3" class="tab">
                                 <div class="tab-container">
                                     <h1>Changer le mot de passe</h1>
-                                    <form method="post">
+                                    <form action="../model/accountModel.php" method="post">
                                         <table>
                                             <tr>
                                                 <td><label for="user-password-old">Ancien mot de passe</label></td>
@@ -199,7 +199,7 @@
                                                 <td><input type="password" id="user-password-new2" name="user_password_new2" /></td>
                                             </tr>
                                             <tr>
-                                                <td colspan="2"><button class="button-submit">Changer le mot de passe</button></td>
+                                                <td colspan="2"><button class="button-submit" name="change_password">Changer le mot de passe</button></td>
                                             </tr>
                                         </table>
                                     </form>
